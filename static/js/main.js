@@ -158,3 +158,13 @@ ScrollReveal().reveal('.srSlideUp', srSlideUp);
 
 //     scrolling()
 // });
+
+$(document).ready(function() {
+  $(window).scroll(function() {
+	if ($(document).scrollTop() > 100) {
+	  $("#logo").addClass("reveal");
+	} else {
+	  $("#logo").removeClass("reveal");
+	}
+  });
+});

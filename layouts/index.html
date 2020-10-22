@@ -2,25 +2,7 @@
 
 {{ partial "hero.html" . }}
 
-<section class="bg_dark text-white">
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-md-6 col-lg-4">
-				<p>salut</p>
-			</div> <!-- /col -->
-			<div class="col-12 col-md-6 col-lg-8">
-				<img src="img/FurryMcFurFace.jpg" alt="hero-image" style='
-                  -webkit-mask: url({{"img/mask-01.png" | absURL }});
-                  -webkit-mask-repeat: no-repeat;
-                  -webkit-mask-size: contain;
-                  -webkit-mask-position: center center;
-                ' />
-			</div> <!-- /col -->
-		</div> <!-- /row -->
-	</div> <!-- /container -->
-</section>
-
-<section class="bg_white work">
+<section class="bg_white work" id="work">
 	<div class="container-fluid">
 		<div id="submenu" class="navbar d-md-none d-flex flex-md-column justify-content-between">
 			<a href="#paper-art" class="nav-link">paper art</a>
@@ -35,12 +17,9 @@
 					<a href="#illustration" class="nav-link">illustration</a>
 					<a href="#wall-murals" class="nav-link">wall murals</a>
 				</div>
-				<div>
-					<p>Lorem ipsum bite couille</p>
-				</div>
 			</div> <!-- /col -->
 			<div class="col-12 col-md-9">
-				<div id="paper-art" style="margin-bottom: 300px;">
+				<div id="paper-art" class="work-section">
 					<div class="row">
 						<div class="col-12 col-md mb-4 mb-md-5">
 							<img src="img/work_paper-022.jpg" class="rounded" alt="">
@@ -78,7 +57,7 @@
 					</div> <!-- /row -->
 				</div>
 
-				<div id="illustration" style="margin-bottom: 300px;">
+				<div id="illustration" class="work-section">
 					<div class="row">
 						<div class="col-12 col-md mb-4 mb-md-5">
 							<img src="img/work_illustration-019.png" class="w-75 d-block mx-auto" alt="">
@@ -116,7 +95,7 @@
 					</div> <!-- /row -->
 				</div>
 
-				<div id="wall-murals" style="margin-bottom: 300px;">
+				<div id="wall-murals" class="work-section">
 					<div class="row">
 						<div class="col-12 col-md mb-4 mb-md-5">
 							<img src="img/work_mural-001.jpg" class="rounded" alt="">
@@ -136,7 +115,7 @@
 	</div> <!-- /container -->
 </section>
 
-<section class="lemon bg_white d-none">
+<section class="lemon bg_white d-snone">
 	<div class="container">
 		<div class="row">
 			<div class="col col-lg-6 mx-auto text-center">

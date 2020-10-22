@@ -16,9 +16,14 @@
 	
 	<div id="all">
 		<div id="sidebar">
-			<p>
-				<a href="#">paper</a> | <a href="#">illustration</a> | <a href="#">wall murals</a> 
-			</p>
+			<div>
+				<p id="logo">
+					{{ .Site.Title }}
+				</p>
+				<p class="">
+					<img src="img/001-lemon.svg" alt="" width="30">
+				</p>
+			</div>
 		</div>
 		<main id="main">
 			{{ partial "nav.html" . }}

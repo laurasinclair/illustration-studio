@@ -4,23 +4,23 @@
 
 	{{- $title := print .Title " | " .Site.Title -}}
 	{{- if .IsHome -}}
-	{{- $title = print .Site.Title " | Designer and illustrator" -}}
+	{{- $title = print .Site.Title " | Creative artwork" -}}
 	{{ end }}
 	<title>{{ $title }}</title>
 	
 	<meta name="title" content="{{ $title }}">
-	<meta name="description" content="Friendly, personable, clean, and positive design! 🍋">
+	<meta name="description" content="{{ .Site.Params.metadescription }}">
 
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://laurasnclr.com">
 	<meta property="og:title" content="{{ $title }}">
-	<meta property="og:description" content="Friendly, personable, clean, and positive design! 🍋">
+	<meta property="og:description" content="{{ .Site.Params.metadescription }}">
 	<meta property="og:image" content="/img/laurasinclair-designer.jpg">
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://laurasnclr.com">
 	<meta property="twitter:title" content="{{ $title }}">
-	<meta property="twitter:description" content="Friendly, personable, clean, and positive design! 🍋">
+	<meta property="twitter:description" content="{{ .Site.Params.metadescription }}">
 	<meta property="twitter:image" content="/img/laurasinclair-designer.jpg">
 
 	<link rel="stylesheet" href="/css/main.css">

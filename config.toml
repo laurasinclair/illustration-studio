@@ -10,8 +10,8 @@ pluralizeListTitles = "false"
     weight = 1
 
 [params]
-  email = "hello@laurasnclr.com"
-  metadescription = "bite"
+  email = "hello@studiolemon.com"
+  metadescription = "Something!"
 
 [related]
     treshold = 1

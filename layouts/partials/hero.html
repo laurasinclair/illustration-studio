@@ -1,16 +1,16 @@
 <header>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row flex-column-reverse flex-sm-row">
 			<div class="col-12 col-lg-5 d-flex flex-column">
-				<h1 class="srSlipeUp delay-1" style="margin-top: 3em; margin-bottom: 3em;">Something about <span class="text-warning">standing&nbsp;out</span> and <span class="text-primary">something&nbsp;else</span> and the sentence gets longer and longer.</h1>
-				<a href="#" class="text-white mt-5" style="margin-bottom: auto;"><span class="bd-b">Read more</span> <img src="/img/icon_arrow-bottom.svg" width="12"></a>
+				<h1 class="sr-down">Something about <span class="text-warning">standing&nbsp;out</span> and <span class="text-primary">attractive impactful</span> and the sentence gets longer and longer.</h1>
+				<a href="#about" class="text-white"><span class="sr-down">Read more</span> <img src="/img/icon_arrow-bottom.svg" width="12" class="sr-down"></a>
 			</div>  <!-- /col -->
 			
-			<div class="col-12 col-lg-7 text-center">
-				<picture>
-					<img src="/img/grapes.png" alt="{{ .Params.title }}" width="700" class="srSlideUp delay-1">
-				</picture>
+			<div id="grapes" class="col-12 col-lg-7 text-center sr-down">
+				<img src="/img/grapes.png" alt="{{ .Params.title }}" width="700">
 			</div> <!-- /col -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </header>
+<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
+</div>

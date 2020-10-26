@@ -6574,9 +6574,6 @@ body {
   position: relative;
   font-size: 16px; }
 
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-  overflow: hidden; }
-
 .no-outline, #sidebar #logo, nav a:hover, nav a:active, nav a:focus,
 nav a:visited:hover,
 nav a:visited:active,

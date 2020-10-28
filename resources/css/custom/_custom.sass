@@ -133,9 +133,9 @@ hr
 	border-bottom: 3px solid $dark
 
 h1
-	font-size: 1.85em
-	// @include media-breakpoint-up(sm)
-	// 	font-size: 2.10rem
+	font-size: 1.70em
+	@include media-breakpoint-up(sm)
+		font-size: 2.10rem
 	@include media-breakpoint-up(md)
 		font-size: 2.25em
 	@include media-breakpoint-up(xl)
@@ -236,7 +236,9 @@ nav
 		right: 50%
 		transform: translateX(50%)
 		width: max-content
+		opacity: 0
 		@include media-breakpoint-up(md)
+			opacity: 1
 			right: 3em
 			bottom: initial
 			transform: initial
@@ -261,6 +263,7 @@ nav
 		&:focus
 			@extend .no-outline
 			// font-weight: 700
+
 .btn
 	border-radius: 4px
 	padding: 13px 24px 14px
@@ -448,7 +451,7 @@ img[src*="#thumbnail"]
 		@include media-breakpoint-up(lg)
 			margin-bottom: 10px
 #grapes
-	// overflow: clip
+	overflow: hidden
 	img
 		max-width: 120%
 		transform: translateX(-10%)
@@ -459,27 +462,45 @@ img[src*="#thumbnail"]
 #submenu
 	position: sticky
 	top: 0
+	left: 0
 	width: 100%
 	background-color: $white
-	left: 0
 	z-index: 888
 	a, 
 	a:visited
-		color: $gray-400
-		padding: 10px 15px
+		color: $gray-500
+		padding: 15px 7px 11px
 		font-weight: 400
+		border-bottom: 4px solid $white
 		&:hover, 
 		&:active,
 		&:focus,
 		&.active
-			font-weight: 800
 			@extend .no-outline
+			font-weight: 1000
 			&:nth-of-type(1)
 				color: $primary
+				border-bottom: 4px solid $primary
 			&:nth-of-type(2)
 				color: $secondary
+				border-bottom: 4px solid $secondary
 			&:nth-of-type(3)
 				color: $tertiary
+				border-bottom: 4px solid $tertiary
+			&:nth-of-type(4)
+				background: $primary
+				background: linear-gradient(90deg, rgba(255,0,188,1) 0%, rgba(255,215,0,1) 25%, rgba(0,212,255,1) 50%, rgba(34,9,121,1) 75%)
+				-webkit-background-clip: text
+				color: transparent
+				border-bottom: 4px solid $gray-500
+				// &:after
+				// 	content: ''
+				// 	display: block
+				// 	height: 4px
+				// 	margin: 0
+				// 	padding: 0
+				// 	background-color: red
+				// 	width: 100%
 
 #submenu-md
 	white-space: nowrap
@@ -493,24 +514,26 @@ img[src*="#thumbnail"]
 	a:visited
 		@extend .transition-2s
 		color: $gray-600
+		font-weight: 300
 		@include media-breakpoint-up(md)
 			font-size: 1.7em
-		font-weight: 300
 		&:hover, 
 		&:active,
-		&:focus
-			@extend .no-outline
-			color: $dark
+		&:focus,
 		&.active
+			@extend .no-outline
+			font-weight: 1000
 			&:nth-of-type(1)
 				color: $primary
 			&:nth-of-type(2)
 				color: $secondary
 			&:nth-of-type(3)
 				color: $tertiary
-			@include media-breakpoint-up(lg)
-				font-size: 1.8em
-			font-weight: 600
+			&:nth-of-type(4)
+				background: rgb(255,0,188)
+				background: linear-gradient(105deg, #f87ad7 6%, gold 14%, #51d6ff 25%, #6e44ff 35%)
+				-webkit-background-clip: text
+				color: transparent
 			&::after
 				content: ''
 				background-image: url(/img/icon_arrow-right.svg)

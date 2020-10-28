@@ -17,6 +17,16 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $(window).scroll(function() {
+	if ($(document).scrollTop() > 200) {
+	  $(".contact").addClass("reveal");
+	} else {
+	  $(".contact").removeClass("reveal");
+	}
+  });
+});
+
 var srDown = {
 	distance: '10%',
 	origin: 'top',

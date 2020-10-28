@@ -10,8 +10,11 @@ html
 	&:focus
 		outline: 1px dotted $dark
 		outline-offset: 2px
+	margin: 0
+	padding: 0
 
 body
+	@extend .bg_white
 	font-family: $font-primary
 	color: $gray-900
 	font-weight: 400
@@ -225,6 +228,7 @@ ul.line
 nav
 	@extend .bg_dark
 	width: 100%
+	margin-bottom: -1px // chrome fix: lines between divs
 	.contact
 		position: fixed
 		z-index: 999
@@ -408,6 +412,7 @@ img[src*="#thumbnail"]
 	header
 		@extend .bg_dark
 		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
 		padding-top: 60px
 		min-height: 100vh
 		h1
@@ -421,7 +426,6 @@ img[src*="#thumbnail"]
 			&+a:visited
 				@extend .text-white
 				@extend .mb-5
-		margin-bottom: auto
 
 @keyframes translate
 	0%
@@ -626,9 +630,26 @@ span
 		position: absolute
 		animation: rotation 15s infinite linear 
 		fill: #000
-		width: 80px
-		left: 15px
+		width: 70px
+		left: 25px
 		bottom: 5px
+		@media screen and (min-width: 350px)
+			width: 80px
+			left: 35px
+			bottom: 30px
+		@media screen and (min-width: 420px)
+			width: 95px
+			left: 45px
+		@media screen and (min-width: 490px)
+			width: 95px
+			left: 55px
+			bottom: 45px
+		@media screen and (min-width: 540px)
+			width: 95px
+		@include media-breakpoint-up(sm)
+			width: 105px
+			left: 45px
+			bottom: 70px
 		@include media-breakpoint-up(md)
 			width: 105px
 			left: 55px
@@ -638,6 +659,16 @@ footer
 	#get-in-touch
 		padding-top: 5em
 		padding-bottom: 5em
+		// &:before
+		// 	content: ''
+		// 	display: block
+		// 	height: 100px
+		// 	width: 100%
+		// 	-webkit-mask: url('/img/bgtop.png')
+		// 	-webkit-mask-repeat: repeat-x
+		// 	-webkit-mask-size: cover
+		// 	-webkit-mask-position: top center 
+
 .vl
 	display: block
 	width: 50%

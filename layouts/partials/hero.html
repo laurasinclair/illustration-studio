@@ -7,7 +7,11 @@
 			</div>  <!-- /col -->
 			
 			<div id="grapes" class="col-12 col-md-6 col-lg-7 text-center sr-down">
-				<img src="/img/grapes.png" alt="{{ .Params.title }}" width="700">
+				<picture>
+					<source srcset="/img/grapes.webp" type="image/webp">
+					<source srcset="/img/grapes.png" type="image/png">
+					<img src="/img/grapes.png" alt="{{ .Params.title }}" width="700">
+				</picture>
 			</div> <!-- /col -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->

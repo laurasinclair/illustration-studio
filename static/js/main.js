@@ -48,3 +48,5 @@ console.log(otherNodeList)
 
 ScrollReveal().reveal(nodeList, srDown);
 ScrollReveal().reveal(otherNodeList, srFade);
+
+// $('body').addClass('js');

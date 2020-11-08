@@ -410,7 +410,8 @@ nav
 		@extend .text-white
 		margin-bottom: -1px // chrome fix: lines between divs
 		padding-top: 60px
-		min-height: 100vh
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
 		h1
 			@extend .mb-3
 			@include media-breakpoint-up(lg)
@@ -422,6 +423,18 @@ nav
 			&+a:visited
 				@extend .text-white
 				@extend .mb-5
+		#grapes
+			overflow: hidden
+			z-index: 999
+			margin-bottom: -135px
+			@include media-breakpoint-up(lg)
+				margin-bottom: -95px
+			img
+				max-width: 120%
+				transform: translateX(-10%)
+				@include media-breakpoint-up(md)
+					max-width: 100%
+					transform: initial
 
 @keyframes translate
 	0%
@@ -439,14 +452,6 @@ nav
 		margin-bottom: 4px
 		@include media-breakpoint-up(lg)
 			margin-bottom: 10px
-#grapes
-	overflow: hidden
-	img
-		max-width: 120%
-		transform: translateX(-10%)
-		@include media-breakpoint-up(md)
-			max-width: 100%
-			transform: initial
 
 #top-btn,
 #top-btn:active

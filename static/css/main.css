@@ -6162,8 +6162,7 @@ nav {
 
 .home header {
   margin-bottom: -1px;
-  padding-top: 60px;
-  min-height: 100vh; }
+  padding-top: 60px; }
   @media (min-width: 992px) {
     .home header h1 {
       margin-top: 1.5em; } }
@@ -6171,6 +6170,20 @@ nav {
     .home header h1 {
       margin-top: 3em;
       margin-bottom: 3em; } }
+  .home header #grapes {
+    overflow: hidden;
+    z-index: 999;
+    margin-bottom: -135px; }
+    @media (min-width: 992px) {
+      .home header #grapes {
+        margin-bottom: -95px; } }
+    .home header #grapes img {
+      max-width: 120%;
+      transform: translateX(-10%); }
+      @media (min-width: 768px) {
+        .home header #grapes img {
+          max-width: 100%;
+          transform: initial; } }
 
 @keyframes translate {
   0% {
@@ -6188,16 +6201,6 @@ nav {
   @media (min-width: 992px) {
     #services li {
       margin-bottom: 10px; } }
-
-#grapes {
-  overflow: hidden; }
-  #grapes img {
-    max-width: 120%;
-    transform: translateX(-10%); }
-    @media (min-width: 768px) {
-      #grapes img {
-        max-width: 100%;
-        transform: initial; } }
 
 #top-btn,
 #top-btn:active {

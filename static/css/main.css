@@ -1,10 +1,6 @@
 /* changed */
 /* changed */
 /* changed */
-/* changed */
-/* changed */
-/* changed */
-/* changed */
 *,
 *::before,
 *::after {
@@ -263,10 +259,6 @@ template {
 [hidden] {
   display: none !important; }
 
-/* changed */
-/* changed */
-/* changed */
-/* changed */
 /* changed */
 /* changed */
 /* changed */
@@ -4664,7 +4656,7 @@ a.text-dark:hover, a.text-dark:focus {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2; }
 
 h1, .h1 {
@@ -5762,14 +5754,30 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: "Roboto Mono";
-  src: url("/css/fonts/roboto-mono/RobotoMono-VariableFont_wght.ttf") format("woff supports variations"), url("/css/fonts/roboto-mono/RobotoMono-VariableFont_wght.ttf") format("woff-variations");
-  font-weight: 400 1000; }
+  src: url("/css/fonts/roboto-mono/RobotoMono-Medium.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/css/fonts/roboto-mono/RobotoMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/css/fonts/roboto-mono/RobotoMono-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/css/fonts/roboto-mono/RobotoMono-Bold.ttf");
+  font-weight: 1000;
+  font-style: normal;
+  font-display: swap; }
 html {
   scroll-behavior: smooth !important; }
-
-.js .sr-down,
-.js #work img {
-  visibility: hidden; }
 
 ::-moz-selection,
 ::selection {

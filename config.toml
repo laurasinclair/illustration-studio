@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Studio Lemon"
+title = "Dirty Lemon"
 pluralizeListTitles = "false"
 
 [menu]
@@ -10,8 +10,8 @@ pluralizeListTitles = "false"
     weight = 1
 
 [params]
-  email = "hello@studiolemon.com"
-  metadescription = "Studio Lemon is a design studio specialising in fun & happy creative artwork!"
+  email = "hello@dirtylemon.studio"
+  metadescription = "Dirty Lemon is a design studio specialising in fun & happy creative artwork!"
 
 [related]
     treshold = 1

@@ -5766,8 +5766,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 400 1000; }
 html {
   scroll-behavior: smooth !important; }
-  html .sr {
-    visibility: hidden; }
+
+.js .sr-down,
+.js #work img {
+  visibility: hidden; }
 
 ::-moz-selection,
 ::selection {

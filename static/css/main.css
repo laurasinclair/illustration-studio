@@ -6415,11 +6415,13 @@ nav {
     animation: rotation 15s infinite linear;
     fill: #000;
     width: 70px;
-    left: 25px;
-    bottom: 5px;
-      bottom-width: 80px;
-      bottom-left: 35px;
-      bottom-bottom: 30px; }
+    left: 30px;
+    bottom: 10px; }
+    @media screen and (min-width: 368px) {
+      #lemon .txt-circle {
+        width: 80px;
+        left: 35px;
+        bottom: 30px; } }
     @media screen and (min-width: 420px) {
       #lemon .txt-circle {
         width: 95px;

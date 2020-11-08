@@ -6462,10 +6462,9 @@ footer #get-in-touch {
 
 .img-round {
   overflow: hidden;
-  width: 40px;
   border-radius: 50%;
-  border: 1px solid white;
-  box-shadow: 0 5px 10px 0 rgba(101, 98, 255, 0.6); }
+  border: 2px solid #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); }
   .img-round img {
     width: 100%;
     height: auto; }

@@ -525,7 +525,18 @@ nav
 		transform: rotate(0deg) 
 	to
 		transform: rotate(359deg)	
-
+#about
+	.social
+		a,
+		a:visited
+			svg path
+				fill: $gray-900
+			&:hover,
+			&:focus
+				transition: all 0.2s ease-in-out
+				outline: none
+				svg path
+					fill: $primary
 #work
 	#submenu
 		position: sticky

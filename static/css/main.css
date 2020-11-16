@@ -6280,6 +6280,19 @@ nav {
     transform: rotate(0deg); }
   to {
     transform: rotate(359deg); } }
+#about .social a svg path,
+#about .social a:visited svg path {
+  fill: #212529; }
+#about .social a:hover, #about .social a:focus,
+#about .social a:visited:hover,
+#about .social a:visited:focus {
+  transition: all 0.2s ease-in-out;
+  outline: none; }
+  #about .social a:hover svg path, #about .social a:focus svg path,
+  #about .social a:visited:hover svg path,
+  #about .social a:visited:focus svg path {
+    fill: #6562FF; }
+
 #work #submenu {
   position: sticky;
   top: 0;
@@ -6464,7 +6477,8 @@ footer #get-in-touch {
   overflow: hidden;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  height: auto; }
   .img-round img {
     width: 100%;
     height: auto; }

@@ -6434,6 +6434,8 @@ nav {
     overflow: visible;
     width: 100%;
     max-width: 470px; }
+    #lemon figure img {
+      height: auto; }
   #lemon .txt-circle {
     position: absolute;
     animation: rotation 15s infinite linear;

@@ -3,13 +3,13 @@
 		<div class="col-12 col-md-6">
 			<p>
 				<label for="name" class="form-label">Your Name:</label>
-				<input type="text" name="name" placeholder=" " />
+				<input id="name" name="name" type="text" placeholder=" " />
 			</p>
 		</div> <!-- /col -->
 		<div class="col-12 col-md-6">
 			<p>
-				<label form="email" class="form-label">Your Email:</label>
-				<input type="email" name="email" placeholder=" " />
+				<label for="email" class="form-label">Your Email:</label>
+				<input id="email" name="email" type="email" placeholder=" " />
 			</p>
 		</div> <!-- /col -->
 	</div> <!-- /row -->
@@ -22,27 +22,27 @@
 		
 			<ul class="ks-cboxtags">
 				<li>
-					<input type="checkbox" id="checkboxOne" name="topics" value="Digital illustrations">
-					<label for="checkboxOne">Digiddtal illustrations</label>
+					<input type="checkbox" id="checkboxOne" name="topic[]" value="Digital illustrations">
+					<label for="checkboxOne">Digital illustrations</label>
 				</li>
 				<li>
-					<input type="checkbox" id="checkboxTwo" name="topics" value="Paper stuff">
+					<input type="checkbox" id="checkboxTwo" name="topic[]" value="Paper stuff">
 					<label for="checkboxTwo">Paper stuff</label>
 				</li>
 				<li>
-					<input type="checkbox" id="checkboxThree" name="topics" value="Wall murals">
+					<input type="checkbox" id="checkboxThree" name="topic[]" value="Wall murals">
 					<label for="checkboxThree">Wall murals</label>
 				</li>
 				<li>
-					<input type="checkbox" id="checkboxFour" name="topics" value="Art direction">
+					<input type="checkbox" id="checkboxFour" name="topic[]" value="Art direction">
 					<label for="checkboxFour">Art direction</label>
 				</li>
 				<li>
-					<input type="checkbox" id="checkboxFive" name="topics" value="Photoshoot">
+					<input type="checkbox" id="checkboxFive" name="topic[]" value="Photoshoot">
 					<label for="checkboxFive">Photoshoot</label>
 				</li>
 				<li>
-					<input type="checkbox" id="checkboxSix" name="topics" value="Other">
+					<input type="checkbox" id="checkboxSix" name="topic[]" value="Other">
 					<label for="checkboxSix">Other</label>
 				</li>
 			</ul>
@@ -54,7 +54,7 @@
 		<div class="col-12">
 			<p>
 				<label for="message" class="form-label">Message:</label>
-				<textarea name="message" placeholder="Heya! I have a question about..."></textarea>
+				<textarea id="message" name="message" placeholder="Heya! I have a question about..."></textarea>
 			</p>
 			<p>
 				<button class="btn" type="submit">Submit your message! <svg width="16" height="11" class="ml2 icon" viewBox="0 0 282 201" xmlns="http://www.w3.org/2000/svg"><path d="M171.07 24.652C165.368 18.9501 165.368 9.9735 171.07 4.2716C176.772 -1.23767 185.748 -1.23767 191.45 4.2716L276.863 89.6717C279.509 92.3172 281.14 95.99 281.14 100.061C281.14 104.132 279.509 107.805 276.863 110.463L191.45 195.863C185.748 201.565 176.772 201.565 171.07 195.863C165.368 190.161 165.368 181.185 171.07 175.483L232.224 114.534L15.1279 114.534C7.17867 114.547 0.860348 108.023 0.860347 100.074C0.860347 92.1246 7.17867 85.8062 15.1279 85.8062L232.211 85.8062L171.07 24.652Z" fill="#ffffff"/></svg></button>

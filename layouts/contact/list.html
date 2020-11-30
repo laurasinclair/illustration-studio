@@ -1,33 +1,37 @@
 {{ define "main" }}
 
-<form action="https://getform.io/f/d6e07164-d94d-49f7-bdb9-8c5d8ffc7d8b" method="POST">
-	<input type="text" name="name">
-	<input type="email" name="email">
-	<input type="text" name="message">
-	<button type="submit">Send</button>
-</form>
+<header class="bg-dark py-5">
+	<div class="container-fluid">
+		<!-- <form action="https://getform.io/f/d6e07164-d94d-49f7-bdb9-8c5d8ffc7d8b" method="POST">
+			<input type="text" name="name">
+			<input type="email" name="email">
+			<input type="text" name="message">
+			<button type="submit">Send</button>
+		</form> -->
 
-<hr>
+		<hr>
 
-<form name="contact" method="POST" data-netlify="true">
-	<p>
-		<label>Your Name: <input type="text" name="name" /></label>
-	</p>
-	<p>
-		<label>Your Email: <input type="email" name="email" /></label>
-	</p>
-	<p>
-		<label>Your Role: <select name="role[]" multiple>
-				<option value="leader">Leader</option>
-				<option value="follower">Follower</option>
-			</select></label>
-	</p>
-	<p>
-		<label>Message: <textarea name="message"></textarea></label>
-	</p>
-	<p>
-		<button type="submit">Send</button>
-	</p>
-</form>
+		<form name="contact" method="POST" data-netlify="true" action="/thank-you">
+			<p>
+				<label>Your Name: <input type="text" name="name" /></label>
+			</p>
+			<p>
+				<label>Your Email: <input type="email" name="email" /></label>
+			</p>
+			<p>
+				<label>Your Role: <select name="role[]" multiple>
+						<option value="leader">Leader</option>
+						<option value="follower">Follower</option>
+					</select></label>
+			</p>
+			<p>
+				<label>Message: <textarea name="message"></textarea></label>
+			</p>
+			<p>
+				<button type="submit">Send</button>
+			</p>
+		</form>
+	</div>
+</header>
 
 {{ end }}        

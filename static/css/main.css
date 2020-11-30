@@ -6643,6 +6643,9 @@ footer #get-in-touch {
 #contact-form label {
   width: 100%; }
 #contact-form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 3.4rem; }
   @media (min-width: 768px) {
     #contact-form input {

@@ -6036,7 +6036,7 @@ nav {
     nav .btn-contact a,
     nav .btn-contact a:visited {
       background-color: #000;
-      padding: 4px 15px;
+      padding: 6px 15px;
       border-radius: 20px; }
       nav .btn-contact a:hover, nav .btn-contact a:active, nav .btn-contact a:focus,
       nav .btn-contact a:visited:hover,
@@ -6643,9 +6643,6 @@ footer #get-in-touch {
 #contact-form label {
   width: 100%; }
 #contact-form input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 3.4rem; }
   @media (min-width: 768px) {
     #contact-form input {
@@ -6655,6 +6652,9 @@ footer #get-in-touch {
   resize: vertical; }
 #contact-form input,
 #contact-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   box-shadow: none;
   width: 100%;
   background-color: transparent;

@@ -6674,7 +6674,7 @@ footer #get-in-touch {
     color: #FFC107; }
     #contact-form input:focus::placeholder,
     #contact-form textarea:focus::placeholder {
-      color: #adb5bd; }
+      color: #000; }
   #contact-form input:invalid,
   #contact-form textarea:invalid {
     outline: none;

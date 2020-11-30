@@ -27,6 +27,17 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+ $(window).scroll(function(){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - $("footer").height()) {
+            $('.contact').removeClass("reveal");
+        } else {
+            $('.contact').addClass("reveal");
+        }
+    });
+});
+
+
 var srDown = {
 	distance: '10%',
 	origin: 'top',

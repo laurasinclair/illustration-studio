@@ -2536,7 +2536,7 @@ nav a:visited,
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4,
+.mb-4, #contact-form .row,
 .my-4,
 #work .work-section {
   margin-bottom: 1.5rem !important; }
@@ -2613,7 +2613,7 @@ nav a:visited,
 .px-2 {
   padding-right: 0.5rem !important; }
 
-.pb-2,
+.pb-2, #contact-form .form-label,
 .py-2 {
   padding-bottom: 0.5rem !important; }
 
@@ -2655,7 +2655,7 @@ nav a:visited,
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
-.pl-4,
+.pl-4, .bd-left,
 .px-4 {
   padding-left: 1.5rem !important; }
 
@@ -4266,7 +4266,7 @@ nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-
 #work #submenu-md a:visited:hover,
 #work #submenu-md a:visited:active,
 #work #submenu-md a:visited:focus,
-#work #submenu-md a.active:visited {
+#work #submenu-md a.active:visited, #contact-form .form-label {
   font-weight: 1000 !important; }
 
 .font-italic {
@@ -5632,7 +5632,7 @@ nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-
 #work #submenu-md a:visited:hover,
 #work #submenu-md a:visited:active,
 #work #submenu-md a:visited:focus,
-#work #submenu-md a.active:visited {
+#work #submenu-md a.active:visited, #contact-form .form-label {
   font-weight: 1000 !important; }
 
 .font-italic {
@@ -5796,6 +5796,9 @@ html {
   background-image: url(/img/bg_stardust.png);
   background-color: #fff; }
 
+.bd-left {
+  border-left: 5px solid #000; }
+
 body {
   font-family: "Roboto Mono", Courier, monospace;
   color: #212529;
@@ -5830,7 +5833,7 @@ a:visited:focus, .tag.instagram:hover svg path, .tag.instagram:active svg path, 
 .tag:visited.instagram:hover svg path,
 .tag:visited.instagram:active svg path,
 .tag:visited.instagram:focus svg path, .reveal, #work #submenu-md a,
-#work #submenu-md a:visited, .overlay:hover div:first-of-type, .overlay:focus div:first-of-type, .overlay:active div:first-of-type {
+#work #submenu-md a:visited, .overlay:hover div:first-of-type, .overlay:focus div:first-of-type, .overlay:active div:first-of-type, #contact-form button svg {
   transition: all 0.2s ease-in-out; }
 
 #all {
@@ -6615,5 +6618,105 @@ footer #get-in-touch {
         #pagenotfound header #grapes img {
           max-width: 100%;
           transform: initial; } }
+
+#contact-form .form-label {
+  display: block; }
+#contact-form label {
+  width: 100%; }
+#contact-form input {
+  height: 3.8rem; }
+#contact-form textarea {
+  min-height: 6rem;
+  resize: vertical; }
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 3px solid #000;
+  border-radius: 6px;
+  color: #000;
+  padding: 1em; }
+  #contact-form input::selection,
+  #contact-form textarea::selection {
+    color: #fff;
+    background: #6562FF; }
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    outline: none;
+    background-color: #000;
+    border-color: #000;
+    color: #FFC107; }
+    #contact-form input:focus::placeholder,
+    #contact-form textarea:focus::placeholder {
+      color: #adb5bd; }
+  #contact-form input:invalid,
+  #contact-form textarea:invalid {
+    outline: none;
+    box-shadow: none;
+    border-color: red; }
+  #contact-form input::placeholder,
+  #contact-form textarea::placeholder {
+    color: #625341;
+    font-style: italic; }
+#contact-form button {
+  border: none;
+  background-color: #000;
+  color: #fff; }
+  #contact-form button svg {
+    width: 16px;
+    height: 11px;
+    margin-left: 3px; }
+  #contact-form button:focus, #contact-form button:hover, #contact-form button:active {
+    background-color: #000; }
+    #contact-form button:focus svg, #contact-form button:hover svg, #contact-form button:active svg {
+      transform: translate(5px, 0); }
+#contact-form ul.ks-cboxtags {
+  list-style: none; }
+  #contact-form ul.ks-cboxtags li {
+    display: inline-block; }
+    #contact-form ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+      border: 3px solid #000;
+      background-color: #000;
+      color: #fff;
+      transition: all 0.2s; }
+      #contact-form ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+        content: "";
+        background-image: url("/img/icon_check-1.svg");
+        transform: rotate(-360deg);
+        transition: transform 0.3s ease-in-out; }
+    #contact-form ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+      border: 2px solid #e9a1ff; }
+    #contact-form ul.ks-cboxtags li label {
+      display: inline-block;
+      background-color: none;
+      border: 3px solid #000 !important;
+      color: #000;
+      border-radius: 25px;
+      white-space: nowrap;
+      margin: 5px 0px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: all 0.2s;
+      padding: 8px 14px;
+      cursor: pointer; }
+      #contact-form ul.ks-cboxtags li label::before {
+        display: inline-block;
+        background-image: url("/img/icon_plus.svg");
+        padding: 2px 6px 2px 2px;
+        content: "";
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 14px;
+        height: 14px;
+        transition: transform 0.3s ease-in-out; }
+    #contact-form ul.ks-cboxtags li input[type="checkbox"] {
+      display: absolute;
+      position: absolute;
+      opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

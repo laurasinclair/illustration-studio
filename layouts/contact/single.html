@@ -1,5 +1,33 @@
 {{ define "main" }}
 
-	{{ .Content }}
+<div id="thank-you">
+	<header>
+		<div class="container-fluid">
+			<div class="row pb-3 pb-md-5">
+				<div class="col-12 col-md-5">
+					<h1 class="sr-down text-center">
+						Thank you!
+					</h1>
+					<p class="lead text-center">
+						I'll get back to you very soon.
+					</p>
+					<p class="text-center">
+						<a href="{{ .Site.BaseURL }}">Back to the home page</a>
+					</p>
+				</div>	
 
-{{ end }}        
+				<div id="totem" class="col-12 col-md-7 text-center py-3 py-md-5 sr-down">
+					<picture>
+						<source srcset="/img/totem_1.webp" type="image/webp">
+						<source srcset="/img/totem_1.png" type="image/png">
+						<img src="/img/totem_1.png" alt="{{ .Params.title }}" width="600">
+					</picture>
+				</div> <!-- /col -->
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</header>
+	<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
+	</div>
+</div>
+
+{{ end }}

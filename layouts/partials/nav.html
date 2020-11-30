@@ -6,7 +6,7 @@
 				<a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }} Studio</a>
 			</div>
 			
-			<div class="contact">
+			<div class="btn-contact">
 				{{ $current := . }}
 				{{ range .Site.Menus.main }}
 					{{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}

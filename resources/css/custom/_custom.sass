@@ -222,19 +222,23 @@ nav
 	@extend .bg_dark
 	width: 100%
 	margin-bottom: -1px // chrome fix: lines between divs
-	.contact
+	height: 4.5em
+	.btn-contact
 		position: fixed
 		z-index: 999
 		bottom: 1em
 		right: 50%
 		transform: translateX(50%)
 		width: max-content
-		opacity: 0
+		// opacity: 0
 		@include media-breakpoint-up(md)
-			opacity: 1
+			// opacity: 1
 			right: 3em
-			bottom: initial
+			bottom: unset
 			transform: initial
+			// top: -0.3em
+			// bottom: initial
+			// transform: initial
 		a,
 		a:visited
 			background-color: $dark
@@ -408,6 +412,10 @@ nav
 	opacity: 1 !important
 	@extend .transition-2s
 
+.hide
+	opacity: 0 !important
+	@extend .transition-2s
+
 .home
 	header
 		@extend .bg_dark
@@ -429,7 +437,7 @@ nav
 				@extend .mb-5
 		#grapes
 			overflow: hidden
-			z-index: 999
+			z-index: 888
 			margin-bottom: -135px
 			@include media-breakpoint-up(lg)
 				margin-bottom: -95px
@@ -474,7 +482,7 @@ nav
 	border: 2px solid $primary
 	border-radius: 50%
 	padding: .25em
-	z-index: 99999
+	z-index: 999
 	@extend .no-outline
 	@include media-breakpoint-up(sm)
 		margin: 0 3em 3em 0

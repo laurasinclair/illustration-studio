@@ -5842,7 +5842,7 @@ a:visited:active,
 a:visited:focus, .tag.instagram:hover svg path, .tag.instagram:active svg path, .tag.instagram:focus svg path,
 .tag:visited.instagram:hover svg path,
 .tag:visited.instagram:active svg path,
-.tag:visited.instagram:focus svg path, .reveal, #work #submenu-md a,
+.tag:visited.instagram:focus svg path, .reveal, .hide, #work #submenu-md a,
 #work #submenu-md a:visited, .overlay:hover div:first-of-type, .overlay:focus div:first-of-type, .overlay:active div:first-of-type, #contact-form button svg {
   transition: all 0.2s ease-in-out; }
 
@@ -6019,30 +6019,29 @@ ul.line li::before {
 
 nav {
   width: 100%;
-  margin-bottom: -1px; }
-  nav .contact {
+  margin-bottom: -1px;
+  height: 4.5em; }
+  nav .btn-contact {
     position: fixed;
     z-index: 999;
     bottom: 1em;
     right: 50%;
     transform: translateX(50%);
-    width: max-content;
-    opacity: 0; }
+    width: max-content; }
     @media (min-width: 768px) {
-      nav .contact {
-        opacity: 1;
+      nav .btn-contact {
         right: 3em;
-        bottom: initial;
+        bottom: unset;
         transform: initial; } }
-    nav .contact a,
-    nav .contact a:visited {
+    nav .btn-contact a,
+    nav .btn-contact a:visited {
       background-color: #000;
       padding: 4px 15px;
       border-radius: 20px; }
-      nav .contact a:hover, nav .contact a:active, nav .contact a:focus,
-      nav .contact a:visited:hover,
-      nav .contact a:visited:active,
-      nav .contact a:visited:focus {
+      nav .btn-contact a:hover, nav .btn-contact a:active, nav .btn-contact a:focus,
+      nav .btn-contact a:visited:hover,
+      nav .btn-contact a:visited:active,
+      nav .btn-contact a:visited:focus {
         background-color: #FFC107;
         color: #000; }
   nav a,
@@ -6173,6 +6172,9 @@ nav {
 .reveal {
   opacity: 1 !important; }
 
+.hide {
+  opacity: 0 !important; }
+
 .home header {
   margin-bottom: -1px;
   padding-top: 60px; }
@@ -6185,7 +6187,7 @@ nav {
       margin-bottom: 3em; } }
   .home header #grapes {
     overflow: hidden;
-    z-index: 999;
+    z-index: 888;
     margin-bottom: -135px; }
     @media (min-width: 992px) {
       .home header #grapes {
@@ -6232,7 +6234,7 @@ nav {
   border: 2px solid #6562FF;
   border-radius: 50%;
   padding: 0.25em;
-  z-index: 99999; }
+  z-index: 999; }
   @media (min-width: 576px) {
     #top-btn,
     #top-btn:active {

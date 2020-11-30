@@ -17,22 +17,20 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $(window).scroll(function() {
-	if ($(document).scrollTop() > 200) {
-	  $(".contact").addClass("reveal");
-	} else {
-	  $(".contact").removeClass("reveal");
-	}
-  });
-});
+// $(document).ready(function() {
+//   $(window).scroll(function() {
+// 	if ($(document).scrollTop() > 1) {
+// 	  $(".btn-contact").addClass("hide");
+// 	} else {
+// 	  $(".btn-contact").removeClass("hide");
+// 	}
+//   });
+// });
 
 $(document).ready(function() {
  $(window).scroll(function(){
-        if($(window).scrollTop() + $(window).height() > $(document).height() - $("footer").height()) {
-            $('.contact').removeClass("reveal");
-        } else {
-            $('.contact').addClass("reveal");
+        if($(window).scrollTop() + $(window).height() > $(document).height() - ($("footer").height()) + 550) {
+            $('.btn-contact').addClass("hide");
         }
     });
 });

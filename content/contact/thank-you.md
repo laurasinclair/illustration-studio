@@ -1,5 +1,5 @@
 ---
-title: thank you!
+title: Thank you for getting in touch!
 slug: thank-you
 
 ---

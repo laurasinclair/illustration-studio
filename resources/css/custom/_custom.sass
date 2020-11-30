@@ -924,12 +924,15 @@ footer
 	label
 		width: 100%
 	input
-		height: 3.8rem
+		height: 3.4rem
+		@include media-breakpoint-up(md)
+			height: 3.8rem
 	textarea
 		min-height: 6rem
 		resize: vertical
 	input,
 	textarea
+		box-shadow: none
 		width: 100%
 		background-color: transparent
 		border: 3px solid $dark

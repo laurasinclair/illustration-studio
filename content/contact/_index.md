@@ -1,5 +1,5 @@
 ---
-title: contact
+title: Let's work together!
 slug: contact
 
 ---

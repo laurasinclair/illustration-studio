@@ -31,7 +31,9 @@ $(document).ready(function() {
  $(window).scroll(function(){
         if($(window).scrollTop() + $(window).height() > $(document).height() - ($("footer").height()) + 550) {
             $('.btn-contact').addClass("hide");
-        }
+        } else {
+            $('.btn-contact').removeClass("hide");
+		}
     });
 });
 

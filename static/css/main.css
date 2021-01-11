@@ -1241,7 +1241,7 @@ button#sidebar:focus {
 .bg-white {
   background-color: #fff !important; }
 
-.bg-transparent {
+.bg-transparent, .btn-secondary-light {
   background-color: transparent !important; }
 
 .border {
@@ -2512,7 +2512,8 @@ nav a:visited, .tag,
   margin-top: 1rem !important; }
 
 .mr-3, .img-round,
-.mx-3 {
+.mx-3,
+.work ul.work-list li {
   margin-right: 1rem !important; }
 
 .mb-3, .home header h1, #pagenotfound header h1,
@@ -2521,7 +2522,8 @@ nav a:visited, .tag,
   margin-bottom: 1rem !important; }
 
 .ml-3,
-.mx-3 {
+.mx-3,
+.work ul.work-list li {
   margin-left: 1rem !important; }
 
 .m-4 {
@@ -2550,7 +2552,8 @@ nav a:visited,
   margin: 3rem !important; }
 
 .mt-5,
-.my-5 {
+.my-5,
+.work ul.work-list {
   margin-top: 3rem !important; }
 
 .mr-5,
@@ -2559,8 +2562,9 @@ nav a:visited,
 
 .mb-5, .home header h1 + a, .home header h1 + a:visited, #pagenotfound header h1 + a, #pagenotfound header h1 + a:visited,
 #thank-you header h1 + a,
-#thank-you header h1 + a:visited, .contact header h1 + a, .contact header h1 + a:visited,
-.my-5 {
+#thank-you header h1 + a:visited, .contact header h1 + a, .contact header h1 + a:visited, .w-project,
+.my-5,
+.work ul.work-list {
   margin-bottom: 3rem !important; }
 
 .ml-5,
@@ -2784,7 +2788,8 @@ nav a:visited,
   margin-top: auto !important; }
 
 .mr-auto,
-.mx-auto {
+.mx-auto,
+.work ul.work-list {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -2792,7 +2797,8 @@ nav a:visited,
   margin-bottom: auto !important; }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+.work ul.work-list {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -4258,7 +4264,7 @@ nav a:visited,
 
 .font-weight-bold, a,
 a:visited, nav a,
-nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-transparent, .tag_primary, .tag_dark, .tag_secondary, .overlay div:first-of-type {
+nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-secondary-light, .btn-disabled, .btn-transparent, .tag_primary, .tag_dark, .tag_secondary, .overlay div:first-of-type {
   font-weight: 600 !important; }
 
 .font-weight-bolder, .label, #work #submenu a:hover, #work #submenu a:active, #work #submenu a:focus, #work #submenu a.active,
@@ -4275,7 +4281,7 @@ nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-
 .font-italic {
   font-style: italic !important; }
 
-.text-white, #sidebar, .btn-primary-dark, .btn-transparent, .home header, .home header h1 + a, .home header h1 + a:visited, #pagenotfound header,
+.text-white, #sidebar, .btn-primary-dark, .btn-secondary-light, .btn-transparent, .home header, .home header h1 + a, .home header h1 + a:visited, #pagenotfound header,
 #thank-you header, #pagenotfound header h1 + a, #pagenotfound header h1 + a:visited,
 #thank-you header h1 + a,
 #thank-you header h1 + a:visited, .contact header, .contact header h1 + a, .contact header h1 + a:visited {
@@ -5627,7 +5633,7 @@ nav a:visited, .tag,
 
 .font-weight-bold, a,
 a:visited, nav a,
-nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-transparent, .tag_primary, .tag_dark, .tag_secondary, .overlay div:first-of-type {
+nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-secondary-light, .btn-disabled, .btn-transparent, .tag_primary, .tag_dark, .tag_secondary, .overlay div:first-of-type {
   font-weight: 600 !important; }
 
 .font-weight-bolder, .label, #work #submenu a:hover, #work #submenu a:active, #work #submenu a:focus, #work #submenu a.active,
@@ -5644,7 +5650,7 @@ nav a:visited, .btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-
 .font-italic {
   font-style: italic !important; }
 
-.text-white, #sidebar, .btn-primary-dark, .btn-transparent, .home header, .home header h1 + a, .home header h1 + a:visited, #pagenotfound header,
+.text-white, #sidebar, .btn-primary-dark, .btn-secondary-light, .btn-transparent, .home header, .home header h1 + a, .home header h1 + a:visited, #pagenotfound header,
 #thank-you header, #pagenotfound header h1 + a, #pagenotfound header h1 + a:visited,
 #thank-you header h1 + a,
 #thank-you header h1 + a:visited, .contact header, .contact header h1 + a, .contact header h1 + a:visited {
@@ -5798,7 +5804,7 @@ html {
   outline-offset: 2px; }
 
 .bg_dark, nav, .home header, #pagenotfound header,
-#thank-you header, .contact header {
+#thank-you header, .contact header, .work header {
   background-image: url(/img/bg_asfalt-light.png);
   background-color: #000; }
 
@@ -5818,7 +5824,7 @@ body {
 .no-outline, #sidebar #logo, nav a:hover, nav a:active, nav a:focus,
 nav a:visited:hover,
 nav a:visited:active,
-nav a:visited:focus, .btn-primary-dark:hover, .btn-primary-dark:active, .btn-primary-dark:focus, .btn-primary-light:hover, .btn-primary-light:active, .btn-primary-light:focus, .btn-disabled:hover, .btn-disabled:active, .btn-disabled:focus, .tag:hover, .tag:active, .tag:focus,
+nav a:visited:focus, .btn-primary-dark:hover, .btn-primary-dark:active, .btn-primary-dark:focus, .btn-primary-light:hover, .btn-primary-light:active, .btn-primary-light:focus, .btn-secondary-light:hover, .btn-secondary-light:active, .btn-secondary-light:focus, .btn-disabled:hover, .btn-disabled:active, .btn-disabled:focus, .tag:hover, .tag:active, .tag:focus,
 .tag:visited:hover,
 .tag:visited:active,
 .tag:visited:focus, #top-btn,
@@ -5977,6 +5983,18 @@ h1 {
   h2 {
     font-size: 2.6rem; } }
 
+h3 {
+  font-size: 1.4rem; }
+  @media (min-width: 576px) {
+    h3 {
+      font-size: 1.6rem; } }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.8rem; } }
+  @media (min-width: 992px) {
+    h3 {
+      font-size: 2rem; } }
+
 p,
 li {
   font-size: 1rem; }
@@ -6048,7 +6066,7 @@ nav {
   nav a:visited {
     color: #fff; }
 
-.btn, .btn-primary-dark, .btn-primary-light, .btn-disabled, .btn-transparent {
+.btn, .btn-primary-dark, .btn-primary-light, .btn-secondary-light, .btn-disabled, .btn-transparent {
   border-radius: 4px;
   padding: 13px 24px 14px;
   display: inline-block;
@@ -6076,6 +6094,13 @@ nav {
       fill: #f1f6f9; }
       .btn-primary-light:hover svg path, .btn-primary-light:active svg path, .btn-primary-light:focus svg path {
         fill: #f1f6f9; }
+
+.btn-secondary-light {
+  border: 2px solid #fff; }
+  .btn-secondary-light svg path {
+    fill: #fff; }
+  .btn-secondary-light:hover, .btn-secondary-light:active, .btn-secondary-light:focus {
+    background-color: #212529 !important; }
 
 .btn-disabled {
   background-color: #e9ecef;
@@ -6779,5 +6804,38 @@ footer #get-in-touch {
 
 .thank-you #get-in-touch {
   display: none; }
+
+.work header {
+  height: 80vh;
+  color: #fff; }
+  .work header .block-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    padding-top: 240px;
+    padding-bottom: 72px; }
+.work ul.work-list {
+  display: block;
+  text-align: center;
+  font-size: 2.5rem; }
+  .work ul.work-list li {
+    display: inline-block; }
+    .work ul.work-list li a {
+      border-bottom: 2px solid; }
+    .work ul.work-list li:first-of-type a {
+      border-bottom: none;
+      color: #fff; }
+
+.w-project:nth-of-type(even) {
+  margin-top: -6rem; }
+.w-project:first-of-type {
+  margin-top: 0; }
+
+#breadcrumbs a {
+  font-weight: 900 !important; }
+  #breadcrumbs a:first-of-type {
+    font-weight: lighter !important;
+    color: #ffffff8c; }
 
 /*# sourceMappingURL=main.css.map */

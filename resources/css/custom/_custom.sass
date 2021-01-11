@@ -11,6 +11,10 @@ html
 	color: $dark
 	background: $secondary
 
+$scale: 0.8
+@include media-breakpoint-up(lg)
+	$scale: 1
+
 *
 	&:focus
 		outline: 1px dotted $dark
@@ -165,14 +169,14 @@ h2
 	@include media-breakpoint-up(xl)
 		font-size: $font-size-base * 2.6
 
-// h3
-// 	font-size: 1.3rem
-// 	// @include media-breakpoint-up(sm)
-// 	// 	// font-size: 1.25rem
-// 	// @include media-breakpoint-up(md)
-// 	// 	// font-size: 1.25rem
-// 	// @include media-breakpoint-up(lg)
-// 	// 	// font-size: 1.25rem
+h3
+	font-size: $font-size-base * 1.4
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.6
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2
 
 p,
 li
@@ -301,6 +305,19 @@ nav
 			fill: $light
 			path
 				fill: $light
+
+.btn-secondary-light
+	@extend .btn
+	@extend .bg-transparent
+	@extend .text-white
+	border: 2px solid $white
+	svg path
+			fill: $white
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: $gray-900 !important
 
 .btn-disabled
 	@extend .btn
@@ -1084,3 +1101,47 @@ footer
 .thank-you
 	#get-in-touch
 		display: none
+
+.work
+	header
+		@extend .bg_dark
+		height: 80vh
+		color: $white
+		.block-hero
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			position: relative
+
+			padding-top: 300px * $scale
+			padding-bottom: 90px * $scale
+	ul.work-list
+		@extend .my-5
+		@extend .mx-auto
+		display: block
+		text-align: center
+		font-size: 2.5rem
+		li
+			@extend .mx-3
+			display: inline-block
+			a
+				border-bottom: 2px solid
+			&:first-of-type
+				a
+					border-bottom: none
+					color: $white
+
+.w-project
+	// margin-top: 5rem
+	@extend .mb-5
+	&:nth-of-type(even)
+		margin-top: -6rem
+	&:first-of-type
+		margin-top: 0
+
+#breadcrumbs
+	a
+		font-weight: 900 !important
+		&:first-of-type
+			font-weight: lighter !important
+			color: #ffffff8c

@@ -5,13 +5,9 @@ pluralizeListTitles = "false"
 
 [menu]
   [[menu.main]]
-    name = "Work"
-    url = "/work"
-    weight = 1
-  [[menu.main]]
     name = "Get in touch 👋"
-    url = "#get-in-touch"
-    weight = 2
+    url = "/get-in-touch"
+    weight = 1
 
 [params]
   email = "hello@dirtylemon.studio"

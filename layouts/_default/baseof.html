@@ -3,7 +3,7 @@
 	{{ partial "head.html" . }}
 
 {{ if isset .Params "slug" }}
-<body class="{{ index .Params "slug" }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
+<body class="{{ with .Section }}{{ . }}{{ end }} {{ index .Params "slug" }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
 {{else}}
 <body class="{{ with .Section }}{{ . }}{{ end }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
 {{ end }}
@@ -18,7 +18,7 @@
 		<div id="sidebar">
 			<div>
 				<p id="logo">
-					<a href="#top" class="text-white">{{ .Site.Title }}</a>
+					<a href="{{ .Site.BaseURL }}" class="text-white">{{ .Site.Title }}</a>
 				</p>
 				<p class="">
 					<img src="img/001-lemon.svg" alt="" width="30">

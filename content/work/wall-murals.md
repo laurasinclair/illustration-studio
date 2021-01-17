@@ -2,9 +2,14 @@
 title: "Wall murals"
 draft: false
 slug: "wall-murals"
-thumbnail: "/img/work_mural-003.jpg"
-thumbnail_description: "..."
 weight: "3"
+
+thumbnails: [
+    big: "thumbnail_mural.jpg", 
+    small: "thumbnail_mural-s.jpg"
+]
+
+headerh1: "Artwork that helps your brand<br> make a killer first impression."
 ---
 
 {{< row >}}

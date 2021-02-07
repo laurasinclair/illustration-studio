@@ -34,6 +34,7 @@ $scale: 0.7
 
 body
 	@extend .bg_white
+	// background-color: blue !important
 	@extend .font-weight-normal
 	font-family: $font-primary
 	color: $gray-900
@@ -677,7 +678,20 @@ nav
 		@extend .my-4
 		&:last-of-type
 			@extend .mb-0
-		
+	
+	.w-projects-list
+		&:hover,
+		&:focus,
+		&:active
+			.w-project:hover,
+			.w-project:focus,
+			.w-project:active
+				@extend .transition-2s
+				opacity: 1
+			.w-project:not(:hover)
+				@extend .transition-2s
+				opacity: 0.5
+
 #lemon
 	display: flex
 	justify-content: center
@@ -1114,6 +1128,12 @@ footer
 				height: 70vh
 			align-items: center
 			padding-bottom: 50px
+.illustration,
+.paper-arwork,
+.wall-murals,
+.other
+	footer
+		@extend .bg_dark
 
 .w-project
 	// margin-top: 5rem
@@ -1127,18 +1147,16 @@ footer
 		padding: 20px 35px 0 0
 		@include media-breakpoint-up(xl)
 			padding: 35px 35px 0 0
-		// 	padding: 35px 35px 35px 0
 		position: absolute
-		// padding: 20px 0 0 0
-		// @include media-breakpoint-up(sm)
-		// 	padding: 1px 35px 0 0
-		// @include media-breakpoint-up(lg)
-		// 	position: absolute
-		// 	padding: 35px 35px 35px 0
 		left: 0
 		bottom: 0
 		color: $white
 		background-color: $dark 
+		&:hover,
+		&:focus,
+		&:active
+			a
+				color: $secondary !important
 	@extend .move
 
 #breadcrumbs
@@ -1148,11 +1166,13 @@ footer
 			font-weight: lighter !important
 			color: #ffffff8c
 
-.grid-1
+.grid-1,
+.grid-2
 	display: grid
 	place-items: center
 
-.full-area-1
+.full-area-1,
+.full-area-2
 	grid-area: 1/1
 
 .speech
@@ -1163,26 +1183,31 @@ footer
 .speech-1
 	@extend .speech
 	@include media-breakpoint-up(sm)
-		margin-right: 150px
+		// margin-right: 150px
 	p
 		transform: rotate(3deg)
 		color: $white
 		padding-top: 20px
+	@include media-breakpoint-up(lg)
+		transform: scale(130%)
 
 .speech-2
 	@extend .speech
 	max-width: 510px
 	@include media-breakpoint-up(sm)
-		margin-left: 60px
+		// margin-left: 60px
 	p
 		max-width: 230px
 		transform: rotate(-3deg) translateY(5px)
 		span
 			@extend .font-weight-bold
-			@media screen and (min-width: 396px)
-				font-size: 1.3em
+			font-size: 1.3em
 			display: block
 			margin-left: 10px
+	@include media-breakpoint-up(sm)
+		transform: scale(110%)
+	@include media-breakpoint-up(lg)
+		transform: scale(130%)
 
 .related
 	.w-project
@@ -1350,3 +1375,90 @@ footer
 				background-color: lighten($dark, 20%)
 		.lead
 			margin: 0 !important
+
+.gallery-grid-container
+	display: flex
+	@include media-breakpoint-up(sm)
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		// grid-template-rows: 100fr
+	grid-gap: 2em
+	@include media-breakpoint-up(md)
+		grid-gap: 3em
+	
+	.gallery-grid-item
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	.gallery-col-1
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 1
+
+	.gallery-col-2
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 2
+
+	.gallery-col-3
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 3
+
+	.gallery-col-4
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 4
+
+	.gallery-col-5
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 5
+
+	.gallery-col-6
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 6
+
+	.gallery-col-7
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 7
+
+	.gallery-col-8
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 8
+
+	.gallery-col-9
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 9
+
+	.gallery-col-10
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 10
+
+	.gallery-col-11
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 11
+
+	.gallery-col-12
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 12
+
+	.gallery-row-1
+		grid-row: span 1
+
+	.gallery-row-2
+		grid-row: span 2
+
+	.gallery-row-3
+		grid-row: span 3
+
+	.gallery-row-3
+		grid-row: span 4

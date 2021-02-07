@@ -1,0 +1,1 @@
+hugo server -w --bind "0.0.0.0" --baseUrl=192.168.0.200

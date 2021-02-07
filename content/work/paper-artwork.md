@@ -13,9 +13,9 @@ weight: "1"
 header: {
 	h1: "Artwork that helps your brand\n make a killer first impression.",
 	img: [ 
-		"paper-01.jpg", 
-		"paper-02.jpg", 
-		"paper-03.jpg"
+		"hero_paper-01.jpg", 
+		"hero_paper-02.jpg", 
+		"hero_paper-03.jpg"
 	]
 }
 
@@ -26,7 +26,7 @@ block_1: {
 block_img: "work_paper-totem.jpg"
 
 block_services: {
-	h2: "We can do so much.",
+	h2: "blah blah bite.",
 	points: [ 
 		{title: "Online assets", img: "work_paper_icon-paper-thing.svg"},
 		{title: "Set Design", img: "work_paper_icon-setdesign.svg"},
@@ -44,12 +44,15 @@ block_double: {
 	]
 }
 
+
 block_selected: {
 	h2: "Selected work",
 	img: [ 
-		"paper-01.jpg", 
-		"work_paper-001.jpg", 
-		"work_paper-002.jpg", 
+		{class: "gallery-col-4", path: "work_paper-totem_s1.jpg"},
+		{class: "gallery-col-4", path: "work_paper-totem_s2.jpg"},
+		{class: "gallery-col-4", path: "work_paper-totem_s3.jpg"},
+		{class: "gallery-col-12 gallery-row-1", path: "work_paper-001.jpg"},
+		{class: "gallery-col-6 gallery-row-2", path: "work_paper-004.jpg"}
 	]
 }
 

@@ -1,0 +1,24 @@
+{
+  "name": "gulp-test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurasinclair/2020-studio.git"
+  },
+  "author": "laura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurasinclair/2020-studio/issues"
+  },
+  "homepage": "https://github.com/laurasinclair/2020-studio#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "watch-sass": "node-sass -w resources/css/main.scss -o static/css/"
+  }
+}

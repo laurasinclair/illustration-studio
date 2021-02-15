@@ -9,7 +9,7 @@
 
 $(document).ready(function() {
   $(window).scroll(function() {
-	if ($(document).scrollTop() > 200) {
+	if ($(document).scrollTop() > 250) {
 	  $("#logo").addClass("reveal");
 	} else {
 	  $("#logo").removeClass("reveal");

@@ -6265,9 +6265,12 @@ footer #get-in-touch {
   .tabs > div a:visited {
     padding: 1.2em;
     display: inline-block;
-    font-size: 1.2em;
     font-weight: 300 !important;
     color: #999999; }
+    @media (min-width: 768px) {
+      .tabs > div a,
+      .tabs > div a:visited {
+        font-size: 1.2em; } }
     @media (min-width: 768px) {
       .tabs > div a,
       .tabs > div a:visited {

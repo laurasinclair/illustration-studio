@@ -1520,6 +1520,8 @@ footer
 	> div
 		a,
 		a:visited
+			@include media-breakpoint-up(md)
+				font-size: 1.2em
 			padding: 1.2em
 			display: inline-block
 			@include media-breakpoint-up(md)
@@ -1527,7 +1529,6 @@ footer
 				display: block
 			@include media-breakpoint-up(lg)
 				padding: 1.5em 2.5em
-			font-size: 1.2em
 			font-weight: 300 !important
 			color: darken($white, 40%)
 		&:hover,

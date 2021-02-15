@@ -3,11 +3,27 @@ languageCode = "en-us"
 title = "Dirty Lemon"
 pluralizeListTitles = "false"
 
-[menu]
+[menu] 
+  [[menu.main-1]]
+    name = "Illustration"
+    url = "/illustration"
+    weight = 1
+  [[menu.main-1]]
+    name = "Paper artwork"
+    url = "/paper-artwork"
+    weight = 2
+  [[menu.main-1]]
+    name = "Murals"
+    url = "/murals"
+    weight = 3 
+  [[menu.main-1]]
+    name = "Everything else"
+    url = "/everything-else"
+    weight = 4
   [[menu.main]]
     name = "Get in touch 👋"
     url = "/get-in-touch"
-    weight = 1
+    weight = 5
 
 [params]
   email = "hello@dirtylemon.studio"

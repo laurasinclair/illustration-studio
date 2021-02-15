@@ -35,7 +35,7 @@ $scale: 0.7
 body
 	@extend .bg_white
 	// background-color: blue !important
-	@extend .font-weight-normal
+	@extend .font-weight-light
 	font-family: $font-primary
 	color: $gray-900
 	position: relative
@@ -81,8 +81,14 @@ body
 		align-items: center
 		top: 0
 		position: sticky
-	#logo
+	#logo,
+	.icon-lemon
 		opacity: 0
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+	#logo
 		font-size: $font-size-base * 1.2
 		// font-size: 1em
 		@extend .font-weight-light
@@ -136,6 +142,7 @@ img
 	max-width: 100%
 	max-height: 100%
 	display: inline-block
+	height: auto
 
 hr
 	border-top: none
@@ -1095,25 +1102,11 @@ footer
 			&+a:visited
 				@extend .text-white
 				@extend .mb-5
-		#grapes
-			overflow: hidden
-			z-index: 9
-			margin-bottom: -135px
-			@include media-breakpoint-up(lg)
-				margin-bottom: -95px
-			img
-				max-width: 120%
-				transform: translateX(-10%)
-				@include media-breakpoint-up(md)
-					max-width: 100%
-					transform: initial
 	input,
 	textarea
 		background-color: $white
 	button
 		background-color: $primary !important
-
-.thank-you
 	#get-in-touch
 		display: none
 
@@ -1121,19 +1114,24 @@ footer
 	header
 		@extend .bg_dark
 		color: $white
-		> div
+		.hero
 			display: flex
-			padding: 3rem 0
-			@include media-breakpoint-up(sm)
-				height: 70vh
+			height: 40vh
+			@include media-breakpoint-up(md)
+				height: 60vh
+				padding: 2.5rem 0
 			align-items: center
 			padding-bottom: 50px
+
 .illustration,
-.paper-arwork,
+.paper-artwork,
 .wall-murals,
-.other
+.everything-else
 	footer
 		@extend .bg_dark
+
+.thank-you
+	background-color: $secondary
 
 .w-project
 	// margin-top: 5rem
@@ -1210,6 +1208,17 @@ footer
 		transform: scale(130%)
 
 .related
+	&:hover,
+	&:focus,
+	&:active
+		.w-project:hover,
+		.w-project:focus,
+		.w-project:active
+			@extend .transition-2s
+			opacity: 1
+		.w-project:not(:hover)
+			@extend .transition-2s
+			opacity: 0.5
 	.w-project
 		@extend .mb-5
 		&:nth-of-type(even)
@@ -1354,18 +1363,18 @@ footer
 	#menu-sm-cat
 		display: flex
 		flex-direction: column
+		justify-content: space-around
 		margin: 0
-		padding: 0
-		padding-top: 50px
+		padding: 2em 1.5em
 		-webkit-font-smoothing: antialiased
 		p, a
 			font-weight: 600
-			padding-top: 8px
-			padding-bottom: 8px
 		.nav-link
 			margin: 0 !important
-			padding-top: 8px
-			padding-bottom: 8px
+			padding-top: 1.1em
+			padding-bottom: 1.1em
+			&:first-of-type
+				color: $secondary
 			span
 				@extend .px-4
 			&:hover,
@@ -1376,12 +1385,23 @@ footer
 		.lead
 			margin: 0 !important
 
+.selected-work
+	margin-bottom: initial
+	h2
+		@include media-breakpoint-up(md)
+			margin-bottom: 2.5em
+			display: block
+
 .gallery-grid-container
 	display: flex
+	padding-left: 1.5em
+	padding-right: 1.5em
 	@include media-breakpoint-up(sm)
 		display: grid
 		grid-template-columns: repeat(12, 1fr)
 		// grid-template-rows: 100fr
+		padding-left: initial
+		padding-right: initial
 	grid-gap: 2em
 	@include media-breakpoint-up(md)
 		grid-gap: 3em
@@ -1390,6 +1410,17 @@ footer
 		width: 100%
 		height: 100%
 		object-fit: cover
+		@extend .text-center
+		&.w-md-50,
+		&.w-md-75
+			@extend .mx-auto
+		&.pt-md-lots
+			@include media-breakpoint-up(md)
+				padding-top: 10em !important
+		&.vertical-align
+			display: flex
+			align-items: center
+			justify-content: center
 
 	.gallery-col-1
 		grid-column: span 12
@@ -1462,3 +1493,59 @@ footer
 
 	.gallery-row-3
 		grid-row: span 4
+
+.tabs
+	width: 100vw
+	white-space: nowrap
+	overflow: auto !important
+	-webkit-overflow-scrolling: touch
+	-ms-overflow-style: -ms-autohiding-scrollbar
+	padding: 0 !important
+	margin: 0
+	z-index: 0
+	display: flex
+	white-space: nowrap !important
+	overflow: auto !important
+	-webkit-overflow-scrolling: touch
+	-ms-overflow-style: -ms-autohiding-scrollbar
+	&::-webkit-scrollbar 
+		display: none
+
+	@include media-breakpoint-up(md)
+		display: flex
+		justify-content: space-around
+		max-width: 1400px
+		margin: 0 auto
+
+	> div
+		a,
+		a:visited
+			padding: 1.2em
+			display: inline-block
+			@include media-breakpoint-up(md)
+				padding: 1.2em 1.5em
+				display: block
+			@include media-breakpoint-up(lg)
+				padding: 1.5em 2.5em
+			font-size: 1.2em
+			font-weight: 300 !important
+			color: darken($white, 40%)
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+			a,
+			a:visited
+				@extend .no-outline
+				color: $white
+				font-weight: 1000 !important
+		&.active
+			box-shadow: 0px -5px 0 0 $primary inset
+			a,
+			a:visited
+				font-weight: 1000 !important
+				color: $primary
+				&:hover,
+				&:active,
+				&:focus
+					color: $primary !important

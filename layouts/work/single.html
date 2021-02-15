@@ -1,30 +1,44 @@
 {{ define "main" }}
 
 <header class="mt-O pt-0">
-	<div class="container">
+	<div class="container hero">
 		<h2 class="text-center mx-auto">{{ (replace .Params.header.h1 "\n" "<br>") | safeHTML }}</h2>
+	</div> <!-- /container -->
+
+	<div class="tabs">
+		{{ $url := .URL }}
+		{{ $pages := where .Site.RegularPages "Section" "work" }}
+		{{ range $pages }}
+		<div {{ if eq $url .URL }}class="active"{{ end }}>
+			<a href="{{.Permalink}}">{{ .Title }}</a>
+		</div>
+		{{ end }}
 	</div>
 </header>
 
+{{ if isset .Params "hero_img" }}
 <div class="mt-O pt-0 mb-3">
 	<div class="row no-gutters">
-		{{ with .Params.header }}
-		<div class="col-12 col-sm-8 col-md-6">
-			<img src="/img/{{ index .img 0 }}" alt="{{ .Site.Title }} | {{ .Page.Title }}">
+		<div class="col-12 col-sm-7 col-md-5">
+			<img src="/img/work/{{ index .Params.hero_img 0 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
 		</div> <!-- /col -->
-		<div class="col-sm-4 col-md-3 d-none d-sm-block">
-			<img src="/img/{{ index .img 1 }}" alt="{{ .Site.Title }} | {{ .Page.Title }}">
+		<div class="col-sm-5 col-md-4 d-none d-sm-block">
+			<img src="/img/work/{{ index .Params.hero_img 1 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
 		</div> <!-- /col -->
 		<div class="col col-md-3 d-none d-md-block">
-			<img src="/img/{{ index .img 2 }}" alt="{{ .Site.Title }} | {{ .Page.Title }}">
+			<img src="/img/work/{{ index .Params.hero_img 2 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
 		</div> <!-- /col -->
-		{{ end }}
 	</div> <!-- /row -->
 </div>
+{{ else }}
+<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
+</div>
+{{ end }}
 
-<section>
+{{ if isset .Params "block_marketing" }}
+<section class="pb-2">
 	<div class="container">
-		<h3 class="text-center my-5">{{ (replace .Params.block_1.h2 "\n" "<br>") | safeHTML }}</h3>
+		<h3 class="text-center my-5">{{ (replace .Params.block_marketing.h3 "\n" "<br>") | safeHTML }}</h3>
 
 		<div class="row mb-5">
 			<div class="col-12 col-sm-11 col-md-9 col-lg-8 col-xl-7 mx-auto d-flex flex-column">
@@ -43,7 +57,7 @@
 					</div>
 					<p class="grid-2 full-area-2">
 						But... <br>
-						<span>Why should I use handmade artwork for my brand?</span>
+						<span>{{ (replace .Params.block_marketing.question "\n" "<br>") | safeHTML }}</span>
 					</p>
 				</div>
 			</div> <!-- /col -->
@@ -52,88 +66,105 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-5">
-				<img src="/img/icon_blobbycircle.svg" alt="icon" class="mb-3" width="20">
-				<h4>Stand out!</h4>
-				<p>It's a unique and personalized way to captivate your customers' interests, and&nbsp;grab their attention.</p>
+			{{ range .Params.block_marketing.answers }}
+			
+			<div class="col-12 col-sm-6 col-md-4 mb-3">
+				<img src="/img/{{ .icon }}" alt="{{ .h4 }}" class="mb-3" width="20">
+				<h4>{{ .h4 }}</h4>
+				<p>{{ (replace .text "&nbsp;" "&nbsp;") | safeHTML }}</p>
 			</div> <!-- /col -->
-
-			<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-5">
-				<img src="/img/icon_square-2.svg" alt="icon" class="mb-3" width="23">
-				<h4>Be remembered!</h4>
-				<p>A warm and personal touch is&nbsp;key to being remembered by consumers or potential clients.</p>
-			</div> <!-- /col -->
-
-			<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-5">
-				<img src="/img/icon_triangle.svg" alt="icon" class="mb-3" width="19">
-				<h4>Make people smile!</h4>
-				<p>Connect with your customers’ emotions. Help people decide with their hearts.</p>
-			</div> <!-- /col -->
+			{{ end }}
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>
+{{ end }}
 
+{{ if isset .Params "comingsoon" }}
+	<div class="container py-5 my-5">
+		<p class="text-center">{{ .Params.comingsoon.title }}</p>
+	</div> <!-- /container -->
+{{ end }}
+
+{{ if isset .Params "block_img" }}
 <section class="container">
 	<div class="row">
-		<div class="col-12">
-			<img src="/img/{{ .Params.block_img }}" alt="{{ .Site.Title }} | {{ .Page.Title }}">
+		<div class="col-12 text-center">
+			<img src="/img/work/{{ .Params.block_img }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
 		</div> <!-- /col -->
 	</div> <!-- /row -->
 </section> <!-- /container -->
+{{ end }}
 
+{{ if isset .Params "block_services" }}
 <section class="container">
 	<div class="row">
-		<div class="col-12 col-lg-10 col-xl-8 mx-auto d-flex align-items-center justify-content-center flex-column">
-			<h3 class="text-center mb-5">{{ (replace .Params.block_services.h2 "\n" "<br>") | safeHTML }}</h3>
+		<div class="col-12 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column">
+			<h2 class="text-center mb-5">{{ (replace .Params.block_services.h2 "\n" "<br>") | safeHTML }}</h2>
 
 			<div id="services" class="row">
 				{{ range .Params.block_services.points }}
 				<div class="col-6 col-sm-4 my-3 text-center">
-					<img src="/img/{{ .img }}" class="mb-2" width="50" height="50" alt="{{ .Site.Title }} | {{ .title }}">
-					<p class="lead">{{ .title }}</p>
+					<img src="/img/work/{{ .img }}" class="mb-2" width="60" height="60" alt="{{ .Site.Title }} | {{ .title }}">
+					<h5>{{ .title }}</h5>
 				</div> <!-- /col -->
 				{{ end }}
+				<div class="col-6 col-sm-4 my-3 text-center mx-auto">
+					<img src="/img/work/work_icon_more.svg" class="mb-2" width="50" height="50" alt="{{ .Site.Title }}">
+					<h5>and more!</h5>
+				</div> <!-- /col -->
 			</div> <!-- /row -->
 		</div> <!-- /col -->
 	</div> <!-- /row -->
 </section> <!-- /container -->
+{{ end }}
 
-<section>
+{{ if isset .Params "block_double" }}
+ <section>
 	<div class="row no-gutters">
 		<div class="col-12 col-lg-6">
-			<img src="/img/{{ range .Params.block_double.img }}{{.cropped}}{{end}}" alt="{{ .Site.Title }} | {{ .Page.Title }}" class="d-lg-none">
-			<img src="/img/{{ range .Params.block_double.img }}{{.uncropped}}{{end}}" alt="{{ .Site.Title }} | {{ .Page.Title }}" class="d-none d-lg-block">
+			<img src="/img/work/{{ range .Params.block_double.img }}{{.cropped}}{{end}}" alt="{{ .Page.Title }} | {{ .Site.Title }}" class="d-lg-none">
+			<img src="/img/work/{{ range .Params.block_double.img }}{{.uncropped}}{{end}}" alt="{{ .Page.Title }} | {{ .Site.Title }}" class="d-none d-lg-block">
 		</div> <!-- /col -->
 
 		<div class="col-12 col-lg-6 p-5 bg-dark d-flex align-items-center justify-content-center text-white">
 			<div class="row">
 				<div class="col-12 col-lg-10">
-					<h4>{{ (replace .Params.block_double.text "\n" "<br>") | safeHTML }}</h4>
+					<h3>{{ (replace .Params.block_double.text "\n" "<br>") | safeHTML }}</h3>
 					<a href="/get-in-touch" class="text-secondary move"><span>Get in touch</span> <svg width="16" height="11" viewBox="0 0 282 201" xmlns="http://www.w3.org/2000/svg"><path d="M171.07 24.652C165.368 18.9501 165.368 9.9735 171.07 4.2716C176.772 -1.23767 185.748 -1.23767 191.45 4.2716L276.863 89.6717C279.509 92.3172 281.14 95.99 281.14 100.061C281.14 104.132 279.509 107.805 276.863 110.463L191.45 195.863C185.748 201.565 176.772 201.565 171.07 195.863C165.368 190.161 165.368 181.185 171.07 175.483L232.224 114.534L15.1279 114.534C7.17867 114.547 0.860348 108.023 0.860347 100.074C0.860347 92.1246 7.17867 85.8062 15.1279 85.8062L232.211 85.8062L171.07 24.652Z" fill="#fff"/></svg></a>
 				</div> <!-- /col -->
 			</div> <!-- /row -->
 		</div> <!-- /col -->
 	</div> <!-- /row -->
 </section>
+{{ end }}
 
-<section class="bg-dark">
+{{ if isset .Params "block_selected" }}
+<div class="bg-dark" style='-webkit-mask: url({{"img/bgtop.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover; -webkit-mask-position: top center; height: 100px'>
+</div>
+<section class="bg-dark selected-work">
 	<div class="container">
-		<h2 class="text-center mb-5 text-white">{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}</h2>
+		<h2 class="text-center text-white">{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}</h2>
 
 		<div class="row mt-5 gallery-grid-container">
+			{{ $title := print .Page.Title " | " .Site.Title }}
 			{{ range .Params.block_selected.img }}
 			<div class="gallery-grid-item {{ .class }}">
-				<img src="/img/{{ .path }}" class="mb-2" alt="{{ .Site.title }} | {{ .alt }}">
+				{{ with .path }}
+				<img src="/img/work/{{ . }}" class="mb-2" alt="{{ $title }}">
+				{{ end }}
 			</div>
 			{{ end }}
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>
+<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
+</div>
+{{ end }}
 
 <section class="container">
 	<div class="row flex-column-reverse flex-md-row">
 		<div class="col-8 mx-auto col-md-5">
-			<img src="/img/apple.png" alt="{{ .Site.Title }} | {{ .Page.Title }}">
+			<img src="/img/apple.png" alt="{{ .Page.Title }} | {{ .Site.Title }}">
 		</div> <!-- /col -->
 
 		<div class="col-12 col-md-6 mx-auto d-flex align-items-center flex-column justify-content-center p-5">
@@ -149,10 +180,9 @@
 		<div class="row">
 			{{ $pages := (where (where .Site.RegularPages "Section" "work") "Title" "!=" .Title ) }}
 			{{ range $pages }}
-
 			<div class="col-12 col-sm-6 col-xl-4 w-project">
 				<div class="position-relative">
-					<a href="{{.Permalink}}"><img src="/img/{{ range .Params.thumbnails }}{{ .small }}{{ end }}" alt="{{ .Title }}"></a>
+					<a href="{{.Permalink}}"><img src="/img/work/{{ range .Params.thumbnails }}{{ .small }}{{ end }}" width="600" height="375" alt="{{ .Page.Title }} | {{ .Site.Title }}"></a>
 
 					<div class="w-project-name">
 						<h4>{{ .Title }}</h4>
@@ -164,5 +194,4 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>
-
 {{ end }}

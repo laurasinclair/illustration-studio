@@ -4,10 +4,10 @@
 			<div class="col-1 d-none d-md-block">
 				&nbsp;
 			</div> <!-- /col -->
-			<div class="col-12 col-md-9 col-lg-5 mb-2 mb-md-5">
-				<h2 class="mb-3">What Dirty Lemon<br>can do for you</h2>
+			<div class="col-12 col-md-9 col-lg-6 col-xl-4 mb-2 mb-md-5">
+				<h2 class="mb-3">What can Dirty&nbsp;Lemon<br>do for you?</h2>
 				<p class="lead">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure assumenda cumque, pariatur laboriosam? Sed cupiditate fuga sequi maiores ipsum corporis!
+					A lot, actually! I create unique artwork tailored to your needs, to make people fall in&nbsp;love with your product! Be unmistakable! Convey emotions! Show your personality! And so&nbsp;much more.
 				</p>
 				<p>
 					<svg width="14" viewBox="0 0 201 281" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,8 +21,8 @@
 			{{ with .Site.GetPage "section" "work" }}
 			{{ range .Paginator.Pages }}
 			<div class="col-12 col-md-6 w-project">
-				<div class="position-relative caca">
-					<a href="{{.Permalink}}" class="move"><img src="/img/{{ range .Params.thumbnails }}{{ .small }}{{ end }}" class="d-md-none mb-4" alt="{{ .Title }}"><img src="/img/{{ range .Params.thumbnails }}{{ .big }}{{ end }}" class="d-none d-md-block mb-4" alt="{{ .Title }}"></a>
+				<div class="position-relative">
+					<a href="{{.Permalink}}" class="move"><img src="/img/work/{{ range .Params.thumbnails }}{{ .small }}{{ end }}" class="d-md-none mb-4" alt="{{ .Title }}"><img src="/img/work/{{ range .Params.thumbnails }}{{ .big }}{{ end }}" class="d-none d-md-block mb-4" alt="{{ .Title }}"></a>
 
 					<div class="w-project-name">
 						<h3>{{ .Title }}</h3>
@@ -35,11 +35,3 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>
-
-<section class="container-fluid">
-	<div class="mx-auto d-flex align-items-center justify-content-center flex-column" style="height: 60vh;">
-		<h3 class="text-center my-5">Paper is really cool <br>and will make you a millionaire!</h3>
-	</div>
-</section>
-
-<hr>

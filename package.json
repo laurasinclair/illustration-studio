@@ -13,7 +13,9 @@
     "url": "https://github.com/laurasinclair/2020-studio/issues"
   },
   "homepage": "https://github.com/laurasinclair/2020-studio#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@adamholtzman/image-compress": "^1.0.1"
+  },
   "devDependencies": {
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"

@@ -66,10 +66,13 @@ block_selected: {
 	img: [ 
 		{class: "gallery-col-12 w-md-50", path: "work_illustration-005.png"},
 
-		{class: "gallery-col-6", path: "work_illustration-016.png"},
-		{class: "gallery-col-6", path: "work_illustration-020.png"},
+		{class: "gallery-col-6", path: "work_illustration-023.png"},
+		{class: "gallery-col-6", path: "work_illustration-008.png"},
+		
+		{class: "gallery-col-12 w-md-50", path: "work_illustration-016.png"},
 
-		{class: "gallery-col-12 w-md-50", path: "work_illustration-023.png"},
+		{class: "gallery-col-7 vertical-align", path: "work_illustration-015.jpg"},
+		{class: "gallery-col-5 vertical-align", path: "work_illustration-020.png"},
 		
 		{class: "gallery-col-12", path: "work_illustration-hey.jpg"},
 		
@@ -77,7 +80,8 @@ block_selected: {
 
 		{class: "gallery-col-12 w-md-75", path: "work_illustration-019.png"},
 
-		{class: "gallery-col-6 gallery-row-2 vertical-align", path: "work_illustration-002.png"},
+		{class: "gallery-col-12 w-md-50", path: "work_illustration-002.png"},
+
 		{class: "gallery-col-6 gallery-row-1", path: "work_illustration-007.jpg"},
 		{class: "gallery-col-6 gallery-row-1", path: "work_illustration-021.jpg"},
 		

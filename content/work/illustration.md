@@ -69,15 +69,18 @@ block_selected: {
 		{class: "gallery-col-6", path: "work_illustration-023.png"},
 		{class: "gallery-col-6", path: "work_illustration-008.png"},
 		
+		{class: "gallery-col-12", path: "work_illustration_monsters.jpg"},
+
 		{class: "gallery-col-8", path: "work_illustration-003.jpg"},
 		{class: "gallery-col-4 vertical-center", path: "work_illustration-020.png"},
 		
-		{class: "gallery-col-12 w-md-75", path: "work_illustration-006.png"},
+		{class: "gallery-col-12 w-md-75", path: "work_illustration_monster-10.png"},
 
 		{class: "gallery-col-12", path: "work_illustration-hey.jpg"},
-		
-		{class: "gallery-col-12 w-md-50", path: "work_illustration-016.png"},
 
+		{class: "gallery-col-7", path: "work_illustration-015.jpg"},
+		{class: "gallery-col-5", path: "work_illustration-016.png"},
+		
 		{class: "gallery-col-12 w-md-75", path: "work_illustration-019.png"},
 
 		{class: "gallery-col-12 w-md-50", path: "work_illustration-002.png"},
@@ -91,8 +94,6 @@ block_selected: {
 		{class: "gallery-col-7", path: "work_illustration-001.png"},
 
 		{class: "gallery-col-12", path: "work_illustration-014.jpg"},
-
-		{class: "gallery-col-12 w-md-75", path: "work_illustration-015.jpg"},
 
 		{class: "gallery-col-12 gallery-row-1 w-md-75", path: "work_illustration-013.png"}
 	]

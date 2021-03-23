@@ -5560,6 +5560,14 @@ nav {
   to {
     transform: rotate(359deg); } }
 
+#about .cat .mg {
+  margin-top: 6px; }
+
+@media (min-width: 1200px) {
+  #about .cat {
+    display: flex;
+    justify-content: flex-end; } }
+
 #about .social a svg path,
 #about .social a:visited svg path {
   fill: #212529; }

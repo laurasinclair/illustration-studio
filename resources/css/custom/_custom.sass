@@ -737,8 +737,15 @@ nav
 	from
 		transform: rotate(0deg) 
 	to
-		transform: rotate(359deg)	
+		transform: rotate(359deg)
+
 #about
+	.cat
+		.mg
+			margin-top: 6px
+		@include media-breakpoint-up(xl)
+			display: flex
+			justify-content: flex-end
 	.social
 		a,
 		a:visited

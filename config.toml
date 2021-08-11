@@ -1,7 +1,7 @@
-baseURL = "/"
 languageCode = "en-us"
 title = "Dirty Lemon"
 pluralizeListTitles = "false"
+baseURL = "https://dirtylemon.studio/"
 
 [menu] 
   [[menu.main-1]]

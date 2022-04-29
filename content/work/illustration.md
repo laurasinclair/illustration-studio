@@ -1,6 +1,6 @@
 ---
 title: "Illustration"
-draft: false
+draft: true
 slug: "illustration"
 weight: "2"
 

@@ -1,6 +1,6 @@
 ---
 title: "Paper Artwork"
-draft: false
+draft: true
 slug: "paper-artwork"
 weight: "1"
 

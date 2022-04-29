@@ -1,6 +1,6 @@
 ---
 title: "Wall murals"
-draft: false
+draft: true
 slug: "wall-murals"
 weight: "3"
 

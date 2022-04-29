@@ -1,0 +1,231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"trailing",
+				"Preferences: Trailing Spaces Settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"beauti",
+				"HTMLBeautify"
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ins",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/laurasinclair/Documents/Files/Illustration/html/index.html",
+		"/Users/laurasinclair/Desktop/Neuer Ordner/index.html",
+		"/Users/laurasinclair/Desktop/presentation.txt",
+		"/Users/laurasinclair/Downloads/result.svg",
+		"/Users/laurasinclair/Desktop/pageFlexColumn.css",
+		"/Users/laurasinclair/Downloads/h.txt",
+		"/Users/laurasinclair/Downloads/typography.txt",
+		"/Users/laurasinclair/Desktop/typography.txt",
+		"/Users/laurasinclair/⚙️ Work/_archive/003 - email-signature/email-signature.html",
+		"/Users/laurasinclair/Desktop/checkbox.svg",
+		"/Users/laurasinclair/⚙️ Work/007 - Austrian Fundraising Congress/assets/blob(1).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob.svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(1) copy.svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(1).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(2).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(3).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(4).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(5).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(6).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(7).svg",
+		"/Users/laurasinclair/🎨 Resources/Blobs/blob(8).svg",
+		"/Users/laurasinclair/Library/Application Support/Übersicht/widgets/simple-clock.widget/index.coffee",
+		"/Users/laurasinclair/Desktop/attention.svg",
+		"/Users/laurasinclair/Desktop/arrow.svg",
+		"/Users/laurasinclair/Desktop/prout.svg",
+		"/Users/laurasinclair/Work/email-signature/email-signatureQQ.html",
+		"/Users/laurasinclair/Work/email-signature/email-signature.html",
+		"/Users/laurasinclair/Work/email-signature/signature.html",
+		"/Users/laurasinclair/Library/Application Support/Sublime Text/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "README.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

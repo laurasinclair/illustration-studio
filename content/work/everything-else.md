@@ -1,6 +1,6 @@
 ---
 title: "Everything else"
-draft: false
+draft: true
 slug: "everything-else"
 weight: "4"
 

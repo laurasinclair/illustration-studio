@@ -6,118 +6,7 @@
 			<h2 class="text-center mx-auto">{{ (replace .Params.header.h1 "\n" "<br>") | safeHTML }}</h2>
 		</div>
 	</div> <!-- /container -->
-
-	<div class="tabs">
-		{{ $url := .URL }}
-		{{ $pages := where .Site.RegularPages "Section" "work" }}
-		{{ range $pages }}
-		<div {{ if eq $url .URL }}class="active"{{ end }}>
-			<a href="{{.Permalink}}">{{ .Title }}</a>
-		</div>
-		{{ end }}
-	</div>
 </header>
-
-{{ if isset .Params "hero_img" }}
-<div class="mt-O pt-0 mb-3">
-	<div class="row no-gutters">
-		<div class="col-12 col-sm-7 col-md-5">
-			<img src="/img/work/{{ index .Params.hero_img 0 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
-		</div> <!-- /col -->
-		<div class="col-sm-5 col-md-4 d-none d-sm-block">
-			<img src="/img/work/{{ index .Params.hero_img 1 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
-		</div> <!-- /col -->
-		<div class="col col-md-3 d-none d-md-block">
-			<img src="/img/work/{{ index .Params.hero_img 2 }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
-		</div> <!-- /col -->
-	</div> <!-- /row -->
-</div>
-{{ else }}
-<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
-</div>
-{{ end }}
-
-{{ if isset .Params "block_marketing" }}
-<section class="pb-2">
-	<div class="container">
-		<h3 class="text-center my-5">{{ (replace .Params.block_marketing.h3 "\n" "<br>") | safeHTML }}</h3>
-
-		<div class="row mb-5">
-			<div class="col-12 col-sm-11 col-md-9 col-lg-8 col-xl-7 mx-auto d-flex flex-column">
-				<div class="grid-1 speech-1 align-self-md-start"> 
-					<div class="grid-1 full-area-1">
-						<img src="{{"img/speech-1.svg" | absURL }}" width="200" alt="Sure, it's fun...">
-					</div>
-					<p class="grid-1 full-area-1 text-white">
-						Sure, <br>it's&nbsp;fun...
-					</p>
-				</div>
-
-				<div class="grid-2 speech-2 align-self-md-end">
-					<div class="grid-2 full-area-2">
-						<img src="{{"img/speech-2.svg" | absURL }}" width="400" alt="{{ (replace .Params.block_marketing.question "\n" "<br>") | safeHTML }}">
-					</div>
-					<p class="grid-2 full-area-2">
-						But... <br>
-						<span>{{ (replace .Params.block_marketing.question "\n" "<br>") | safeHTML }}</span>
-					</p>
-				</div>
-			</div> <!-- /col -->
-		</div> <!-- /row -->
-	</div> <!-- /container -->
-
-	<div class="container">
-		<div class="row">
-			{{ range .Params.block_marketing.answers }}
-			<div class="col-12 col-sm-6 col-md-4 mb-3">
-				<img src="/img/{{ .icon }}" alt="{{ .h4 }}" class="mb-3" width="20">
-				<h4>{{ .h4 }}</h4>
-				<p>{{ (replace .text "&nbsp;" "&nbsp;") | safeHTML }}</p>
-			</div> <!-- /col -->
-			{{ end }}
-		</div> <!-- /row -->
-	</div> <!-- /container -->
-</section>
-{{ end }}
-
-{{ if isset .Params "comingsoon" }}
-	<div class="container py-5 my-5">
-		<p class="text-center">{{ .Params.comingsoon.title }}</p>
-	</div> <!-- /container -->
-{{ end }}
-
-{{ if isset .Params "block_img" }}
-<section class="container">
-	<div class="row">
-		<div class="col-12 text-center">
-			<img src="/img/work/{{ .Params.block_img }}" alt="{{ .Page.Title }} | {{ .Site.Title }}">
-		</div> <!-- /col -->
-	</div> <!-- /row -->
-</section> <!-- /container -->
-{{ end }}
-
-{{ if isset .Params "block_services" }}
-<section class="container">
-	<div class="row">
-		<div class="col-12 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column">
-			<h2 class="text-center mb-5">{{ (replace .Params.block_services.h2 "\n" "<br>") | safeHTML }}</h2>
-
-			<div id="services" class="row">
-				{{ range .Params.block_services.points }}
-				<div class="col-6 col-sm-4 my-3 text-center">
-					<img src="/img/work/{{ .img }}" class="mb-2" width="60" height="60" alt="{{ .Site.Title }} | {{ .title }}">
-					<h5>{{ .title }}</h5>
-				</div> <!-- /col -->
-				{{ end }}
-				<div class="col-6 col-sm-4 my-3 text-center mx-auto">
-					<img src="/img/work/work_icon_more.svg" class="mb-2" width="50" height="50" alt="{{ .Site.Title }}">
-					<h5>and more!</h5>
-				</div> <!-- /col -->
-			</div> <!-- /row -->
-		</div> <!-- /col -->
-	</div> <!-- /row -->
-</section> <!-- /container -->
-{{ end }}
 
 {{ if isset .Params "block_double" }}
  <section>
@@ -140,9 +29,9 @@
 {{ end }}
 
 {{ if isset .Params "block_selected" }}
-<div class="bg-dark" style='-webkit-mask: url({{"img/bgtop.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover; -webkit-mask-position: top center; height: 100px'>
+<div style='-webkit-mask: url({{"img/bgtop.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover; -webkit-mask-position: top center; height: 100px; background-color: {{ .Params.block_selected.bgcolor }}'>
 </div>
-<section class="bg-dark selected-work">
+<section class="selected-work" style="background-color: {{ .Params.block_selected.bgcolor }}">
 	<div class="container">
 		<h2 class="text-center text-white">{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}</h2>
 
@@ -158,7 +47,7 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>
-<div class="bg_dark" style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'>
+<div style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px; background-color: {{ .Params.block_selected.bgcolor }}'>
 </div>
 {{ end }}
 
@@ -175,7 +64,7 @@
 	</div> <!-- /row -->
 </section> <!-- /container -->
 
-<section class="related bg-dark">
+<section class="related bg-dark d-none">
 	<div class="container-fluid">
 		<h3 class="text-center text-white mb-5">Dirty Lemon also does...</h3>
 		<div class="row">

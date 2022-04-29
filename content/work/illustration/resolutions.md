@@ -1,11 +1,11 @@
 ---
-title: "Bodies"
+title: "Resolutions"
 draft: false
-slug: "bodies"
-weight: "100"
+slug: "resolutions"
+weight: "1"
 
 thumbnail: [
-	"illustrations/thumbnail_illustration_031.jpg"
+	"illustrations/thumbnail_resolutions.jpg"
 ]
 
 header: {

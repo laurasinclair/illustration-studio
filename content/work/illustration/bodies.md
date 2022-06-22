@@ -2,7 +2,7 @@
 title: "Bodies"
 draft: false
 slug: "bodies"
-weight: "100"
+weight: "7"
 
 thumbnail: [
 	"illustrations/thumbnail_illustration_031.jpg"

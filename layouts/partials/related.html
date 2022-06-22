@@ -1,0 +1,19 @@
+<div class="container-fluid">
+	<div class="row my-5" style="font-size: 1.3em">
+		<div class="col">
+			<div class="next-post">
+				{{ if .NextPage }}
+				<a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer"><span style="color: #000; border: none;">Previous project</span><br>« {{ .NextPage.Title | truncate 50 "..." }}</a>
+				{{ end }}
+			</div>
+		</div>
+
+		<div class="col text-right">
+			<div class="previous-post">
+				{{ if .PrevPage }}
+				<a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer"><span style="color: #000; border: none;">Next project</span><br>{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+				{{ end }}
+			</div>
+		</div>
+	</div> <!-- /row -->
+</div> <!-- /container -->

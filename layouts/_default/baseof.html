@@ -1,64 +1,45 @@
 <!doctype html>
 <html lang="en" class="sr">
-	{{ partial "head.html" . }}
-
-{{ if isset .Params "slug" }}
-<body class="{{ with .Section }}{{ . }}{{ end }} {{ index .Params "slug" }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
-{{else}}
-<body class="{{ with .Section }}{{ . }}{{ end }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
-{{ end }}
-<!-- 	<a onclick="topFunction()" id="top-btn d-none" title="Go to top">
-		<svg width="43" height="61" viewBox="0 0 43 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M37.753 24.5609C38.9736 25.7815 40.8951 25.7815 42.1158 24.5609C42.6831 23.9765 43.0004 23.194 43.0004 22.3795C43.0004 21.565 42.6831 20.7826 42.1158 20.1981L23.8341 1.91362C23.542 1.62196 23.1951 1.39092 22.8134 1.23379C22.4317 1.07666 22.0226 0.996542 21.6099 0.998036C21.1967 0.996788 20.7874 1.07701 20.4053 1.23412C20.0232 1.39122 19.6759 1.62213 19.3831 1.91362L1.10138 20.1981C-0.119257 21.4188 -0.119257 23.3403 1.10138 24.5609C2.32202 25.7815 4.24352 25.7815 5.46416 24.5609L18.5118 11.4696L18.5118 57.9436C18.509 59.6455 19.9054 60.998 21.6073 60.998C23.3092 60.998 24.6617 59.6451 24.6617 57.9436L24.6617 11.4726L37.753 24.5609V24.5609Z" fill="#6562FF"/>
-		</svg>
-		<span class="screen-reader-text">Back to top</span>
-	</a> -->
-	
-	<div id="all">
-		<div id="sidebar">
-			<div>
-				<p class="icon-lemon">
-					<a href="{{ .Site.BaseURL }}"><img src="/img/001-lemon.png" alt="Dirty Lemon studio" width="30"></a>
-				</p>
-				<p id="logo">
-					<a href="{{ .Site.BaseURL }}" class="text-white">{{ .Site.Title }} Studio</a>
-				</p>
-			</div>
-		</div>
-		<main id="main">
-			{{ partial "nav.html" . }}
-			
-			{{- block "main" . -}}{{- end -}}
-
-			{{- partial "footer.html" . -}}
-		</main>
+{{ partial "head.html" . }}
+<body class="{{ .Section }}{{ if isset .Params "extraclass" }} {{ .Params.extraclass }}{{ end }}{{ if isset .Params "slug" }} {{ index .Params "slug" }}{{ end }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
+<div id="all">
+	<div id="sidebar">
+		{{ partial "sidebar.html" . }}
 	</div>
+	<main id="main">
+		{{ partial "nav.html" . }}
 
-	<script src="/js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<!-- <script src="/js/in-view.js"></script> -->
+		{{- block "main" . -}}{{- end -}}
 
-	<script>
-		// btn = document.getElementById("top-btn");
+		{{- partial "footer.html" . -}}
+	</main>
+</div>
 
-		// window.onscroll = function() {scrollFunction()};
+<script src="/js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <script src="/js/in-view.js"></script> -->
 
-		// function scrollFunction() {
-		//   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-		//     btn.style.display = "inline-flex";
-		//   } else {
-		//     btn.style.display = "none";
-		//   }
-		// }
+<script>
+	// btn = document.getElementById("top-btn");
 
-		// function topFunction() {
-		//   document.body.scrollTop = 0; // For Safari
-		//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		// } 
+	// window.onscroll = function() {scrollFunction()};
 
-		document.body.className += ' js';
-	</script>
-	<script src="/js/main.js"></script>
-	<script src="/js/swaptext.js"></script>
+	// function scrollFunction() {
+	//   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+	//     btn.style.display = "inline-flex";
+	//   } else {
+	//     btn.style.display = "none";
+	//   }
+	// }
+
+	// function topFunction() {
+	//   document.body.scrollTop = 0; // For Safari
+	//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	// } 
+
+	document.body.className += ' js';
+</script>
+<script src="/js/main.js"></script>
+<script src="/js/swaptext.js"></script>
 </body>
 </html>

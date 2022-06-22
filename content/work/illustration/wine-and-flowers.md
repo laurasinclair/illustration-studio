@@ -1,11 +1,11 @@
 ---
-title: "Resolutions"
+title: "Wine & Flowers"
 draft: false
-slug: "resolutions"
-weight: "1"
+slug: "wine-and-flowers"
+weight: "16"
 
 thumbnail: [
-	"illustrations/thumbnail_resolutions.jpg"
+	"illustrations/illustration_023.jpg"
 ]
 
 header: {
@@ -16,7 +16,7 @@ block_selected: {
 	h2: "...",
 	bgcolor: "#5028C7",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_031.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_023.jpg"}
 	]
 }
 

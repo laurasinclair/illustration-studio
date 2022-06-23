@@ -227,7 +227,7 @@ ul.arrow
 			border: 1px solid $dark
 			border-width: 2px 2px 0 0
 			transform: rotate(45deg)
-	
+
 ul.line
 	li
 		&::before
@@ -250,7 +250,7 @@ nav
 		@extend .d-inline-block
 		color: $white
 		padding: 6px 15px
-		
+
 	.btn-contact
 		position: fixed
 		z-index: 9
@@ -290,9 +290,9 @@ nav
 				padding-left: 0 !important
 				margin-left: 0 !important
 
-	#menu-mobile
+	#menu
 		z-index: 9999
-		.menu-mobile_logo
+		.menu_logo
 			@extend .nav-link 
 			@extend .text-uppercase 
 			@extend .lead
@@ -300,27 +300,13 @@ nav
 			display: inline-block
 			transition: all .2s ease-in-out
 		.checkbox-toggle
-			position: fixed
-			top: 12px
-			right: 12px
-			z-index: 2
 			cursor: pointer
-			width: 40px
+			width: 140px
 			z-index: 99999
-			height: 40px
-			opacity: 0
-			&:checked 
-				&+ .hamburger > div
-					-webkit-transform: rotate(135deg)
-					transform: rotate(135deg)
-					&:before,
-					&:after
-						top: 0
-						-webkit-transform: rotate(90deg)
-						transform: rotate(90deg)
-						&:after
-							opacity: 0
-				& ~ .menu-mobile_all
+			height: 140px
+			opacity: 1
+			&:hover
+				& ~ .menu_all
 					pointer-events: auto
 					visibility: visible
 					& > div
@@ -336,60 +322,7 @@ nav
 				&:hover + .hamburger > div
 					-webkit-transform: rotate(225deg)
 							transform: rotate(225deg)
-
-		.hamburger
-			position: fixed
-			top: 12px
-			right: 12px
-			z-index: 9999
-			width: 40px
-			height: 40px
-			padding: 10px
-			background: $dark
-			cursor: pointer
-			-webkit-transition: box-shadow 0.4s ease
-			transition: box-shadow 0.4s ease
-			-webkit-backface-visibility: hidden
-			backface-visibility: hidden
-			display: -webkit-box
-			display: flex
-			-webkit-box-align: center
-			align-items: center
-			-webkit-box-pack: center
-			justify-content: center
-			& > div
-				position: relative
-				-webkit-box-flex: 0
-				flex: none
-				width: 100%
-				height: 3px
-				border-radius: 5px
-				background: $white
-				-webkit-transition: all 0.4s ease
-				transition: all 0.4s ease
-				display: -webkit-box
-				display: flex
-				-webkit-box-align: center
-				align-items: center
-				-webkit-box-pack: center
-				justify-content: center
-				&:before,
-				&:after
-					content: ''
-					position: absolute
-					z-index: 1
-					top: -8px
-					left: 0
-					width: 100%
-					height: 3px
-					border-radius: 5px
-					background: inherit
-					-webkit-transition: all 0.4s ease
-					transition: all 0.4s ease
-				&:after
-					top: 8px
-
-		.menu-mobile_all
+		.menu_all
 			z-index: 999
 			position: fixed
 			top: 0
@@ -416,7 +349,7 @@ nav
 				-webkit-backface-visibility: hidden
 				backface-visibility: hidden
 				overflow: hidden
-		.menu-mobile_cat
+		.menu_cat
 			display: flex
 			flex-direction: column
 			justify-content: center
@@ -441,7 +374,7 @@ nav
 					outline: none
 					color: $secondary
 					background-color: lighten($dark, 20%)
-		.menu-mobile_contact
+		.menu_contact
 			margin-left: 1em
 			a, a:visited
 				color: $secondary
@@ -619,8 +552,7 @@ nav
 
 .home
 	header
-		background-color: red !important
-		// @extend .bg_dark
+		@extend .bg_dark
 		@extend .text-white
 		margin-bottom: -1px // chrome fix: lines between divs
 		padding-top: 60px

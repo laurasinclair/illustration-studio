@@ -1,0 +1,116 @@
+
+
+// ---------------------------
+// Vars & Helper Functions
+// ---------------------------
+
+:root {
+  --screen-width:     320px;
+  --screen-height:    560px;
+  --header-bg-color:  #673AB7;
+  --splash-bg-color:  #368887;
+}
+
+// calculate a circle's circumference based on radius
+@function circumference($r){
+  $pi: 3.141592653;
+  @return 2*$pi*$r;
+}
+
+
+// ---------------------------
+// Main Navigation Menu
+// ---------------------------
+
+
+.lemon2 {
+  z-index: 999999999999999999999
+}
+#sidebar {
+  z-index: 9999999999999999999
+}
+
+.nav {
+  // Toggle Button
+  &__toggle {
+    display:inline-block;
+    position:absolute;
+    background:transparent;
+    outline:0;
+    z-index: 15;
+    cursor:pointer;
+    transition:background-color .15s linear;
+
+  }
+
+  &__menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height: var(--screen-height);
+    z-index: 9999999999999;
+    visibility:hidden;
+  }
+
+  &__item {
+    opacity:0;
+    transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000) .3s;
+  }
+  @for $i from 1 through 5 {
+    &__item:nth-child(#{$i}){
+      transform:translateY(-40px * $i);
+    }
+  }
+
+  &__link {
+    color:white;
+    display:block;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:1.25rem;
+    text-decoration:none;
+    padding:1rem;
+
+    &:hover,
+    &:focus {
+      outline:0;
+      background-color:rgba(0,0,0,0.2);
+    }
+  }
+}
+
+
+// ---------------------------
+// SVG Menu Icon
+// ---------------------------
+
+.menuicon {
+  display:block;
+  cursor:pointer;
+}
+
+// ---------------------------
+// Active State
+// ---------------------------
+
+.nav:target,
+.nav--open {
+  //show the nav items
+  .nav {
+    &__menu {
+      visibility:visible;
+    }
+
+    &__item {
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+}

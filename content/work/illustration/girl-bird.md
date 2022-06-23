@@ -9,12 +9,11 @@ thumbnail: [
 ]
 
 header: {
-	h1: "..."
+	h1: "Girl with a bird"
 }
 
 block_selected: {
-	h2: "...",
-	bgcolor: "#dd3300",
+	bgcolor: "#000",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_024.jpg"},
 	]

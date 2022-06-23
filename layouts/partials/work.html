@@ -1,107 +1,22 @@
-<style type="text/css">
-	footer {
-		margin-top: -40px;
-	}
-
-	#gallery::before {
-		content: "";
-		display: table;
-		clear: both;
-	}
-
-	#gallery {
-		margin-top: 22px;
-	}
-
-	#gallery::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-
-	.gallery-block {
-		margin-bottom: 24px;
-		border-radius: 4px;
-		overflow: hidden;
-		position: relative;
-	}
-
-	.gallery-block .gallery-image {
-		width: 100%;
-		display: block;
-		height: auto;
-	}
-
-	#work {
-		background-color: white !important;
-	}
-	.w-project-name {
-		background-color:  white !important;
-		transform: translateY(92px);
-		opacity: 0;
-	}
-	.w-project:hover .w-project-name {
-		transform: translateY(0px);
-		opacity: 1;
-		transition: all 0.3s ease-out;
-	}
-	.w-project-name h3 {
-		color:  black !important;
-	}
-
-	.gallery-block div {
-		position: absolute;
-		left: 25px;
-		bottom: 20px;
-		/*background-image: linear-gradient(to right, #242633, #2A2B6F, #A4216B);*/
-		/*border-radius: 6px;*/
-		background-color: black;
-		padding: 3px 6px;
-		color: #fff;
-		padding: 4px 13px;
-		/*transform: scaleX(0);*/
-		/*transform-origin: 0% 50%;*/
-		opacity: 0;
-        transition: transform 1000ms cubic-bezier(.32,0,.07,1);		
-	}
-
-	.gallery-block:hover div {
-		/*transform: scaleX(1);*/
-		opacity: 1;
-		transition: all 0.5s ease-in-out;
-	}
-
-	.gallery-block:hover div a {
-		opacity: 1;
-	}
-
-	.gallery-block div a {
-		font-weight: 200;
-		color: #fff;
-		opacity: 0;
-		font-size: 1.3em;
-	}
-</style>
-
-<section id="work" class="bg-dark py-5">
+<section id="work" class="py-5">
 	<div class="container-fluid">
 		<div class="gallery-block">
-			<a href="work/illustration/by-the-lake"><img src="img/work/illustrations/illustration_001.jpg" alt="" class="gallery-image"></a>
 			<div>
-				<a href="{{.Permalink}}">{{.Title}}</a>
+				<a href="{{.Permalink}}">By The Lake</a>
 			</div>
+			<a href="work/illustration/by-the-lake"><img src="img/work/illustrations/illustration_001.jpg" alt="" class="gallery-image"></a>
 		</div>
 
 		<div id="gallery">
-			{{ with .Site.GetPage "section" "work" }}
+			{{ with .Site.GetPage "work" }}
 			{{ range .Pages }}
 
 				{{ if isset .Params "thumbnail" }}
 				<div class="gallery-block">
-					<a href="{{.Permalink}}"><img src="img/work/{{ range .Params.thumbnail }}{{.}}{{end}}" alt="{{.Title}}" class="gallery-image"></a>
 					<div>
 						<a href="{{.Permalink}}">{{.Title}}</a>
 					</div>
+					<a href="{{.Permalink}}"><img src="/img/work/{{ range .Params.thumbnail }}{{.}}{{end}}" alt="{{.Title}}" class="gallery-image"></a>
 				</div>
 				{{ end }}
 			{{ end }}
@@ -110,98 +25,15 @@
 	</div>
 
 	<div class="container-fluid">
-		 <div id="gallery-a" class="d-none">
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_002.jpg" alt="" class="gallery-image"> <!-- 1 - 2021 goals -->
-			</div>
-
-			<div class="gallery-block">
-				<a href="https://duckduckgo.com"><img src="img/work/illustrations/illustration_003.jpg" alt="" class="gallery-image"></a>
-				<div>
-					<a href="https://duckduckgo.com" class="stretched-link">Project title</a>
-				</div>
-			</div> <!-- 2 - Orange -->
-
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_004.gif" alt="" class="gallery-image"> <!-- 3 - Monsters - GIF -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_005.jpg" alt="" class="gallery-image"> <!-- 4 - Koalabird -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_018.jpg" alt="" class="gallery-image"> <!-- 5 - Frankie - Bicycle -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_007.png" alt="" class="gallery-image"> <!-- 6 - Strawberries -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_012.jpg" alt="" class="gallery-image"> <!-- 7 - Embleme -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_009.png" alt="" class="gallery-image"> <!-- 8 - Monster - Fat bird -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_031.jpg" alt="" class="gallery-image"> <!-- 9 - Time Out -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_014.jpg" alt="" class="gallery-image"> <!-- 10 - Portrait Woman -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_008.jpg" alt="" class="gallery-image"> <!-- 11 - Frankie - Cover -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_010.jpg" alt="" class="gallery-image"> <!-- 12 - Sleeping Buddies -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_011.png" alt="" class="gallery-image"> <!-- 13 - Monsters - Pink with 6 eyes -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_019.jpg" alt="" class="gallery-image"> <!-- 14 - Shapes -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_016.gif" alt="" class="gallery-image"> <!-- 15 - Bodies - Naked ladies -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_023.jpg" alt="" class="gallery-image"> <!-- 16 - Wine & Flowers -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_028.png" alt="" class="gallery-image"> <!-- 17 - Bird with shovel -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_020.jpg" alt="" class="gallery-image"> <!-- 18 - JQ Hippo flying -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_017.jpg" alt="" class="gallery-image"> <!-- 19 - Inktober - Kid with boat -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_030.jpg" alt="" class="gallery-image"> <!-- 20 - Sleeping in room -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_024.jpg" alt="" class="gallery-image"> <!-- 21 - Girl with bird -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_032.png" alt="" class="gallery-image"> <!-- 22 - Rodrigo -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_025.jpg" alt="" class="gallery-image"> <!-- 23 - Hippo in park -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_029.png" alt="" class="gallery-image"> <!-- 24 - Man phone tinder -->
-			</div>
-			<div class="gallery-block">
-				<img src="img/work/illustrations/illustration_026.jpg" alt="" class="gallery-image"> <!-- 25 - Selfie with plants -->
-			</div>
-		</div>
-
 		<div class="row my-5">
 			<div class="col-12 col-lg-8 mb-2 mb-md-5 mx-auto">
-				<div class="gallery-block">
+				<div class="gallery-block sr-down">
 					<img src="img/work/illustrations/illustration_027.png" alt="" class="gallery-image">
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</section> <!-- #work -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>

@@ -2,6 +2,11 @@
 <html lang="en" class="sr">
 {{ partial "head.html" . }}
 <body class="{{ .Section }}{{ if isset .Params "extraclass" }} {{ .Params.extraclass }}{{ end }}{{ if isset .Params "slug" }} {{ index .Params "slug" }}{{ end }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
+
+<div id="myNav" class="nav_overlay">
+		{{- partial "menu.html" . -}}
+</div>
+
 <div id="all">
 	<div id="sidebar">
 		{{ partial "sidebar.html" . }}
@@ -17,7 +22,26 @@
 
 <script src="/js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- <script src="/js/in-view.js"></script> -->
+<script src="/js/in-view.js"></script>
+
+<script>
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) {
+       document.getElementById("myNav").style.width = "0%";
+    }
+});
+
+</script>
 
 <script>
 	// btn = document.getElementById("top-btn");

@@ -17,15 +17,15 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $(window).scroll(function() {
-	if ($(document).scrollTop() > 100) {
-	  $(".icon-lemon").addClass("reveal");
-	} else {
-	  $(".icon-lemon").removeClass("reveal");
-	}
-  });
-});
+// $(document).ready(function() {
+//   $(window).scroll(function() {
+// 	if ($(document).scrollTop() > 100) {
+// 	  $(".icon-lemon").addClass("reveal");
+// 	} else {
+// 	  $(".icon-lemon").removeClass("reveal");
+// 	}
+//   });
+// });
 
 // $(document).ready(function() {
 //   $(window).scroll(function() {

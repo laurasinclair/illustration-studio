@@ -19,8 +19,4 @@ block_selected: {
 	]
 }
 
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
-}
-
 ---

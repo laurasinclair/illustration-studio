@@ -3,27 +3,23 @@ title = "Dirty Lemon"
 pluralizeListTitles = "false"
 baseURL = "https://dirtylemon.studio/"
 
-[menu] 
-  [[menu.main-1]]
-    name = "Illustration"
-    url = "/illustration"
-    weight = 1
-  [[menu.main-1]]
-    name = "Paper artwork"
-    url = "/paper-artwork"
-    weight = 2
-  [[menu.main-1]]
-    name = "Murals"
-    url = "/murals"
-    weight = 3 
-  [[menu.main-1]]
-    name = "Everything else"
-    url = "/everything-else"
-    weight = 4
+[menu]
   [[menu.main]]
-    name = "Get in touch 👋"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Work"
+    url = "/work"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
     url = "/get-in-touch"
-    weight = 5
+    weight = 4
 
 [params]
   email = "hello@dirtylemon.studio"

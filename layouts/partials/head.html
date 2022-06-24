@@ -7,9 +7,10 @@
 	{{- $title = print .Site.Title " | Creative artwork" -}}
 	{{ end }}
 	<title>{{ $title }}</title>
-	
+
 	<meta name="title" content="{{ $title }}">
 	<meta name="description" content="{{ .Site.Params.metadescription }}">
+	<meta name="robots" content="noindex">
 
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="{{"" | absURL }}">
@@ -31,7 +32,7 @@
 
 		gtag('config', 'G-9Y5D3KK1T6');
 	</script>
-	
+
 	<!-- <link rel="preload" href="/css/fonts/roboto-mono/RobotoMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin> -->
 	<link rel="stylesheet" href="{{"css/main.css" | absURL }}">
 

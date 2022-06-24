@@ -2,7 +2,7 @@
 title: "Bird"
 draft: false
 slug: "bird"
-weight: "17"
+weight: "16"
 
 thumbnail: [
 	"illustrations/illustration_028.png"
@@ -13,7 +13,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#5028C7",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_028.png"}

@@ -14,7 +14,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#fff",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_mad_03.jpg"},

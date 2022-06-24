@@ -13,7 +13,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#666",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_020.jpg"},

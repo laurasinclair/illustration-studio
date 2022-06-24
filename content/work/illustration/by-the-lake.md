@@ -10,12 +10,14 @@ header: {
 }
 
 block_selected: {
-	h2: "Dunno",
+	h2: "(description coming soon)",
 	fontcolor: "#3300ff",
 	bgcolor: "#fff",
-	description: "Lorem",
+	description: "(description coming soon)",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_001.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_033.jpg"},
+		{class: "gallery-col-12", path: "illustrations/bob_013.jpg"},
+		{class: "gallery-col-12", path: "illustrations/bob_05.jpg"},
 	]
 }
 

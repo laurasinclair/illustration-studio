@@ -1,8 +1,8 @@
 ---
-title: "Man Tinder"
+title: "Characters"
 draft: false
-slug: "man-tinder"
-weight: "24"
+slug: "characters"
+weight: "21"
 
 thumbnail: [
 	"illustrations/illustration_029.png"
@@ -13,7 +13,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#dd3300",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_029.png"},

@@ -2,7 +2,7 @@
 title: "Girl with bird"
 draft: false
 slug: "Girl with bird"
-weight: "21"
+weight: "24"
 
 thumbnail: [
 	"illustrations/illustration_024.jpg"
@@ -13,6 +13,7 @@ header: {
 }
 
 block_selected: {
+	h2: "(description coming soon)",
 	bgcolor: "#000",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_024.jpg"},

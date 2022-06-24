@@ -1,11 +1,11 @@
 ---
-title: "Sleeping"
+title: "Sleep on the grass"
 draft: false
-slug: "Sleeping"
-weight: "20"
+slug: "sleep-grass"
+weight: "17"
 
 thumbnail: [
-	"illustrations/illustration_030.jpg"
+	"illustrations/thumbnail_illustration_035.jpg"
 ]
 
 header: {
@@ -16,7 +16,7 @@ block_selected: {
 	h2: "(description coming soon)",
 	bgcolor: "#fff",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_030.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_035.jpg"}
 	]
 }
 

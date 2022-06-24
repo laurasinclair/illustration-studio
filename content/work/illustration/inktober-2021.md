@@ -3,6 +3,8 @@ title: "Inktober 2021"
 draft: false
 slug: "inktober-2021"
 weight: "19"
+aliases:
+- "/work/illustration/inktober-2021-01/"
 
 thumbnail: [
 	"illustrations/illustration_017.jpg"
@@ -13,7 +15,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#5028C7",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_017.jpg"}

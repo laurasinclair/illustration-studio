@@ -2,7 +2,7 @@
 title: "Rodrigo"
 draft: false
 slug: "rodrigo"
-weight: "22"
+weight: "25"
 
 thumbnail: [
 	"illustrations/illustration_032.png"
@@ -13,7 +13,7 @@ header: {
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#dd3300",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_032.png"},

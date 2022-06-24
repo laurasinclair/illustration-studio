@@ -12,18 +12,12 @@ thumbnail: [
 	"illustrations/thumbnail_monsters-01.gif"
 ]
 
-thumbnails: [ 
-	{1: "illustrations/thumbnail_monsters-01.gif", weight: "45"},
-	{2: "illustrations/illustration_009.png", weight: "2"},
-	{3: "illustrations/illustration_022.png", weight: "3"},
-]
-
 header: {
 	h1: "..."
 }
 
 block_selected: {
-	h2: "...",
+	h2: "(description coming soon)",
 	bgcolor: "#fff",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_004.jpg"},

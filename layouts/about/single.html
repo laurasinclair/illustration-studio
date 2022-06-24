@@ -4,15 +4,16 @@
 	background-color: black !important;
 }
 </style>
-<header class="mt-O bg-dark">
+<header class="mt-O">
 	<div class="container">
 		<div class="hero">
-			{{ if isset .Params.header "titleimage" }}
+			{{ if isset .Params.header "titleimage" }} 
 			<img src="/img/work/{{ .Params.header.titleimage }}" alt="{{ .Params.header.h1 }}">
 			{{ else }}
 			<h2 class="text-center mx-auto">{{ (replace .Params.header.h1 "\n" "<br>") | safeHTML }}</h2>
 			{{ end }}
 		</div>
+
 	</div> <!-- /container -->
 </header>
 
@@ -20,8 +21,8 @@
 <section class="container-fluid">
 	<div class="row">
 		<div class="col-6 mx-auto mt-5 pt-5">
-			<p style="font-size: 1.5em">ss
-				Officia pdderspiciatis eveniet molestiae eum. Error voluptas dolores minima possimus. Reiciendis consequatur asperiores vel atque distinctio voluptatum. Eos laudantium officia fuga libero similique consectetur qui vel.
+			<p style="font-size: 1.5em">
+				Officia perspiciatis eveniet molestiae eum. Error voluptas dolores minima possimus. Reiciendis consequatur asperiores vel atque distinctio voluptatum. Eos laudantium officia fuga libero similique consectetur qui vel.
 			</p>
 		</div>
 	</div>
@@ -47,7 +48,7 @@
 {{ if isset .Params "block_selected" }}
 <section class="selected-work" style="background-color: {{ .Params.block_selected.bgcolor }}">
 	<div class="container">
-		<h2 class="text-center d-none" style="color: {{ .Params.block_selected.fontcolor }}">ss{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}</h2>
+		<h2 class="text-center d-none" style="color: {{ .Params.block_selected.fontcolor }}">{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}</h2>
 		<p class="title-3 text-center" style="color: {{ .Params.block_selected.fontcolor }}">
 			{{ (replace .Params.block_selected.h2 "\n" "<br>") | safeHTML }}
 		</p>

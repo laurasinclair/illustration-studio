@@ -5,25 +5,17 @@ slug: "inktober-2021"
 weight: "19"
 aliases:
 - "/work/illustration/inktober-2021-01/"
-
-thumbnail: [
-	"illustrations/illustration_017.jpg"
-]
-
-header: {
-	h1: "..."
-}
+thumbnail: "illustrations/illustration_017.jpg"
+mainpage: true
+related: true
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#5028C7",
+	description: "(description coming soon)",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_017.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_006.jpg"},
+		{class: "gallery-col-5 offset-md-2", path: "illustrations/Day_3_-_Vessel.jpg"},
+		{class: "gallery-col-5 offset-md-2", path: "illustrations/Day_6_-_Spirit.jpg"},
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

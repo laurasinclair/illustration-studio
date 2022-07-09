@@ -2,27 +2,20 @@
 title: "Goals"
 draft: false
 slug: "goals"
-weight: "1"
-
-thumbnail: [
-	"illustrations/illustration_002.jpg"
-]
+weight: "2"
+thumbnail: "illustrations/illustration_002.jpg"
+mainpage: true
+related: true
 
 header: {
-	h1: "Goals",
 	titleimage: "illustrations/project-title_goals.png"
 }
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#ffffff",
+	description: "(description coming soon)",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_002.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_002.png"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

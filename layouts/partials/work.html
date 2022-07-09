@@ -8,17 +8,17 @@
 		</div>
 
 		<div id="gallery">
-			{{ with .Site.GetPage "work" }}
+			{{ $mainpage := .Site.GetPage "section" "work" }}
+			{{ range ($mainpage.Pages.GroupByParam "mainpage") }}
+			{{ if eq .Key true }}
 			{{ range .Pages }}
-
-				{{ if isset .Params "thumbnail" }}
-				<div class="gallery-block">
-					<div>
-						<a href="{{.Permalink}}">{{.Title}}</a>
-					</div>
-					<a href="{{.Permalink}}"><img src="{{"/img/work/" | absURL }}{{ range .Params.thumbnail }}{{.}}{{end}}" alt="{{.Title}}" class="gallery-image"></a>
+			<div class="gallery-block">
+				<div>
+					<a href="{{.Permalink}}">{{.Title }}</a>
 				</div>
-				{{ end }}
+				<a href="{{.Permalink}}"><img src="{{"/img/work/" | absURL }}{{ .Param "thumbnail" }}" alt="{{.Title}}" class="gallery-image"></a>
+			</div>
+			{{ end }}
 			{{ end }}
 			{{ end }}
 		</div>

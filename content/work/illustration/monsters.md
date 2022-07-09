@@ -2,35 +2,31 @@
 title: "Monsters"
 draft: false
 slug: "monsters"
-weight: "3"
+weight: "4"
 aliases:
 - "/work/illustration/monsters-01/"
 - "/work/illustration/monsters-02/"
 - "/work/illustration/monsters-03/"
-
-thumbnail: [
-	"illustrations/thumbnail_monsters-01.gif"
-]
+thumbnail: "illustrations/thumbnail_monsters-01.gif"
+mainpage: true
+related: true
 
 header: {
-	h1: "..."
+	titleimage: "illustrations/project-title_monsters.png"
 }
 
 block_selected: {
-	h2: "(description coming soon)",
+	description: "(description coming soon)",
 	bgcolor: "#fff",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_004.jpg"},
 		{class: "gallery-col-12", path: "illustrations/illustration_013.jpg"},
 		{class: "gallery-col-12", path: "illustrations/illustration_015.jpg"},
-		{class: "gallery-col-12", path: "illustrations/illustration_009.png"},
+		{class: "gallery-col-12", path: "illustrations/work_illustration_monsters.jpg"},
 		{class: "gallery-col-12", path: "illustrations/illustration_011.png"},
 		{class: "gallery-col-12", path: "illustrations/illustration_022.png"},
+		{class: "gallery-col-12", path: "illustrations/illustration_010.png"},
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

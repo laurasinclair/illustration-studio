@@ -3,25 +3,16 @@ title: "Characters"
 draft: false
 slug: "characters"
 weight: "21"
-
-thumbnail: [
-	"illustrations/illustration_029.png"
-]
-
-header: {
-	h1: "..."
-}
+thumbnail: "illustrations/illustration_029.png"
+mainpage: true
+related: true
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#dd3300",
+	description: "(description coming soon)",
+	bgcolor: "#fff2d4",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_029.png"},
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

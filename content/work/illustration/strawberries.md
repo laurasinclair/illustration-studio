@@ -2,26 +2,16 @@
 title: "Strawberries"
 draft: false
 slug: "strawberries"
-weight: "4"
-
-thumbnail: [
-	"illustrations/illustration_007.png"
-]
-
-header: {
-	h1: "..."
-}
+weight: "6"
+thumbnail: "illustrations/illustration_007.png"
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#5028C7",
+	description: "(description coming soon)",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_007.png"}
+		{class: "gallery-col-12", path: "illustrations/illustration_007.png"},
+		{class: "gallery-col-6 mx-auto", path: "illustrations/work_illustration-024.png"},
+		{class: "gallery-col-6 mx-auto", path: "illustrations/work_illustration-023.png"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

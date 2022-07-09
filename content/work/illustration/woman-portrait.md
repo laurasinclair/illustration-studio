@@ -1,27 +1,17 @@
 ---
-title: "Woman portrait"
+title: "Portraits"
 draft: false
-slug: "woman-portrait"
+slug: "portrait"
 weight: "26"
-
-thumbnail: [
-	"illustrations/illustration_014.jpg"
-]
-
-header: {
-	h1: "..."
-}
+thumbnail: "illustrations/illustration_014.jpg"
+mainpage: true
+related: true
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#5028C7",
+	description: "(description coming soon)",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_014.jpg"},
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

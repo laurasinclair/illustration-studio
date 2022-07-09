@@ -32,6 +32,13 @@ $scale: 0.7
 	border-left: 5px solid $dark
 	@extend .pl-4
 
+.pic-bg
+	background-size: cover !important
+	background-position: center center
+
+.debug
+	outline: 1px solid red
+
 body
 	// @extend .bg_white
 	// background-color: red !important
@@ -449,10 +456,6 @@ nav
 	padding-right: 10px
 	background-color: $secondary
 
-#related
-	margin-top: 6em
-	margin-bottom: 2em
-
 .reveal
 	opacity: 1 !important
 	@extend .transition-2s
@@ -579,7 +582,7 @@ nav
 
 @keyframes rotation
 	from
-		transform: rotate(0deg) 
+		transform: rotate(0deg)
 	to
 		transform: rotate(359deg)
 
@@ -590,6 +593,15 @@ nav
 		@include media-breakpoint-up(xl)
 			display: flex
 			justify-content: flex-end
+	.pic
+		@extend .pic-bg
+		box-shadow: 0 12px 37px rgba(26, 27, 32, 0.24)
+		border: 1px solid #fff
+		width: 220px
+		height: 220px
+		max-width: 100%
+		border-radius: 12px
+
 	.social
 		a,
 		a:visited
@@ -1077,11 +1089,11 @@ footer
 		h1
 			@extend .mb-3
 			@include media-breakpoint-up(lg)
-				margin-top: 1.5em 
+				margin-top: 1.5em
 			@include media-breakpoint-up(xl)
-				margin-top: 3em 
+				margin-top: 3em
 				margin-bottom: 3em
-			&+a, 
+			&+a,
 			&+a:visited
 				@extend .text-white
 				@extend .mb-5
@@ -1106,12 +1118,13 @@ footer
 			align-items: center
 			padding-bottom: 50px
 
-.illustration,
-.paper-art,
-.wall-murals,
-.everything-else
-	footer
-		@extend .bg_dark
+.hero
+	&_large
+		padding: 5em 0 6em
+		background-color: $dark
+		h2
+			color: white
+			padding: 2em 0
 
 .thank-you
 	background-color: $secondary
@@ -1132,7 +1145,7 @@ footer
 		left: 0
 		bottom: 0
 		color: $white
-		background-color: $dark 
+		background-color: $dark
 		&:hover,
 		&:focus,
 		&:active
@@ -1157,25 +1170,52 @@ footer
 	grid-area: 1/1
 
 .related
-	&:hover,
-	&:focus,
-	&:active
-		.w-project:hover,
-		.w-project:focus,
-		.w-project:active
-			@extend .transition-2s
+	#toggle
+		@extend .no-outline
+		background: none
+		border: none
+		span
+			border-bottom: 2px solid $dark
+			display: inline-block
+		&::after
+			content: ""
+			background-image: url(/img/icon_bracket-down.svg)
+			background-size: cover
+			width: 12px
+			height: 12px
+			display: inline-block
+			margin-left: 10px
+		&.active
+			&::after
+				transition: all .4s ease-in-out
+				transform: rotate(180deg)
+	#related_all
+		transition: all .2s ease-in-out
+		position: relative
+		overflow: hidden
+		height: 0
+		opacity: 0
+		&.active
+			transition: all .4s ease-in-out
+			height: 100%
 			opacity: 1
-		.w-project:not(:hover)
-			@extend .transition-2s
-			opacity: 0.3
-			@include media-breakpoint-up(lg)
-				opacity: 0.5
-	.w-project
-		@extend .mb-5
-		&:nth-of-type(even)
-			margin-top: 0
-		&:first-of-type
-			margin-top: 0
+	.card
+		overflow: hidden
+		&:hover,
+		&:focus,
+		&:active
+			background-color: $primary
+		&-img
+			border-radius: 0
+			width: 100%
+			height: 200px
+			background-size: cover
+			background-position: center center
+		a, a:visited
+			border: none
+			&:hover
+				@extend .no-outline
+				color: #fff
 
 .selected
 	margin-bottom: initial
@@ -1185,15 +1225,11 @@ footer
 			display: block
 
 .gallery-grid-container
-	display: flex
-	padding-left: 1.5em
-	padding-right: 1.5em
-	@include media-breakpoint-up(sm)
-		display: grid
-		grid-template-columns: repeat(12, 1fr)
-		// grid-template-rows: 100fr
-		padding-left: initial
-		padding-right: initial
+	display: grid
+	grid-template-columns: repeat(12, 1fr)
+	// grid-template-rows: 100fr
+	padding-left: initial
+	padding-right: initial
 	grid-gap: 2em
 	@include media-breakpoint-up(md)
 		grid-gap: 3em
@@ -1214,6 +1250,8 @@ footer
 			display: flex
 			align-items: center
 			justify-content: center
+		img
+			border-radius: 4px
 
 	.gallery-col-1
 		grid-column: span 12

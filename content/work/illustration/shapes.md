@@ -3,25 +3,17 @@ title: "Shapes"
 draft: false
 slug: "shapes"
 weight: "14"
-
-thumbnail: [
-	"illustrations/illustration_019.jpg"
-]
-
-header: {
-	h1: "..."
-}
+thumbnail: "illustrations/illustration_019.jpg"
+mainpage: true
+related: true
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#5028C7",
+	description: "(description coming soon)",
+	bgcolor: "#fff",
+	fontcolor: "#4b6dee",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_019.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_019_02.jpg"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

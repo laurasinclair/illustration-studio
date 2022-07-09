@@ -3,25 +3,16 @@ title: "Flying friends"
 draft: false
 slug: "flying-friends"
 weight: "18"
-
-thumbnail: [
-	"illustrations/illustration_020.jpg"
-]
-
-header: {
-	h1: "..."
-}
+thumbnail: "illustrations/illustration_020.jpg"
+mainpage: true
+related: true
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#666",
+	description: "(description coming soon)",
+	bgcolor: "#aaccf7",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_020.jpg"},
+		{class: "gallery-col-12", path: "illustrations/illustration_020.jpg"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

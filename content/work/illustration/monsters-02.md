@@ -2,10 +2,9 @@
 title: "Monsters"
 draft: false
 slug: "monsters"
-weight: "11"
-
-thumbnail: [
-	"illustrations/illustration_009.png"
-]
+weight: "12"
+thumbnail: "illustrations/illustration_009.png"
+mainpage: true
+related: false
 
 ---

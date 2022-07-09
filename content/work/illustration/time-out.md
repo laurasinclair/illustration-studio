@@ -2,26 +2,22 @@
 title: "Time Out"
 draft: false
 slug: "time-out"
-weight: "9"
-
-thumbnail: [
-	"illustrations/illustration_016.gif"
-]
+weight: "7"
+thumbnail: "illustrations/thumbnail_illustration_031.jpg"
+mainpage: true
+related: true
 
 header: {
-	h1: "..."
+	titleimage: "illustrations/project-title_time-out.png"
 }
 
 block_selected: {
-	h2: "(description coming soon)",
+	description: "(description coming soon)",
 	bgcolor: "#5028C7",
+	fontcolor: "#fff",
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_031.jpg"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

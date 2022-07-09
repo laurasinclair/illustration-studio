@@ -1,13 +1,19 @@
 {{ define "main" }}
+<header class="mt-O bg-dark">
+	<div class="container-fluid">
+		<div class="hero_large">
+			<h2 class="text-center mx-auto">{{ .Params.title }}</h2>
+		</div>
+	</div> <!-- /container -->
+</header>
 <section id="about" class="bg_white">
 	<div class="container-fluid">
 		<div class="row mb-4 mb-md-5">
 			<div class="col-12 col-md-3 sr-down cat">
 				<p class="label mg">About</p>
 			</div> <!-- /col -->
-
 			<div class="col-12 col-md-9 col-xl-7">
-				<h2 class="sr-down">Say goodbye<br>to boring design!</h2>
+				<h2 class="sr-down">Hey there 👋</h2>
 				<p class="sr-down">
 					Good content needs good visuals to stand out!<br>
 				</p>
@@ -15,11 +21,14 @@
 					Based in Berlin, {{ .Site.Title }} creates original and unique visuals to promote your brand or business, showcase your product, or create window displays for your store or office space!
 				</p>
 				<div class="row flex-column flex-sm-row no-gutters">
-					<div class="col-4 col-sm-2">
-						<img src="/img/laura2.jpg" alt="Laura Sinclair" class="img-round mb-3" width="150">
+					{{ if isset .Params "photo" }}
+					<div class="col-4 col-sm-3">
+						<div style="background-image: url('{{ .Params.photo }}'); width: 220px; height: 220px;" alt="Laura Sinclair" class="pic mb-3">
+						</div>
 					</div> <!-- /col -->
+					{{ end }}
 
-					<div class="col-12 col-md-9 pl-0 pl-sm-4">
+					<div class="col-12 col-md-8 pl-0 pl-sm-4 d-flex justify-content-center flex-column">
 						<p class="sr-down text-muted mb-2">The studio is run by Laura Sinclair, visual designer with 7+ years of experience across different fields, working for over 20 brands!</p>
 
 						<div class="social">
@@ -37,7 +46,7 @@
 
 		<div id="services" class="row">
 			<div class="col-12 col-md-3 sr-down cat">
-				<p class="label">Services</p>
+				<p class="label">Education</p>
 			</div> <!-- /col -->
 
 			<div class="col-12 col-sm-5 col-md-4 col-lg-3">
@@ -60,13 +69,10 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 
-	<div class="container d-none">
-		<div class="row">
-			<div class="col-12 col-lg-9 mx-auto text-center">
-				<h2 class="">What we do, how we do it</h2>
-				<p class="">I would love to hear from you. <a href="mailto:{{ .Site.Params.email }}" class="arrow-right"><span>{{ .Site.Params.email }}</span> <svg width="16" height="11" class="ml2 icon" viewBox="0 0 282 201" xmlns="http://www.w3.org/2000/svg"><path d="M171.07 24.652C165.368 18.9501 165.368 9.9735 171.07 4.2716C176.772 -1.23767 185.748 -1.23767 191.45 4.2716L276.863 89.6717C279.509 92.3172 281.14 95.99 281.14 100.061C281.14 104.132 279.509 107.805 276.863 110.463L191.45 195.863C185.748 201.565 176.772 201.565 171.07 195.863C165.368 190.161 165.368 181.185 171.07 175.483L232.224 114.534L15.1279 114.534C7.17867 114.547 0.860348 108.023 0.860347 100.074C0.860347 92.1246 7.17867 85.8062 15.1279 85.8062L232.211 85.8062L171.07 24.652Z" fill="#343a40"/></svg></a></p>
-			</div> <!-- /col -->
-		</div> <!-- /row -->
-	</div> <!-- /container -->
+	<div class="row">
+		<div class="col-12 col-md-6 mx-auto">
+			<img src="{{"img/work/illustrations/happylemon.png" | absURL }}" alt="">
+		</div> <!-- /col -->
+	</div> <!-- /row -->
 </section>
 {{ end }}

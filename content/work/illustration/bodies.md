@@ -2,26 +2,23 @@
 title: "Bodies"
 draft: false
 slug: "bodies"
-weight: "7"
-
-thumbnail: [
-	"illustrations/thumbnail_illustration_031.jpg"
-]
+weight: "11"
+thumbnail: "illustrations/illustration_016.gif"
+mainpage: true
+related: true
 
 header: {
-	h1: "..."
+	titleimage: "illustrations/project-title_bodies.png"
 }
 
 block_selected: {
-	h2: "(description coming soon)",
-	bgcolor: "#5028C7",
+	description: "(description coming soon)",
+	fontcolor: "#fff",
 	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_031.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_bodies-01.png"},
+		{class: "gallery-col-12", path: "illustrations/illustration_bodies-02.png"},
+		{class: "gallery-col-12", path: "illustrations/illustration_bodies-03.png"}
 	]
-}
-
-block_interested: {
-	title: "Interested?\nLet's get in touch!"
 }
 
 ---

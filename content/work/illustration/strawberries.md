@@ -4,6 +4,8 @@ draft: false
 slug: "strawberries"
 weight: "6"
 thumbnail: "illustrations/illustration_007.png"
+mainpage: true
+related: true
 
 block_selected: {
 	description: "(description coming soon)",

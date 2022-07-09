@@ -3,7 +3,7 @@ title: "Goals"
 draft: false
 slug: "goals"
 weight: "2"
-thumbnail: "illustrations/illustration_002.jpg"
+thumbnail: "illustrations/thumbnail_illustration_002.jpg"
 mainpage: true
 related: true
 

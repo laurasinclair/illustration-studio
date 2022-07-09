@@ -1,8 +1,8 @@
 ---
 title: About
-draft: false
+draft: true
 slug: about
-photo: "/img/laura.jpg"
+photo: "/img/laurasinclair.jpg"
 
 ---
 

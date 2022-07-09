@@ -25,7 +25,7 @@ block_selected: {
 		{class: "gallery-col-12", path: "illustrations/work_illustration_monsters.jpg"},
 		{class: "gallery-col-12", path: "illustrations/illustration_011.png"},
 		{class: "gallery-col-12", path: "illustrations/illustration_022.png"},
-		{class: "gallery-col-12", path: "illustrations/illustration_010.png"},
+		{class: "gallery-col-12", path: "illustrations/work_illustration_monsters-10.png"},
 	]
 }
 

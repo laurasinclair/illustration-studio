@@ -17,7 +17,7 @@ block_selected: {
 	img: [ 
 		{class: "gallery-col-12", path: "illustrations/bob_016.jpg"},
 		{class: "gallery-col-12", path: "illustrations/bob_013.jpg"},
-		{class: "gallery-col-12", path: "illustrations/bob_05.jpg"},
+		{class: "gallery-col-12", path: "illustrations/bob_05.jpg"}
 	]
 }
 

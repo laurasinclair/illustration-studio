@@ -9,7 +9,7 @@ aliases:
 - "/work/illustration/monsters-03/"
 thumbnail: "illustrations/thumbnail_monsters-01.gif"
 mainpage: true
-related: true
+related: true 
 
 header: {
 	titleimage: "illustrations/project-title_monsters.png"

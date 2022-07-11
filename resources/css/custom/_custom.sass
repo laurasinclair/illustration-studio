@@ -466,6 +466,12 @@ nav
 
 .home
 	header
+		.container-fluid
+			margin-left: -30px
+			margin-right: -30px
+			@include media-breakpoint-up(sm)
+				margin-left: initial
+				margin-right: initial
 		@extend .bg_dark
 		@extend .text-white
 		margin-bottom: -1px // chrome fix: lines between divs
@@ -1171,6 +1177,8 @@ footer
 	grid-area: 1/1
 
 .related
+	@include media-breakpoint-up(sm)
+		font-size: 1.3em
 	#toggle
 		@extend .no-outline
 		background: none
@@ -1218,6 +1226,10 @@ footer
 				@extend .no-outline
 				color: #fff
 
+.selected-work
+	.row
+		max-width: 100vw
+
 .selected
 	margin-bottom: initial
 	h2
@@ -1239,7 +1251,8 @@ footer
 		width: 100%
 		height: 100%
 		object-fit: cover
-		@extend .mb-5
+		@extend .mb-3
+		@extend .mb-md-5
 		@extend .text-center
 		&.w-md-50,
 		&.w-md-75

@@ -1,6 +1,6 @@
 ---
 title: "Hippo in park"
-draft: false
+draft: true
 slug: "hippo-in-park"
 weight: "22"
 thumbnail: "illustrations/illustration_025.jpg"

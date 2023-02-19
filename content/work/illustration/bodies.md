@@ -13,7 +13,7 @@ header: {
 
 block_project: {
 	description: "(description coming soon)",
-	bgcolor: "#0D0D0D",
+	bgcolor: "#03012b",
 	fontcolor: "#fff",
 	work: [ 
 		{class: "gallery-col-12 w-md-50", path: "illustrations/bubble-lady_01.png"},

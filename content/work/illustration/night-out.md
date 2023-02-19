@@ -1,7 +1,7 @@
 ---
-title: "Poker"
+title: "Night Out"
 draft: false
-slug: "poker"
+slug: "night-out"
 weight: "4"
 thumbnail: "illustrations/thumbnail_03.jpg"
 mainpage: true

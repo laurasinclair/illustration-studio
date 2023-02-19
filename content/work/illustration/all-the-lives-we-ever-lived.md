@@ -11,6 +11,8 @@ header: {
 }
 
 block_project: {
+	bgcolor: "#151515",
+	fontcolor: "#fff",
 	description: "(description coming soon)",
 	work: [ 
 		{class: "gallery-col-12", path: "illustrations/all-the-lives.jpg"},

@@ -11,13 +11,13 @@ header: {
 	titleimage: "illustrations/project-title_fruit-feast.png"
 }
 
-block_selected: {
+block_project: {
 	description: "(description coming soon)",
 	bgcolor: "#fff",
 	work: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_mad_03.jpg"},
-		{class: "gallery-col-6", path: "illustrations/illustration_mad_01.jpg"},
-		{class: "gallery-col-6", path: "illustrations/illustration_mad_02.jpg"}
+		{class: "gallery-col-12", path: "illustrations/fruit-feast_happylemon2.png"},
+		{class: "gallery-col-12", path: "illustrations/fruit-feast_pear.png"},
 	]
 }
 

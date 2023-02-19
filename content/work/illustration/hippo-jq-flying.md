@@ -1,16 +1,16 @@
 ---
 title: "Flying friends"
-draft: false
+draft: true
 slug: "flying-friends"
 weight: "18"
 thumbnail: "illustrations/illustration_020.jpg"
 mainpage: true
 related: true
 
-block_selected: {
+block_project: {
 	description: "(description coming soon)",
 	bgcolor: "#aaccf7",
-	img: [ 
+	work: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_020.jpg"}
 	]
 }

@@ -2,8 +2,8 @@
 title: "Bodies"
 draft: false
 slug: "bodies"
-weight: "11"
-thumbnail: "illustrations/illustration_016.gif"
+weight: "4"
+thumbnail: "illustrations/thumbnail_11.jpg"
 mainpage: true
 related: true
 
@@ -11,13 +11,14 @@ header: {
 	titleimage: "illustrations/project-title_bodies.png"
 }
 
-block_selected: {
+block_project: {
 	description: "(description coming soon)",
+	bgcolor: "#0D0D0D",
 	fontcolor: "#fff",
-	img: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_bodies-01.png"},
-		{class: "gallery-col-12", path: "illustrations/illustration_bodies-02.png"},
-		{class: "gallery-col-12", path: "illustrations/illustration_bodies-03.png"}
+	work: [ 
+		{class: "gallery-col-12 w-md-50", path: "illustrations/bubble-lady_01.png"},
+		{class: "gallery-col-12 w-md-50", path: "illustrations/bubble-lady_02.png"},
+		{class: "gallery-col-12 w-md-50", path: "illustrations/bubble-lady_03.png"}
 	]
 }
 

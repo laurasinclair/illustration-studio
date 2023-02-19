@@ -3,7 +3,7 @@ title: "Goals"
 draft: false
 slug: "goals"
 weight: "2"
-thumbnail: "illustrations/thumbnail_illustration_002.jpg"
+thumbnail: "illustrations/thumbnail_02.jpg"
 mainpage: true
 related: true
 
@@ -11,9 +11,9 @@ header: {
 	titleimage: "illustrations/project-title_goals.png"
 }
 
-block_selected: {
+block_project: {
 	description: "(description coming soon)",
-	img: [ 
+	work: [ 
 		{class: "gallery-col-12", path: "illustrations/illustration_002.png"}
 	]
 }

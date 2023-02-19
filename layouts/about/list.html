@@ -14,22 +14,20 @@
 			</div> <!-- /col -->
 			<div class="col-12 col-md-9 col-xl-7">
 				<h2 class="sr-down">Hey there 👋</h2>
-				<p class="sr-down">
-					Good content needs good visuals to stand out!<br>
-				</p>
-				<p class="sr-down">
-					Based in Berlin, {{ .Site.Title }} creates original and unique visuals to promote your brand or business, showcase your product, or create window displays for your store or office space!
-				</p>
 				<div class="row flex-column flex-sm-row no-gutters">
 					{{ if isset .Params "photo" }}
 					<div class="col-4 col-sm-3">
 						<div style="background-image: url('{{ .Params.photo }}'); width: 220px; height: 220px;" alt="Laura Sinclair" class="pic mb-3">
+							&nbsp;
 						</div>
 					</div> <!-- /col -->
 					{{ end }}
 
 					<div class="col-12 col-md-8 pl-0 pl-sm-4 d-flex justify-content-center flex-column">
-						<p class="sr-down text-muted mb-2">The studio is run by Laura Sinclair, visual designer with 7+ years of experience across different fields, working for over 20 brands!</p>
+						<p class="sr-down">
+							I am a digital illustrator and visual designer, based in Berlin, Germany.<br>
+							My work is inspired by the simplicity of life and natural human interactions. I love to explore the process of empathy through drawn characters and imagined worlds.
+						</p>
 
 						<div class="social">
 							<a href="https://www.linkedin.com/in/laurasnclr/" target="_blank">
@@ -46,7 +44,7 @@
 
 		<div id="services" class="row">
 			<div class="col-12 col-md-3 sr-down cat">
-				<p class="label">Education</p>
+				<p class="label">Stuff</p>
 			</div> <!-- /col -->
 
 			<div class="col-12 col-sm-5 col-md-4 col-lg-3">
@@ -71,7 +69,9 @@
 
 	<div class="row">
 		<div class="col-12 col-md-6 mx-auto">
-			<img src="{{"img/work/illustrations/happylemon.png" | absURL }}" alt="">
+			<figure class="m-0">
+                <img src="{{"img/work/illustrations/happylemon.png" | absURL }}" alt="" width="200">
+            </figure>
 		</div> <!-- /col -->
 	</div> <!-- /row -->
 </section>

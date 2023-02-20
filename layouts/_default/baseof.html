@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="sr">
 {{- partial "head.html" . -}}
-<body class="{{ .Section }}{{ if isset .Params "extraclass" }} {{ .Params.extraclass }} {{ end }} {{ if isset .Params "slug" }} {{ index .Params "slug" }}{{ end }}">
+<body class="{{ .Section }}{{ if isset .Params "extraclass" }} {{ .Params.extraclass }}{{ end }}{{ if isset .Params "slug" }} {{ index .Params "slug" }}{{ end }}" data-spy="scroll" data-target=".spyscroll" data-offset="450">
 	<div id="all">
 	<div id="sidebar">
 		{{- partial "sidebar.html" . -}}

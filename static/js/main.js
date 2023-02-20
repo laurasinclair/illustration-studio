@@ -47,7 +47,6 @@ $(document).ready(function() {
     });
 });
 
-
 var srDown = {
 	distance: '10%',
 	origin: 'top',

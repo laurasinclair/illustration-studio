@@ -10,7 +10,7 @@ baseURL = "https://dirtylemon.studio/"
     weight = 1
   [[menu.main]]
     name = "Work"
-    url = "/work"
+    url = "/#work"
     weight = 2
   [[menu.soon]]
     name = "About"

@@ -2,25 +2,25 @@
 	<div class="container-fluid">
 		<div class="gallery-block">
 			<div>
-				<a href="{{"work/illustrations/by-the-lake" | absURL }}">By The Lake</a>
+				<a href="{{"work/illustration/by-the-lake" | absURL }}">By The Lake</a>
 			</div>
-			<a href="{{"work/illustrations/by-the-lake" | absURL }}"><img src="{{"img/work/illustrations/illustration_001.jpg" | absURL }}" alt="" class="gallery-image"></a>
+			<a href="{{"work/illustration/by-the-lake" | absURL }}"><img src="{{"img/work/illustrations/illustration_001.jpg" | absURL }}" alt="" class="gallery-image"></a>
 		</div>
 
 		<div id="gallery">
-			{{ $mainpage := .Site.GetPage "section" "work" }}
-			{{ range ($mainpage.Pages.GroupByParam "mainpage") }}
-			{{ if eq .Key true }}
-			{{ range .Pages }}
+			{{- $mainpage := .Site.GetPage "section" "work" -}}
+			{{- range ($mainpage.Pages.GroupByParam "mainpage") -}}
+			{{- if eq .Key true -}}
+			{{- range .Pages -}}
 			<div class="gallery-block">
 				<div>
 					<a href="{{.Permalink}}">{{.Title }}</a>
 				</div>
 				<a href="{{.Permalink}}"><img src="{{"/img/work/" | absURL }}{{ .Param "thumbnail" }}" alt="{{.Title}}" class="gallery-image"></a>
 			</div>
-			{{ end }}
-			{{ end }}
-			{{ end }}
+			{{- end -}}
+			{{- end -}}
+			{{- end -}}
 		</div>
 
 		<div class="container-fluid">
@@ -29,7 +29,7 @@
 					<div>
 						<a href="work/illustration/all-the-lives-we-ever-lived">All The Lives We Ever Lived</a>
 					</div>
-					<a href="work/illustration/all-the-lives-we-ever-lived"><img src="/img/work/illustrations/all-the-lives01.jpg" alt="" class="gallery-image"></a>
+					<a href="work/illustration/all-the-lives-we-ever-lived"><img src="/img/work/illustrations/all-the-lives01.jpg" alt="All The Lives We Ever Lived" class="gallery-image"></a>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 		<div class="row my-5">
 			<div class="col-12 col-lg-6 mb-2 mb-md-5 mx-auto">
 				<div class="gallery-block sr-down">
-					<img src="{{"img/work/illustrations/illustration_027.png" | absURL }}" alt="" class="gallery-image">
+					<img src="{{"img/work/illustrations/fruit-feast_happylemon2.png" | absURL }}" alt="Dirty Lemon Studio" class="gallery-image">
 				</div>
 			</div>
 		</div>

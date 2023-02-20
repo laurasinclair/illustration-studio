@@ -14,7 +14,8 @@ block_project: {
 	work: [ 
 		{class: "gallery-col-12", path: "illustrations/frankie-magazine_cover-spread.jpg"},
 		{class: "gallery-col-6", path: "illustrations/frankie-magazine_spread-zoom-01.jpg"},
-		{class: "gallery-col-6", path: "illustrations/frankie-magazine_spread-zoom-02.jpg"}
+		{class: "gallery-col-6", path: "illustrations/frankie-magazine_spread-zoom-02.jpg"},
+		{class: "gallery-col-12 w-md-50 text-center", path: "illustrations/frankie-magazine_spread-zoom-03.png"}
 	]
 }
 

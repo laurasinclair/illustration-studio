@@ -1,45 +1,45 @@
-{{ define "main" }}
+{{-  define "main" -}}
 <header class="mt-O bg-dark">
 	<div class="container">
 		<div class="hero_large">
-			{{ if isset .Params.header "titleimage" }}
+			{{-  if isset .Params.header "titleimage" -}}
 			<img src="/img/work/{{ .Params.header.titleimage }}" alt="{{ .Params.header.h1 }}">
-			{{ else }}
+			{{- else -}}
 			<h2 class="text-center mx-auto">{{ (replace .Params.title "\n" "<br>") | safeHTML }}</h2>
-			{{ end }}
+			{{- end -}}
 		</div>
 	</div> <!-- /container -->
 </header>
 
-{{ if isset .Params "block_project" }}
+{{- if isset .Params "block_project" -}}
 <section class="selected-work"{{ if isset .Params.block_project "bgcolor" }} style="background-color: {{ .Params.block_project.bgcolor }}"{{ else }} style="background-color: #f1f1f7;"{{ end }}>
 	<div class="container-fluid">
-		{{ if isset .Params.block_project "description" }}
+		{{- if isset .Params.block_project "description" -}}
 		<p class="title-3 text-center"{{ if isset .Params.block_project "fontcolor" }} style="color: {{ .Params.block_project.fontcolor }}"{{ end }}>
-			{{ (replace .Params.block_project.description "\n" "<br>") | safeHTML }}
+			{{- (replace .Params.block_project.description "\n" "<br>") | safeHTML -}}
 		</p>
-		{{ end }}
+		{{- end -}}
 
 		<div class="row mt-5">
 			<div class="col-12">
 				<div class="gallery-grid-container">
-					{{ $title := print .Page.Title " | " .Site.Title }}
-					{{ range .Params.block_project.work }}
+					{{- $title := print .Page.Title " | " .Site.Title -}}
+					{{- range .Params.block_project.work -}}
 					<div class="gallery-grid-item {{ .class }}">
-						{{ if .video }}
+						{{- if .video -}}
 						<video width="2000" height="1000" style="max-width: 100%;" autoplay loop>
 							<source src="/img/work/{{ .path }}.webm" type="video/webm">
 							Your browser does not support the video tag.
 						</video> 
-						{{ else if .text }}
+						{{- else if .text -}}
 						<p>
-							{{ .content }}
+							{{- .content -}}
 						</p>
-						{{ else if .path }}
+						{{- else if .path -}}
 						<img src="/img/work/{{ .path }}" class="mb-2" alt="{{ $title }}">
-						{{ end }}
+						{{- end -}}
 					</div>
-					{{ end }}
+					{{- end -}}
 				</div>
 			</div>
 		</div> <!-- /row -->
@@ -47,8 +47,8 @@
 </section>
 <div style='-webkit-mask: url({{"img/bgbottom.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;{{ if isset .Params.block_project "bgcolor" }} background-color: {{ .Params.block_project.bgcolor }}{{ else }} background-color: #f1f1f7;{{ end }}'>
 </div>
-{{ end }}
+{{- end -}}
 
-{{ partial "related.html" . }}
+{{- partial "related.html" . -}}
 
-{{ end }}
+{{- end -}}

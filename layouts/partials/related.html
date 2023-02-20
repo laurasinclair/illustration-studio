@@ -3,9 +3,9 @@
 		<div class="row my-5 flex-column flex-md-row justify-content-center align-items-center">
 			<div class="col order-1 order-md-1 text-center text-md-left">
 				<div class="next-post">
-					{{ if .NextInSection }}
+					{{- if .NextInSection -}}
 					<a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Previous project</span>«&nbsp;{{ .NextPage.Title | truncate 50 "..." }}</a>
-					{{ end }}
+					{{- end -}}
 				</div>
 			</div>
 
@@ -15,9 +15,9 @@
 
 			<div class="col order-2 order-md-3 text-center text-md-right">
 				<div class="previous-post">
-					{{ if .PrevInSection }}
+					{{- if .PrevInSection -}}
 					<a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Next project</span>{{ .PrevPage.Title | truncate 50 "..."}} »</a>
-					{{ end }}
+					{{- end -}}
 				</div>
 			</div>
 		</div> <!-- /row -->
@@ -25,21 +25,21 @@
 
 	<div class="container-fluid" id="related_all">
 		<div class="row my-5">
-			{{ $mainpage := .Site.GetPage "section" "work" }}
-			{{ range ($mainpage.Pages.GroupByParam "related") }}
-			{{ if eq .Key true }}
-			{{ range .Pages }}
+			{{- $mainpage := .Site.GetPage "section" "work" -}}
+			{{- range ($mainpage.Pages.GroupByParam "related") -}}
+			{{- if eq .Key true -}}
+			{{- range .Pages -}}
 			<div class="col-12 col-sm-6 col-md-4 col-xl-2">
 				<div class="card mb-4">
 					<div class="card-body">
-						<a href="{{.Permalink}}" class="stretched-link">{{.Title | truncate 16 " (…)" }}</a>
+						<a href="{{.Permalink}}" class="stretched-link">{{.Title | truncate 16 "…" }}</a>
 					</div>
 					<div class="card-img" style="background-image: url('{{"/img/work/" | absURL }}{{ .Param "thumbnail" }}');" alt="{{ .Title}} | {{ .Site.Title}} Studio" class="rounded mb-3">&nbsp;</div>
 				</div>
 			</div> <!-- /col -->
-			{{ end }}
-			{{ end }}
-			{{ end }}
+			{{- end -}}
+			{{- end -}}
+			{{- end -}}
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </section>

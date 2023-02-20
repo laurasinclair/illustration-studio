@@ -12,9 +12,9 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the nav_overlay (height or width, depending on reveal) */
   display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Position the content inside the nav_overlay */

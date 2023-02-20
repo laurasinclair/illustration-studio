@@ -20,8 +20,5 @@
     "hugo-extended": "^0.80.0",
     "nodemon": "^2.0.7",
     "sass": "^1.58.3"
-  },
-  "scripts": {
-    "watch-sass": "sass -w resources/css/main.scss static/css/"
   }
 }

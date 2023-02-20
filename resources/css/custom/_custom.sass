@@ -245,7 +245,7 @@ ul.line
 			width: 8px
 			display: block
 			border-top: 2px solid $dark
-
+ 
 nav
 	@extend .bg_dark
 	width: 100%
@@ -510,6 +510,7 @@ nav
 	100%
 		transform: translateX(0)
 		opacity: 1
+
 .sticky
 	position: sticky
 	z-index: 6
@@ -547,7 +548,7 @@ nav
 		border: 3px solid $primary
 	&:hover,
 	&:focus,
-	&:active,
+	&:active
 		@extend .no-outline
 		background-color: $primary
 		svg
@@ -604,7 +605,6 @@ nav
 		@extend .pic-bg
 		box-shadow: 0 12px 37px rgba(26, 27, 32, 0.24)
 		// border: 1px solid #fff
-		border: 103px solid red !important
 		width: 220px
 		height: 220px
 		max-width: 100%
@@ -702,45 +702,6 @@ nav
 				@include media-breakpoint-up(lg)
 					opacity: 0.5
 
-#lemon
-	display: flex
-	justify-content: center
-	figure
-		position: relative
-		overflow: visible
-		width: 100%
-		max-width: 470px
-		img
-			height: auto
-	.txt-circle
-		position: absolute
-		animation: rotation 15s infinite linear 
-		fill: #000
-		width: 70px
-		left: 30px
-		bottom: 10px
-		@media screen and (min-width: 368px)
-			width: 80px
-			left: 35px
-			bottom: 30px
-		@media screen and (min-width: 420px)
-			width: 95px
-			left: 45px
-		@media screen and (min-width: 490px)
-			width: 95px
-			left: 55px
-			bottom: 45px
-		@media screen and (min-width: 540px)
-			width: 95px
-		@include media-breakpoint-up(sm)
-			width: 105px
-			left: 45px
-			bottom: 70px
-		@include media-breakpoint-up(md)
-			width: 105px
-			left: 55px
-			bottom: 70px
-
 footer
 	margin-top: -40px
 	#get-in-touch
@@ -753,7 +714,6 @@ footer
 	overflow: hidden
 	border-radius: 50%
 	border: 2px solid $white
-	// box-shadow: 0 5px 10px 0 transparentize($primary, 0.4)
 	box-shadow: 0 6px 10px transparentize($dark, 0.5)
 	height: auto
 	img
@@ -769,34 +729,34 @@ footer
 	border-right: 2px solid $dark
 	margin: 1.5em 0
 
-// .cd-title
-// 	position: relative
-// 	i
-// 		font-style: normal !important
+.cd-title
+	position: relative
+	i
+		font-style: normal !important
 
-// @media only screen and (min-width: 768px)
-// 	.cd-title
-// 		line-height: 250px
+@media only screen and (min-width: 768px)
+	.cd-title
+		line-height: 250px
 
-// @media only screen and (min-width: 1170px)
-// 	.cd-title
-// 		height: 200px
-// 		line-height: 300px
+@media only screen and (min-width: 1170px)
+	.cd-title
+		height: 200px
+		line-height: 300px
 		
-// @media only screen and (min-width: 768px)
-// 	.cd-intro
-// 		margin: 5em auto
+@media only screen and (min-width: 768px)
+	.cd-intro
+		margin: 5em auto
 	
-// @media only screen and (min-width: 1170px)
-// 	.cd-intro
-// 		margin: 6em auto
+@media only screen and (min-width: 1170px)
+	.cd-intro
+		margin: 6em auto
 
 .cd-words-wrapper
 	display: inline-block
 	position: relative
 	text-align: left
-	// i
-	// 	font-style: normal !important
+	i
+		font-style: normal !important
 
 .cd-words-wrapper b
 	display: inline-block
@@ -851,61 +811,6 @@ footer
 
 .no-csstransitions .cd-headline.scale .is-visible i
 	opacity: 1
-
-@-webkit-keyframes scale-up
-	0%
-		-webkit-transform: scale(0)
-		opacity: 0
-
-	60%
-		-webkit-transform: scale(1.2)
-		opacity: 1
-
-	100%
-		-webkit-transform: scale(1)
-		opacity: 1
-
-@-moz-keyframes scale-up
-	0%
-		-moz-transform: scale(0)
-		opacity: 0
-
-	60%
-		-moz-transform: scale(1.2)
-		opacity: 1
-
-	100%
-		-moz-transform: scale(1)
-		opacity: 1
-
-// .cd-headline.loading-bar
-// 	span
-// 		display: inline-block
-// 		padding: .2em 0
-// 	.cd-words-wrapper
-// 		overflow: hidden
-// 		vertical-align: top
-// 		&::after
-// 			/* loading bar */
-// 			content: ''
-// 			position: absolute
-// 			left: 0
-// 			bottom: 0
-// 			height: 3px
-// 			width: 0
-// 			background: $primary
-// 			z-index: 2
-// 			@include transition(width .3s -0.1s)
-// 		&.is-loading::after
-// 			width: 100%
-// 			@include transition(width 3s)
-// 	b
-// 		top: .2em
-// 		opacity: 0
-// 		@include transition(opacity .3s)
-// 		&.is-visible
-// 			opacity: 1
-// 			top: 0
 
 .overlay
 	@extend .rounded
@@ -1087,8 +992,6 @@ footer
 					opacity: 0
 
 .get-in-touch
-	.btn-contact
-		display: none
 	header
 		@extend .bg_dark
 		@extend .text-white
@@ -1179,7 +1082,8 @@ footer
 
 .related
 	@include media-breakpoint-up(sm)
-		font-size: 1.3em
+		font-size: 1.1em
+		white-space: nowrap
 	#toggle
 		@extend .no-outline
 		background: none
@@ -1218,7 +1122,7 @@ footer
 		&-img
 			border-radius: 0
 			width: 100%
-			height: 200px
+			height: 160px
 			background-size: cover
 			background-position: center center
 		a, a:visited
@@ -1226,6 +1130,8 @@ footer
 			&:hover
 				@extend .no-outline
 				color: #fff
+		.card-body
+			padding: 0.9rem 1.1rem
 
 .selected-work
 	.row

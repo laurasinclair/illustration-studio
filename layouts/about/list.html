@@ -17,7 +17,7 @@
 				<div class="row flex-column flex-sm-row no-gutters">
 					{{ if isset .Params "photo" }}
 					<div class="col-4 col-sm-3">
-						<div style="background-image: url('{{ .Params.photo }}'); width: 220px; height: 220px;" alt="Laura Sinclair" class="pic mb-3">
+						<div style="background-image: url('{{ .Params.photo }}'); -webkit-mask: url({{"img/mask01.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; width: 220px; height: 220px;" alt="Laura Sinclair" class="pic mb-3">
 							&nbsp;
 						</div>
 					</div> <!-- /col -->

@@ -12,10 +12,10 @@ header: {
 }
 
 block_project: {
-	bgcolor: "#f8f9ff",
+	bgcolor: "#e9e9f2",
 	description: "(description coming soon)",
 	work: [ 
-		{class: "gallery-col-12", path: "illustrations/thumbnail_02.jpg"}
+		{class: "gallery-col-12", path: "illustrations/illustration_002.jpg"}
 	]
 }
 

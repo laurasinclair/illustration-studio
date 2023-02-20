@@ -65,5 +65,5 @@ var srFade = {
 var nodeList = document.querySelectorAll('.sr-down');
 var otherNodeList = document.querySelectorAll('.work-section img');
 
-ScrollReveal().reveal(nodeList, srDown);
-ScrollReveal().reveal(otherNodeList, srFade);
+// ScrollReveal().reveal(nodeList, srDown);
+// ScrollReveal().reveal(otherNodeList, srFade);

@@ -720,18 +720,18 @@ nav
 			display: table
 			clear: both
 	.gallery-block
-		margin-bottom: 24px
-		border-radius: 4px
+		margin-bottom: 50px
 		overflow: hidden
 		position: relative
 		.gallery-image
 			width: 100%
 			display: block
 			height: auto
+			border-radius: 4px
 		div
 			position: absolute
-			left: 25px
-			bottom: 20px
+			left: 55px
+			bottom: 25px
 			background-color: black
 			padding: 3px 6px
 			color: #fff
@@ -749,17 +749,6 @@ nav
 		transition: all 0.5s ease-in-out
 		a
 			opacity: 1
-	.w-project-name
-		background-color:  white !important
-		transform: translateY(92px)
-		opacity: 0
-		h3
-			color:  black !important
-
-	.w-project:hover .w-project-name
-		transform: translateY(0px)
-		opacity: 1
-		transition: all 0.3s ease-out
 	hr
 		margin-top: 50px
 		margin-bottom: 100px
@@ -773,21 +762,6 @@ nav
 		@extend .my-4
 		&:last-of-type
 			@extend .mb-0
-
-	.w-projects-list
-		&:hover,
-		&:focus,
-		&:active
-			.w-project:hover,
-			.w-project:focus,
-			.w-project:active
-				@extend .transition-2s
-				opacity: 1
-			.w-project:not(:hover)
-				@extend .transition-2s
-				opacity: 0.3
-				@include media-breakpoint-up(lg)
-					opacity: 0.5
 
 footer
 	margin-top: -40px

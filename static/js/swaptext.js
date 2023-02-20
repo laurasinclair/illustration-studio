@@ -13,7 +13,9 @@ jQuery(document).ready(function($){
 		//clip effect 
 		revealDuration = 600,
 		revealAnimationDelay = 1500;
+	
 	initHeadline();
+	
 
 	function initHeadline() {
 		//insert <i> element for each letter of a changing word

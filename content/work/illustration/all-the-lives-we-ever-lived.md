@@ -2,7 +2,7 @@
 title: "All The Lives We Ever Lived"
 draft: false
 slug: "all-the-lives-we-ever-lived"
-thumbnail: "illustrations/all-the-lives01.jpg"
+thumbnail: "illustrations/all-the-lives_mobile.jpg"
 mainpage: false
 related: true
 

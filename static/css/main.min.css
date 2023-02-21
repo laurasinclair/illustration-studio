@@ -3532,7 +3532,7 @@ nav a:visited {
 }
 
 .mb-3, .gallery-grid-container .gallery-grid-item, .get-in-touch header h1, #pagenotfound header h1,
-#thank-you header h1, .home header h2,
+#thank-you header h1, #work .gallery-block, .home header h2,
 .my-3 {
   margin-bottom: 1rem !important;
 }
@@ -4338,7 +4338,7 @@ nav a:visited,
   .mx-md-5 {
     margin-right: 3rem !important;
   }
-  .mb-md-5, .gallery-grid-container .gallery-grid-item,
+  .mb-md-5, .gallery-grid-container .gallery-grid-item, #work .gallery-block,
   .my-md-5 {
     margin-bottom: 3rem !important;
   }
@@ -7741,7 +7741,7 @@ body {
   font-size: 1rem;
 }
 
-.no-outline, .related .card a:hover, .related .card a:visited:hover, .related #toggle, #top-btn:hover, #top-btn:focus,
+.no-outline, .related .card a:hover, .related .card a:visited:hover, .related #toggle, #work .gallery-block:hover, #work .gallery-block, #top-btn:hover, #top-btn:focus,
 #top-btn:active:hover,
 #top-btn:active:focus,
 #top-btn:active:active, #top-btn,
@@ -8532,7 +8532,6 @@ nav #menu-desktop .menu-desktop_logo a {
   clear: both;
 }
 #work .gallery-block {
-  margin-bottom: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -8543,24 +8542,33 @@ nav #menu-desktop .menu-desktop_logo a {
   border-radius: 4px;
 }
 #work .gallery-block div {
-  position: absolute;
-  left: 55px;
-  bottom: 25px;
-  background-color: black;
-  padding: 3px 6px;
+  background-color: #000;
   color: #fff;
   padding: 4px 13px;
-  opacity: 0;
   -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  opacity: 0;
+  position: absolute;
+  left: 35px;
+  bottom: 10px;
 }
 #work .gallery-block div a {
   font-weight: 200;
   color: #fff;
   opacity: 0;
-  font-size: 1.3em;
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  #work .gallery-block div {
+    left: 55px;
+    bottom: 25px;
+    padding: 3px 6px;
+  }
+  #work .gallery-block div a {
+    font-size: 1.3em;
+  }
 }
 #work .gallery-block:hover div {
   /*transform: scaleX(1)*/

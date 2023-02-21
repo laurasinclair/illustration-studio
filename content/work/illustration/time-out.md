@@ -16,7 +16,7 @@ block_project: {
 	bgcolor: "#5028C7",
 	fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12", path: "illustrations/illustration_031.jpg"}
+		{class: "gallery-col-12 w-md-75", path: "illustrations/illustration_031.jpg"}
 	]
 }
 

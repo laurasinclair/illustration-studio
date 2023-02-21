@@ -3,7 +3,11 @@
 	<div class="container">
 		<div class="hero_large">
 			{{-  if isset .Params.header "titleimage" -}}
-			<img src="/img/work/{{ .Params.header.titleimage }}" alt="{{ .Params.header.h1 }}">
+			<div class="row">
+				<div class="col-12 col-sm-9 mx-auto">
+					<img src="/img/work/{{ .Params.header.titleimage }}" alt="{{ .Params.header.h1 }}">
+				</div>
+			</div>
 			{{- else -}}
 			<h2 class="text-center mx-auto">{{ (replace .Params.title "\n" "<br>") | safeHTML }}</h2>
 			{{- end -}}

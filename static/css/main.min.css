@@ -8275,10 +8275,12 @@ nav #menu-desktop .menu-desktop_logo a {
 
 .reveal {
   opacity: 1 !important;
+  display: block !important;
 }
 
 .hide {
   opacity: 0 !important;
+  display: none !important;
 }
 
 .home header {

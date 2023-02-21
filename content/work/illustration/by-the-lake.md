@@ -16,9 +16,9 @@ block_project: {
 	fontcolor: "#fff",
 	bgcolor: "#040404",
 	work: [ 
-		{class: "gallery-col-12", path: "illustrations/bob_016.jpg"},
-		{class: "gallery-col-12", path: "illustrations/bob_013.jpg"},
-		{class: "gallery-col-12", path: "illustrations/bob_05.jpg"}
+		{class: "gallery-col-12 w-md-75", path: "illustrations/bob_016.jpg"},
+		{class: "gallery-col-12 w-md-75", path: "illustrations/bob_013.jpg"},
+		{class: "gallery-col-12 w-md-75", path: "illustrations/bob_05.jpg"}
 	]
 }
 

@@ -9094,12 +9094,6 @@ footer #get-in-touch {
   grid-template-columns: repeat(12, 1fr);
   padding-left: initial;
   padding-right: initial;
-  grid-gap: 2em;
-}
-@media (min-width: 768px) {
-  .gallery-grid-container {
-    grid-gap: 3em;
-  }
 }
 .gallery-grid-container .gallery-grid-item {
   width: 100%;

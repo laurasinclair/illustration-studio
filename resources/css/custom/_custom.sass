@@ -611,17 +611,17 @@ nav
 		max-width: 100%
 		border-radius: 200px
 
-	.social
-		a,
-		a:visited
+.social
+	a,
+	a:visited
+		svg path
+			fill: $gray-900
+		&:hover,
+		&:focus
+			transition: all 0.2s ease-in-out
+			outline: none
 			svg path
-				fill: $gray-900
-			&:hover,
-			&:focus
-				transition: all 0.2s ease-in-out
-				outline: none
-				svg path
-					fill: $primary
+				fill: $primary
 #work
 	#gallery
 		margin-top: 22px

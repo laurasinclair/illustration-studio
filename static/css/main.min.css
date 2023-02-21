@@ -8501,20 +8501,21 @@ nav #menu-desktop .menu-desktop_logo a {
   max-width: 100%;
   border-radius: 200px;
 }
-#about .social a svg path,
-#about .social a:visited svg path {
+
+.social a svg path,
+.social a:visited svg path {
   fill: #212529;
 }
-#about .social a:hover, #about .social a:focus,
-#about .social a:visited:hover,
-#about .social a:visited:focus {
+.social a:hover, .social a:focus,
+.social a:visited:hover,
+.social a:visited:focus {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   outline: none;
 }
-#about .social a:hover svg path, #about .social a:focus svg path,
-#about .social a:visited:hover svg path,
-#about .social a:visited:focus svg path {
+.social a:hover svg path, .social a:focus svg path,
+.social a:visited:hover svg path,
+.social a:visited:focus svg path {
   fill: #6562FF;
 }
 

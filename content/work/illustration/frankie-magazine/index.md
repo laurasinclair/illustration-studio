@@ -3,7 +3,6 @@ title: "Frankie Magazine"
 draft: false
 slug: "frankie-magazine"
 weight: "10"
-thumbnail: "thumbnail_frankie-magazine.jpg"
 mainpage: true
 related: true
 

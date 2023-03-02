@@ -3,7 +3,6 @@ title: "Night Out"
 draft: false
 slug: "night-out"
 weight: "4"
-thumbnail: "thumbnail_night-out.jpg"
 mainpage: true
 related: true
 

@@ -3,7 +3,6 @@ title: "Sleeping Buddies"
 draft: false
 slug: "sleeping-buddies"
 weight: "12"
-thumbnail: "thumbnail_sleeping-buddies.jpg"
 mainpage: true
 related: true
 

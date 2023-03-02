@@ -3,7 +3,6 @@ title: "Birds"
 draft: false
 slug: "Birds"
 weight: "4"
-thumbnail: "thumbnail_birds.jpg"
 mainpage: true
 related: true
 

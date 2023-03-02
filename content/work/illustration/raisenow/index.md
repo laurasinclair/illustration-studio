@@ -3,7 +3,6 @@ title: "RaiseNow"
 draft: false
 slug: "raisenow"
 weight: "5"
-thumbnail: "thumbnail_raisenow.jpg"
 mainpage: true
 related: true
 

@@ -3,7 +3,6 @@ title: "Time Out"
 draft: false
 slug: "time-out"
 weight: "7"
-thumbnail: "thumbnail_time-out.jpg"
 mainpage: true
 related: true
 

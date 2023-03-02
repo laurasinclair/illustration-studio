@@ -3,7 +3,6 @@ title: "Characters"
 draft: false
 slug: "characters"
 weight: "4"
-thumbnail: "thumbnail_characters.jpg"
 mainpage: true
 related: true
 

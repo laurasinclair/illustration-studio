@@ -3,7 +3,6 @@ title: "Glow In The Dark"
 draft: false
 slug: "glow-in-the-dark"
 weight: "5"
-thumbnail: "thumbnail_glow-in-the-dark.jpg"
 mainpage: true
 related: true
 

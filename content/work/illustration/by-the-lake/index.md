@@ -3,7 +3,6 @@ title: "By The Lake"
 draft: false
 slug: "by-the-lake"
 weight: "1"
-thumbnail: "thumbnail-desktop_by-the-lake.jpg"
 mainpage: false
 related: true
 

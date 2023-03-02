@@ -3,7 +3,6 @@ title: "Fruit Feast"
 draft: false
 slug: "fruit-feast"
 weight: "3"
-thumbnail: "thumbnail_fruit-feast.jpg"
 mainpage: true
 related: true
 

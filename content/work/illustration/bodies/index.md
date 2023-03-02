@@ -3,7 +3,6 @@ title: "Bodies"
 draft: false
 slug: "bodies"
 weight: "4"
-thumbnail: "thumbnail_bodies.jpg"
 mainpage: true
 related: true
 

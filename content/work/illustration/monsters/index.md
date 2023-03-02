@@ -3,7 +3,6 @@ title: "Monsters"
 draft: false
 slug: "monsters"
 weight: "1"
-thumbnail: "thumbnail_monsters.jpg"
 mainpage: true
 related: true 
 

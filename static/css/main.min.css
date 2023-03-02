@@ -1848,7 +1848,7 @@ button#sidebar:focus {
   border-radius: 0.2rem !important;
 }
 
-.rounded, .overlay {
+.rounded {
   border-radius: 0.25rem !important;
 }
 
@@ -5377,7 +5377,7 @@ nav a:visited,
   font-weight: 400 !important;
 }
 
-.font-weight-bold, .overlay div:first-of-type, .tag_secondary, .tag_dark, .tag_primary, .btn, .btn-transparent, .btn-disabled, .btn-secondary-light, .btn-primary-light, .btn-primary-dark, nav a,
+.font-weight-bold, .tag_secondary, .tag_dark, .tag_primary, .btn, .btn-transparent, .btn-disabled, .btn-secondary-light, .btn-primary-light, .btn-primary-dark, nav a,
 nav a:visited, a,
 a:visited {
   font-weight: 600 !important;
@@ -6081,7 +6081,7 @@ mark,
   border-radius: 0.2rem !important;
 }
 
-.rounded, .overlay {
+.rounded {
   border-radius: 0.25rem !important;
 }
 
@@ -7260,7 +7260,7 @@ nav a:visited {
   font-weight: 400 !important;
 }
 
-.font-weight-bold, .overlay div:first-of-type, .tag_secondary, .tag_dark, .tag_primary, .btn, .btn-transparent, .btn-disabled, .btn-secondary-light, .btn-primary-light, .btn-primary-dark, nav a,
+.font-weight-bold, .tag_secondary, .tag_dark, .tag_primary, .btn, .btn-transparent, .btn-disabled, .btn-secondary-light, .btn-primary-light, .btn-primary-dark, nav a,
 nav a:visited, a,
 a:visited {
   font-weight: 600 !important;
@@ -7712,12 +7712,12 @@ html {
 
 .bg_dark, .get-in-touch header, #pagenotfound header,
 #thank-you header, .home header, nav {
-  background-image: url(/img/bg_asfalt-light.png);
+  background-image: url(assets/bg_asfalt-light.png);
   background-color: #000;
 }
 
 .bg_white {
-  background-image: url(/img/bg_stardust.png);
+  background-image: url(assets/bg_stardust.png);
   background-color: #fff;
 }
 
@@ -7741,7 +7741,7 @@ body {
   font-size: 1rem;
 }
 
-.no-outline, .related .card a:hover, .related .card a:visited:hover, .related #toggle, #work .gallery-block:hover, #work .gallery-block, #top-btn:hover, #top-btn:focus,
+.no-outline, .related .card a:hover, .related .card a:visited:hover, .related #toggle, #work .gallery-block:hover div, #work .gallery-block:focus div, #work .gallery-block:hover, #work .gallery-block:focus, #work .gallery-block .gallery-image:hover, #work .gallery-block .gallery-image:focus, #top-btn:hover, #top-btn:focus,
 #top-btn:active:hover,
 #top-btn:active:focus,
 #top-btn:active:active, #top-btn,
@@ -7755,7 +7755,7 @@ body {
   outline: none;
 }
 
-.transition-2s, #contact-form button svg, .overlay:hover div:first-of-type, .overlay:focus div:first-of-type, .overlay:active div:first-of-type, .hide, .reveal, .tag.instagram:hover svg path, .tag.instagram:active svg path, .tag.instagram:focus svg path,
+.transition-2s, #contact-form button svg, .hide, .reveal, .tag.instagram:hover svg path, .tag.instagram:active svg path, .tag.instagram:focus svg path,
 .tag:visited.instagram:hover svg path,
 .tag:visited.instagram:active svg path,
 .tag:visited.instagram:focus svg path, a:hover, a:active, a:focus,
@@ -8573,13 +8573,13 @@ nav #menu-desktop .menu-desktop_logo a {
     font-size: 1.3em;
   }
 }
-#work .gallery-block:hover div {
+#work .gallery-block:hover div, #work .gallery-block:focus div {
   /*transform: scaleX(1)*/
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-#work .gallery-block:hover div a {
+#work .gallery-block:hover div a, #work .gallery-block:focus div a {
   opacity: 1;
 }
 #work hr {
@@ -8687,33 +8687,6 @@ footer #get-in-touch {
     opacity: 1;
   }
 }
-.overlay {
-  overflow: hidden;
-  position: relative;
-}
-.overlay div:first-of-type {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(101, 98, 255, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-}
-.overlay:hover div:first-of-type, .overlay:focus div:first-of-type, .overlay:active div:first-of-type {
-  opacity: 1 !important;
-}
-
 #pagenotfound header,
 #thank-you header {
   margin-bottom: -1px;
@@ -8772,6 +8745,9 @@ footer #get-in-touch {
   #contact-form input {
     height: 3.8rem;
   }
+}
+#contact-form input[type=checkbox]:hover {
+  cursor: pointer;
 }
 #contact-form textarea {
   min-height: 8rem;
@@ -8883,7 +8859,7 @@ footer #get-in-touch {
 }
 #contact-form ul.ks-cboxtags li input[type=checkbox]:checked + label::before {
   content: "";
-  background-image: url("img/icon_check-1.svg");
+  background-image: url("assets/icon_check-1.svg");
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -8915,7 +8891,7 @@ footer #get-in-touch {
 }
 #contact-form ul.ks-cboxtags li label::before {
   display: inline-block;
-  background-image: url("/img/icon_plus.svg");
+  background-image: url("assets/icon_plus.svg");
   padding: 2px 6px 2px 2px;
   content: "";
   margin-right: 10px;
@@ -9031,7 +9007,7 @@ footer #get-in-touch {
 }
 .related #toggle::after {
   content: "";
-  background-image: url(/img/icon_bracket-down.svg);
+  background-image: url(assets/icon_bracket-down.svg);
   background-size: cover;
   width: 12px;
   height: 12px;

@@ -1,5 +1,8 @@
 <div>
-	<a href="{{ .Site.BaseURL }}"><img src="/img/001-lemon.png" alt="Dirty Lemon studio" width="30"></a>
+	{{- $image := resources.Get "img/001-lemon.png" -}}
+    {{- if $image -}}
+	<img src="{{ $image.Permalink }}" alt="{{ .Site.Title }} Studio" width="30">
+    {{- end -}}
 
 	<p id="logo">
 		<a href="{{ .Site.BaseURL }}" class="text-white">{{ .Site.Title }} Studio</a>

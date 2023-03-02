@@ -1,0 +1,1220 @@
+html
+	scroll-behavior: smooth !important
+
+// .js
+// 	.sr-down,
+// 	# img
+// 		visibility: hidden
+
+::-moz-selection,
+::selection
+	color: $dark
+	background: $secondary
+
+$scale: 0.7
+@include media-breakpoint-up(lg)
+	$scale: 1
+
+*
+	&:focus
+		outline: 1px dotted $dark
+		outline-offset: 2px
+
+.bg_dark
+	background-image: url(/img/bg_asfalt-light.png)
+	background-color: $dark
+
+.bg_white
+	background-image: url(/img/bg_stardust.png)
+	background-color: $white
+
+.bd-left
+	border-left: 5px solid $dark
+	@extend .pl-4
+
+.pic-bg
+	background-size: cover !important
+	background-position: center center
+
+.debug
+	outline: 1px solid red
+
+body
+	// @extend .bg_white
+	// background-color: red !important
+	@extend .font-weight-light
+	font-family: $font-primary
+	color: $gray-900
+	position: relative
+	font-size: $font-size-base * 1
+	// font-size: 16px
+
+.no-outline
+	outline: none
+
+.transition-2s
+	transition: all 0.2s ease-in-out
+
+#all
+	display: grid
+	grid-template-columns: [main] auto
+	@include media-breakpoint-up(md)
+		grid-template-columns: [sidebar] 7% [main] auto
+
+#sidebar
+	@extend .d-none
+	@extend .d-md-block
+	@extend .bg-dark
+	@extend .text-white
+	border-right: 1px solid #666
+	p
+		width: fit-content
+		white-space: nowrap
+		text-align: right
+		padding: 0
+		margin: 0
+		transform-origin: center
+		&:first-of-type
+			transform: rotate(-90deg) translateX(-50%)
+		&:last-of-type
+			transform: rotate(-90deg) translateX(50%)
+	&>div
+		padding-top: 1em
+		padding-bottom: 1em
+		height: 100vh
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		top: 0
+		position: sticky
+	#logo,
+	.icon-lemon
+		opacity: 0
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+	#logo
+		font-size: $font-size-base * 1.2
+		// font-size: 1em
+		@extend .font-weight-light
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+
+section
+	padding-top: 2em
+	padding-bottom: 2em
+	@include media-breakpoint-up(sm)
+		padding-top: 2.5em
+		padding-bottom: 2.5em
+	@include media-breakpoint-up(md)
+		padding-top: 3em
+		padding-bottom: 3em
+	@include media-breakpoint-up(lg)
+		padding-top: 4em
+		padding-bottom: 4em
+	@include media-breakpoint-up(xl)
+		padding-top: 5em
+		padding-bottom: 5em
+
+a,
+a:visited
+	@extend .font-weight-bold
+	color: $primary
+	text-decoration: none
+	span
+		border-bottom: 1px solid
+	svg
+		@extend .transition-2s
+	&:hover,
+	&:active,
+	&:focus
+		color: $primary
+		text-decoration: none
+		@extend .transition-2s
+		span,
+		&.link
+			border-bottom: 2px solid
+.move
+	&:hover,
+	&:active,
+	&:focus
+		svg
+			transform: translate(5px, 0)
+
+img
+	max-width: 100%
+	max-height: 100%
+	display: inline-block
+	height: auto
+
+hr
+	border-top: none
+	border-bottom: 3px solid $dark
+
+h1
+	font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 2
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 2.2
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2.5
+	@include media-breakpoint-up(xl)
+		font-size: $font-size-base * 2.7
+
+h2
+	font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 2.2
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2.4
+	@include media-breakpoint-up(xl)
+		font-size: $font-size-base * 2.6
+
+h3
+	font-size: $font-size-base * 1.4
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.6
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2
+
+h4
+	font-size: $font-size-base * 1.2
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.4
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.6
+
+h5
+	font-size: $font-size-base * 1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.4
+
+p,
+li
+	font-size: $font-size-base * 1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+
+.lead
+	font-size: $font-size-base * 1.1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+
+.label
+	font-size: $font-size-base * 1
+	@extend .font-weight-bolder
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style: none
+		position: relative
+		padding: 0
+		margin-left: 0
+
+ul.arrow
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 6px
+			height: 5px
+			width: 5px
+			border: 1px solid $dark
+			border-width: 2px 2px 0 0
+			transform: rotate(45deg)
+
+ul.line
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 12px
+			width: 8px
+			display: block
+			border-top: 2px solid $dark
+ 
+nav
+	@extend .bg_dark
+	width: 100%
+	margin-bottom: -1px // chrome fix: lines between divs
+	a,
+	a:visited
+		@extend .font-weight-bold
+		@extend .mt-4
+		@extend .d-inline-block
+		color: $white
+		padding: 6px 15px
+
+	.btn-contact
+		position: fixed
+		z-index: 9
+		bottom: 1em
+		right: 50%
+		transform: translateX(50%)
+		width: max-content
+		@include media-breakpoint-up(md)
+			right: 3em
+			bottom: unset
+			transform: initial
+
+	#menu-desktop
+		.btn-contact
+			a,
+			a:visited
+				margin: 0 12px
+				background-color: $dark
+				border-radius: 20px
+				margin-right: 0 !important
+				@include media-breakpoint-up(md)
+					border: 1px solid $white
+				&:hover,
+				&:focus,
+				&:active
+					background-color: $secondary !important
+					border-color: $secondary
+					color: $dark
+		a,
+		a:visited
+			&:hover,
+			&:focus,
+			&:active
+				outline: none
+				color: $secondary
+		.menu-desktop_logo
+			a
+				padding-left: 0 !important
+				margin-left: 0 !important
+
+.btn
+	@extend .font-weight-bold
+	border-radius: 4px
+	padding: 13px 24px 14px
+	display: inline-block
+	margin-top: 10px
+	margin-bottom: 10px
+	text-align: center
+
+.btn-primary-dark
+	@extend .btn
+	@extend .text-white
+	svg
+		fill: $white
+		path
+			fill: $white
+	background-color: $primary
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		color: $white !important
+		background-color: $dark
+
+.btn-primary-light
+	@extend .btn
+	@extend .bg-light
+	color: $dark
+	svg
+		fill: $dark
+		path
+			fill: $dark
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: transparent !important
+		box-shadow: inset 0px 0px 0px 2px $light
+		color: $light
+		svg
+			fill: $light
+			path
+				fill: $light
+
+.btn-secondary-light
+	@extend .btn
+	@extend .bg-transparent
+	@extend .text-white
+	border: 2px solid $white
+	svg path
+			fill: $white
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: $gray-900 !important
+
+.btn-disabled
+	@extend .btn
+	background-color: $gray-200
+	color: $gray-600
+	svg
+		fill: $gray-600
+		path
+			fill: $gray-600
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: transparent !important
+		box-shadow: inset 0px 0px 0px 2px $light
+		color: $light
+		svg
+			fill: $light
+			path
+				fill: $light
+
+.btn-transparent
+	@extend .btn
+	@extend .text-white
+	background: none
+	fill: $white
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration: none !important
+		background: none !important
+		box-shadow: none !important
+
+.u-light
+	border-bottom: 1px solid $light
+.u-dark
+	border-bottom: 1px solid $dark
+
+.tag,
+.tag:visited
+	@extend .d-inline-block
+	color: $dark
+	border: 2px solid $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		color: $light
+		background-color: $primary
+		border: 2px solid $primary
+	&.instagram
+		svg
+			width: 23px
+			height: 21px
+			margin-bottom: 4px
+			transform: none
+			path
+				fill: $dark
+		&:hover,
+		&:active,
+		&:focus
+			svg
+				transform: none
+				path
+					fill: $light
+					@extend .transition-2s
+
+.tag_primary
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $primary
+
+.tag_dark
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: #262560
+
+.tag_secondary
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $secondary
+
+.reveal
+	opacity: 1 !important
+	display: block !important
+	@extend .transition-2s
+
+.hide
+	opacity: 0 !important
+	display: none !important
+	@extend .transition-2s
+
+.home
+	header
+		.container-fluid
+			margin-left: -30px
+			margin-right: -30px
+			@include media-breakpoint-up(sm)
+				margin-left: initial
+				margin-right: initial
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
+		h2
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				font-size: 3em
+				margin-top: 1.5em
+			@include media-breakpoint-up(xl)
+				margin-top: 3em
+				margin-bottom: 3em
+			&+a, 
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+		#grapes
+			overflow: hidden
+			z-index: 8
+			margin-bottom: -135px
+			@include media-breakpoint-up(lg)
+				margin-bottom: -95px
+			img
+				max-width: 120%
+				transform: translateX(-10%)
+				@include media-breakpoint-up(md)
+					max-width: 100%
+					transform: initial
+
+@keyframes translate
+	0%
+		transform: translateX(-10px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+.sticky
+	position: sticky
+	z-index: 6
+
+#services
+	li
+		margin-bottom: 4px
+		@include media-breakpoint-up(lg)
+			margin-bottom: 10px
+
+#top-btn,
+#top-btn:active
+	transition: all .25s ease-in-out
+	display: none
+	position: fixed
+	bottom: 0
+	right: 0
+	cursor: pointer
+	align-items: center
+	justify-content: center
+	margin: 0 1em 1em 0
+	width: 40px
+	height: 40px
+	background-color: $light
+	border: 2px solid $primary
+	border-radius: 50%
+	padding: .25em
+	z-index: 9
+	@extend .no-outline
+	@include media-breakpoint-up(sm)
+		margin: 0 3em 3em 0
+		width: 50px
+		height: 50px
+		background-color: transparent
+		border: 3px solid $primary
+	&:hover,
+	&:focus,
+	&:active
+		@extend .no-outline
+		background-color: $primary
+		svg
+			path
+				fill: $light !important
+	svg
+		width: 30px
+		height: 19px
+		@include media-breakpoint-up(sm)
+			width: 40px
+			height: 22px
+	
+.screen-reader-text
+	position: absolute
+	clip-path: inset(50%)
+	margin: -1px
+	border: 0
+	padding: 0
+	width: 1px
+	height: 1px
+	overflow: hidden
+	word-wrap: normal !important
+	clip: rect(1px, 1px, 1px, 1px)
+	&:focus
+		display: block
+		top: 5px
+		left: 5px
+		z-index: 10
+		clip-path: none
+		background-color: #eee
+		padding: 15px 23px 14px
+		width: auto
+		height: auto
+		text-decoration: none
+		line-height: normal
+		color: #444
+		font-size: 1em
+		clip: auto !important
+
+@keyframes rotation
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(359deg)
+
+#about
+	.cat
+		.mg
+			margin-top: 6px
+		@include media-breakpoint-up(xl)
+			display: flex
+			justify-content: flex-end
+	.pic
+		@extend .pic-bg
+		box-shadow: 0 12px 37px rgba(26, 27, 32, 0.24)
+		// border: 1px solid #fff
+		width: 220px
+		height: 220px
+		max-width: 100%
+		border-radius: 200px
+
+.social
+	a,
+	a:visited
+		svg path
+			fill: $gray-900
+		&:hover,
+		&:focus
+			transition: all 0.2s ease-in-out
+			outline: none
+			svg path
+				fill: $primary
+#work
+	#gallery
+		margin-top: 22px
+		&::before
+			content: ""
+			display: table
+			clear: both
+		&::after
+			content: ""
+			display: table
+			clear: both
+	.gallery-block
+		@extend .mb-3
+		@extend .mb-md-5
+		@extend .no-outline
+		overflow: hidden
+		position: relative
+		.gallery-image
+			width: 100%
+			display: block
+			height: auto
+			border-radius: 4px
+		div
+			background-color: $dark
+			color: #fff
+			padding: 4px 13px
+			transition: transform 1000ms cubic-bezier(.32,0,.07,1)
+			opacity: 0
+			position: absolute
+			left: 35px
+			bottom: 10px
+			a
+				font-weight: 200
+				color: #fff
+				opacity: 0
+				font-size: 0.9em
+			@include media-breakpoint-up(md)
+				left: 55px
+				bottom: 25px
+				padding: 3px 6px
+				a
+					font-size: 1.3em
+	.gallery-block:hover
+		@extend .no-outline
+		div
+			/*transform: scaleX(1)*/
+			opacity: 1
+			transition: all 0.5s ease-in-out
+			a
+				opacity: 1
+	hr
+		margin-top: 50px
+		margin-bottom: 100px
+		@include media-breakpoint-up(md)
+			margin-top: 100px
+			margin-bottom: 150px
+		@include media-breakpoint-up(lg)
+			margin-top: 200px
+			margin-bottom: 250px
+	.-section
+		@extend .my-4
+		&:last-of-type
+			@extend .mb-0
+
+footer
+	margin-top: -40px
+	#get-in-touch
+		padding-top: 5em
+		padding-bottom: 5em
+
+.img-round
+	@extend .mr-3
+	@extend .d-block
+	overflow: hidden
+	border-radius: 50%
+	border: 2px solid $white
+	box-shadow: 0 6px 10px transparentize($dark, 0.5)
+	height: auto
+	img
+		width: 100%
+		height: auto
+
+.no-js 
+	.cd-words-wrapper 
+		b
+			opacity: 0
+			&.is-visible
+				opacity: 1
+
+// animated text 
+.cd-headline
+	.cd-words-wrapper
+		display: inline-block
+		position: relative
+		text-align: left
+		b
+			display: inline-block
+			position: absolute
+			white-space: nowrap
+			left: 0
+			top: 0
+			&.is-visible
+				position: relative
+	&.scale 
+		b
+			opacity: 0
+		i
+			font-style: normal !important
+			display: inline-block
+			opacity: 0
+			transform: scale(0)
+			&.in
+				animation: scale-up 0.6s forwards
+			&.out
+				animation: scale-down 4.6s forwards
+
+.is-visible 
+	.cd-headline
+		&.scale 
+			i
+				opacity: 1
+
+.no-csstransitions 
+	.cd-headline
+		&.scale 
+			i
+				transform: scale(1)
+				opacity: 0
+			.is-visible 
+				i
+					opacity: 1
+
+@-webkit-keyframes scale-up
+	0%
+		-webkit-transform: scale(0)
+		opacity: 0
+
+	60%
+		-webkit-transform: scale(1.2)
+		opacity: 1
+
+	100%
+		-webkit-transform: scale(1)
+		opacity: 1
+
+@-moz-keyframes scale-up
+	0%
+		-moz-transform: scale(0)
+		opacity: 0
+
+	60%
+		-moz-transform: scale(1.2)
+		opacity: 1
+
+	100%
+		-moz-transform: scale(1)
+		opacity: 1
+
+// @-webkit-keyframes scale-down
+// 	0%
+// 		-webkit-transform: scale(1)
+// 		opacity: 1
+
+// 	60%
+// 		-webkit-transform: scale(0)
+// 		opacity: 0
+
+// @-moz-keyframes scale-down
+// 	0%
+// 		-moz-transform: scale(1)
+// 		opacity: 1
+
+// 	60%
+// 		-moz-transform: scale(0)
+// 		opacity: 0
+
+// @keyframes scale-down
+// 	0%
+// 		-webkit-transform: scale(1)
+// 		-moz-transform: scale(1)
+// 		-ms-transform: scale(1)
+// 		-o-transform: scale(1)
+// 		transform: scale(1)
+// 		opacity: 1
+
+// 	60%
+// 		-webkit-transform: scale(0)
+// 		-moz-transform: scale(0)
+// 		-ms-transform: scale(0)
+// 		-o-transform: scale(0)
+// 		transform: scale(0)
+// 		opacity: 0
+
+.overlay
+	@extend .rounded
+	overflow: hidden
+	position: relative
+	div:first-of-type
+		@extend .font-weight-bold
+		opacity: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: transparentize($primary, 0.2)
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $white
+	&:hover,
+	&:focus,
+	&:active
+		div:first-of-type
+			@extend .transition-2s
+			opacity: 1 !important
+
+#pagenotfound,
+#thank-you
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
+		h1
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em 
+			@include media-breakpoint-up(xl)
+				margin-top: 3em 
+				margin-bottom: 3em
+			&+a, 
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+		#grapes
+			overflow: hidden
+			z-index: 9
+			margin-bottom: -135px
+			@include media-breakpoint-up(lg)
+				margin-bottom: -95px
+			img
+				max-width: 120%
+				transform: translateX(-10%)
+				@include media-breakpoint-up(md)
+					max-width: 100%
+					transform: initial
+
+#contact-form
+	.row
+		@extend .mb-4
+	.form-label
+		@extend .font-weight-bolder
+		@extend .pb-2
+		display: block
+		// font-size: $font-size-base * 1.4
+	label
+		width: 100%
+	input
+		height: 3.4rem
+		@include media-breakpoint-up(md)
+			height: 3.8rem
+	textarea
+		min-height: 8rem
+		resize: vertical
+	input,
+	textarea
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		box-shadow: none
+		width: 100%
+		background: transparent
+		border: 3px solid $dark
+		border-radius: 6px
+		color: $dark
+		padding: 1em
+		&::selection
+			color: $white
+			background: $primary
+		&:focus
+			outline: none
+			background-color: $dark
+			border-color: $dark
+			color: $secondary
+			&::placeholder
+				color: $dark
+		&:invalid
+			outline: none
+			box-shadow: none
+			border-color: red
+		&::placeholder
+			color: #625341
+			font-style: italic
+	button
+		border: none
+		background-color: $dark
+		color: $white
+		svg
+			width: 16px
+			height: 11px
+			margin-left: 3px
+			@extend .transition-2s
+		&:focus,
+		&:hover,
+		&:active
+			background-color: $dark
+			svg
+				transform: translate(5px, 0)
+	ul
+		&.ks-cboxtags
+			list-style: none
+			li
+				display: inline-block
+				input[type="checkbox"]:checked
+					& + label
+						border: 3px solid $dark
+						background-color: $dark
+						color: #fff
+						transition: all .2s
+						&::before
+							// content: "\f00c"
+							content: ''
+							background-image: url('img/icon_check-1.svg')
+							transform: rotate(-360deg)
+							transition: transform .3s ease-in-out
+				input[type="checkbox"]:focus
+					& + label
+						border: 2px solid #e9a1ff
+				label
+					display: inline-block
+					background-color: none
+					border: 3px solid $dark !important
+					color: $dark
+					border-radius: 25px
+					white-space: nowrap
+					margin: 5px 0px
+					-webkit-touch-callout: none
+					-webkit-user-select: none
+					-moz-user-select: none
+					-ms-user-select: none
+					user-select: none
+					-webkit-tap-highlight-color: transparent
+					transition: all .2s
+					padding: 8px 14px
+					cursor: pointer
+					&::before
+						display: inline-block
+						background-image: url('/img/icon_plus.svg')
+						padding: 2px 6px 2px 2px
+						content: ''
+						margin-right: 10px
+						background-repeat: no-repeat
+						background-size: cover
+						width: 14px
+						height: 14px
+						transition: transform .3s ease-in-out
+				input[type="checkbox"]
+					display: absolute
+					position: absolute
+					opacity: 0
+
+.get-in-touch
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		h1
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em
+			@include media-breakpoint-up(xl)
+				margin-top: 3em
+				margin-bottom: 3em
+			&+a,
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+	input,
+	textarea
+		background-color: $white
+	button
+		background-color: $primary !important
+	#get-in-touch
+		display: none
+
+	header
+		@extend .bg_dark
+		color: $white
+		.hero
+			display: flex
+			min-height: 40vh
+			padding: 3em 0 0
+			@include media-breakpoint-up(md)
+				height: 60vh
+				padding: 2.5rem 0
+			align-items: center
+			padding-bottom: 50px
+
+.hero
+	&_large
+		padding: 5em 0 6em
+		background-color: $dark
+		h2
+			color: white
+			padding: 2em 0
+
+.thank-you
+	background-color: $secondary
+
+#breadcrumbs
+	a
+		font-weight: 900 !important
+		&:first-of-type
+			font-weight: lighter !important
+			color: #ffffff8c
+
+.grid-1,
+.grid-2
+	display: grid
+	place-items: center
+
+.full-area-1,
+.full-area-2
+	grid-area: 1/1
+
+.related
+	@include media-breakpoint-up(sm)
+		font-size: 1.1em
+		white-space: nowrap
+	#toggle
+		@extend .no-outline
+		background: none
+		border: none
+		span
+			border-bottom: 2px solid $dark
+			display: inline-block
+		&::after
+			content: ""
+			background-image: url(/img/icon_bracket-down.svg)
+			background-size: cover
+			width: 12px
+			height: 12px
+			display: inline-block
+			margin-left: 10px
+		&.active
+			&::after
+				transition: all .4s ease-in-out
+				transform: rotate(180deg)
+	#related_all
+		transition: all .2s ease-in-out
+		position: relative
+		overflow: hidden
+		height: 0
+		opacity: 0
+		&.active
+			transition: all .4s ease-in-out
+			height: 100%
+			opacity: 1
+	.card
+		overflow: hidden
+		&:hover,
+		&:focus,
+		&:active
+			background-color: $primary
+		&-img
+			border-radius: 0
+			width: 100%
+			height: 160px
+			background-size: cover
+			background-position: center center
+		a, a:visited
+			border: none
+			&:hover
+				@extend .no-outline
+				color: #fff
+		.card-body
+			padding: 0.9rem 1.1rem
+
+.selected-work
+	.row
+		max-width: 100vw
+
+.selected
+	margin-bottom: initial
+	h2
+		@include media-breakpoint-up(md)
+			margin-bottom: 2.5em
+			display: block
+
+.gallery-grid-container
+	display: grid
+	grid-template-columns: repeat(12, 1fr)
+	// grid-template-rows: 100fr
+	padding-left: initial
+	padding-right: initial
+	// grid-gap: 2em
+	@include media-breakpoint-up(md)
+		// grid-gap: 3em
+
+	.gallery-grid-item
+		width: 100%
+		height: 100%
+		object-fit: cover
+		@extend .mb-3
+		@extend .mb-md-5
+		@extend .text-center
+		&.w-md-50,
+		&.w-md-75
+			@extend .mx-auto
+		&.pt-md-lots
+			@include media-breakpoint-up(md)
+				padding-top: 10em !important
+		&.vertical-align
+			display: flex
+			align-items: center
+			justify-content: center
+		img
+			border-radius: 4px
+
+	.gallery-col-1
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 1
+
+	.gallery-col-2
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 2
+
+	.gallery-col-3
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 3
+
+	.gallery-col-4
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 4
+
+	.gallery-col-5
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 5
+
+	.gallery-col-6
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 6
+
+	.gallery-col-7
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 7
+
+	.gallery-col-8
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 8
+
+	.gallery-col-9
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 9
+
+	.gallery-col-10
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 10
+
+	.gallery-col-11
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 11
+
+	.gallery-col-12
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 12
+
+	.gallery-row-1
+		grid-row: span 1
+
+	.gallery-row-2
+		grid-row: span 2
+
+	.gallery-row-3
+		grid-row: span 3
+
+	.gallery-row-3
+		grid-row: span 4

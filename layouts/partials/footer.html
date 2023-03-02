@@ -1,5 +1,8 @@
 <footer>
-	<div class="bg-secondary" style='-webkit-mask: url({{"img/bgtop.png" | absURL }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover; -webkit-mask-position: top center; height: 100px'>
+	{{- $image := resources.Get "img/bgtop.png" -}}
+	{{- if $image -}}
+	<div class="bg-secondary" style='-webkit-mask: url({{ $image.Permalink }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover; -webkit-mask-position: top center; height: 100px'>
+	{{- end -}}
 	</div>
 
 	<div id="get-in-touch" class="bg-secondary">

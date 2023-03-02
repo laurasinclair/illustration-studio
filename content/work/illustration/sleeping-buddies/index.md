@@ -13,10 +13,10 @@ block_project: {
 	work: [ 
 		{class: "gallery-col-12", path: "illustration_sleeping-buddies-01.jpg"},
 		{text: true, class: "gallery-col-12", content: "Behind the scenes:"},
-		{class: "gallery-col-3", path: "illustration_sleeping-buddies-03.png"},
-		{class: "gallery-col-3", path: "illustration_sleeping-buddies-04.png"},
-		{class: "gallery-col-3", path: "illustration_sleeping-buddies-05.png"},
-		{class: "gallery-col-3", path: "illustration_sleeping-buddies-06.png"},
+		{class: "gallery-col-3 px-md-2", path: "illustration_sleeping-buddies-03.png"},
+		{class: "gallery-col-3 px-md-2", path: "illustration_sleeping-buddies-04.png"},
+		{class: "gallery-col-3 px-md-2", path: "illustration_sleeping-buddies-05.png"},
+		{class: "gallery-col-3 px-md-2", path: "illustration_sleeping-buddies-06.png"},
 	]
 }
 

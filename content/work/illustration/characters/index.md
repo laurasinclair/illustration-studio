@@ -15,10 +15,10 @@ block_project: {
 		{class: "gallery-col-4", path: "illustration_characters-03.jpg"},
 		{class: "gallery-col-4", path: "illustration_characters-04.jpg"},
 		{class: "gallery-col-4", path: "illustration_characters-05.jpg"},
-		{class: "gallery-col-6", path: "illustration_characters-06.jpg"},
-		{class: "gallery-col-6", path: "illustration_characters-07.jpg"},
-		{class: "gallery-col-12 w-md-50 text-center", path: "illustration_characters-08.png"},
-		{class: "gallery-col-12 w-md-50 text-center", path: "illustration_characters-09.png"},
+		{class: "gallery-col-6 pr-md-4", path: "illustration_characters-06.jpg"},
+		{class: "gallery-col-6 pl-md-4", path: "illustration_characters-07.jpg"},
+		{class: "gallery-col-12 w-md-75 text-center", path: "illustration_characters-08.png"},
+		{class: "gallery-col-12 w-md-75 text-center", path: "illustration_characters-09.png"},
 	]
 }
 

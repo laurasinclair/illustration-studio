@@ -8883,7 +8883,7 @@ footer #get-in-touch {
 }
 #contact-form ul.ks-cboxtags li input[type=checkbox]:checked + label::before {
   content: "";
-  background-image: url("/img/icon_check-1.svg");
+  background-image: url("img/icon_check-1.svg");
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;

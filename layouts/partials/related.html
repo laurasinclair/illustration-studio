@@ -38,7 +38,7 @@
 					<div class="card-img">
 						{{- $image := .Resources.GetMatch "thumbnail_*" -}}
 						{{- with $image -}}
-						<div class="card-img" style="background-image: url('{{ .Permalink }}');" alt=" Studio" class="rounded mb-3">&nbsp;</div>
+						<div class="card-img rounded mb-3" style="background-image: url('{{ .Permalink }}');">&nbsp;</div>
 						{{- end -}}
 					</div>
 				</div>

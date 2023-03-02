@@ -8979,6 +8979,9 @@ footer #get-in-touch {
     padding: 2.5rem 0;
   }
 }
+.get-in-touch footer .social-links {
+  background-color: #FFC107 !important;
+}
 
 .hero_large {
   padding: 5em 0 6em;

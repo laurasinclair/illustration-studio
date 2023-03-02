@@ -34,7 +34,13 @@
 					<div class="card-body">
 						<a href="{{.Permalink}}" class="stretched-link">{{.Title | truncate 16 "…" }}</a>
 					</div>
-					<div class="card-img" style="background-image: url('{{"/img/work/" | absURL }}{{ .Param "thumbnail" }}');" alt="{{ .Title}} | {{ .Site.Title}} Studio" class="rounded mb-3">&nbsp;</div>
+
+					<div class="card-img">
+						{{- $image := .Resources.GetMatch "thumbnail_*" -}}
+						{{- with $image -}}
+						<div class="card-img" style="background-image: url('{{ .Permalink }}');" alt=" Studio" class="rounded mb-3">&nbsp;</div>
+						{{- end -}}
+					</div>
 				</div>
 			</div> <!-- /col -->
 			{{- end -}}

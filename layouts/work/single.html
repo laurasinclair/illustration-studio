@@ -1,11 +1,13 @@
 {{-  define "main" -}}
+
 <header class="mt-O bg-dark">
 	<div class="container">
 		<div class="hero_large">
-			{{-  if isset .Params.header "titleimage" -}}
+			{{- $image := .Resources.GetMatch "project-title_*" -}}
+			{{- with $image -}}
 			<div class="row">
 				<div class="col-12 col-sm-9 mx-auto">
-					<img src="/img/work/{{ .Params.header.titleimage }}" alt="{{ .Params.header.h1 }}">
+					<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Params.header.h1 }}">
 				</div>
 			</div>
 			{{- else -}}
@@ -32,7 +34,7 @@
 					<div class="gallery-grid-item {{ .class }}">
 						{{- if .video -}}
 						<video width="2000" height="1000" style="max-width: 100%;" autoplay loop>
-							<source src="/img/work/{{ .path }}.webm" type="video/webm">
+							<source src="{{ .path }}.webm" type="video/webm">
 							Your browser does not support the video tag.
 						</video> 
 						{{- else if .text -}}
@@ -40,7 +42,7 @@
 							{{- .content -}}
 						</p>
 						{{- else if .path -}}
-						<img src="/img/work/{{ .path }}" class="mb-2" alt="{{ $title }}">
+						<img src="{{ .path }}" class="mb-2" alt="{{ $title }}">
 						{{- end -}}
 					</div>
 					{{- end -}}

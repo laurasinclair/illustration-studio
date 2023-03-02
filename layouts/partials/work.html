@@ -5,7 +5,7 @@
 				<div>
 					<a href="{{"work/illustration/by-the-lake" | absURL }}">By The Lake</a>
 				</div>
-				<a href="{{"work/illustration/by-the-lake" | absURL }}"><img src="{{"work/illustration/by-the-lake/thumbnail_by-the-lake.jpg" | absURL }}" alt="By The Lake | Dirty Lemon Studio" class="gallery-image d-block d-sm-none"><img src="{{"work/illustration/by-the-lake/thumbnail-desktop_by-the-lake.jpg" | absURL }}" alt="By The Lake | Dirty Lemon Studio" class="gallery-image d-none d-sm-block"></a>
+				<a href="{{"work/illustration/by-the-lake" | absURL }}"><img src="{{"work/illustration/by-the-lake/thumbnail_by-the-lake.jpg" | absURL }}" alt="By The Lake | {{ .Site.Title }}" class="gallery-image d-block d-sm-none"><img src="{{"work/illustration/by-the-lake/thumbnail-desktop_by-the-lake.jpg" | absURL }}" alt="By The Lake | Dirty Lemon Studio" class="gallery-image d-none d-sm-block"></a>
 			</div>
 		</div> <!-- /row -->
 
@@ -16,12 +16,12 @@
 			{{- range .Pages -}}
 			<div class="gallery-block col-12 col-md-6">
 				<div>
-					<a href="{{.RelPermalink}}">{{.Title }}</a>
+					<a href="{{.RelPermalink}}">{{ .Title }}</a>
 				</div>
 				<a href="{{.Permalink}}">
 				{{- $image := .Resources.GetMatch "thumbnail_*" -}}
 				{{- with $image -}}
-				<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{.Title}} | Dirty Lemon Studio" class="gallery-image">
+				<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Title }} | Dirty Lemon Studio" class="gallery-image">
 				{{- end -}}
 				</a>
 			</div>
@@ -35,7 +35,7 @@
 				<div>
 					<a href="{{"work/illustration/all-the-lives-we-ever-lived" | absURL }}">All The Lives We Ever Lived</a>
 				</div>
-				<a href="{{"work/illustration/all-the-lives-we-ever-lived" | absURL }}"><img src="{{"work/illustration/all-the-lives-we-ever-lived/thumbnail_all-the-lives.jpg" | absURL }}" alt="All The Lives We Ever Lived | Dirty Lemon Studio" class="gallery-image d-block d-md-none"><img src="{{"work/illustration/all-the-lives-we-ever-lived/thumbnail-desktop_all-the-lives.jpg" | absURL }}" alt="All The Lives We Ever Lived | Dirty Lemon Studio" class="gallery-image d-none d-md-block"></a>
+				<a href="{{"work/illustration/all-the-lives-we-ever-lived" | absURL }}"><img src="{{"work/illustration/all-the-lives-we-ever-lived/thumbnail_all-the-lives.jpg" | absURL }}" alt="All The Lives We Ever Lived | {{ .Site.Title }}" class="gallery-image d-block d-md-none"><img src="{{"work/illustration/all-the-lives-we-ever-lived/thumbnail-desktop_all-the-lives.jpg" | absURL }}" alt="All The Lives We Ever Lived | Dirty Lemon Studio" class="gallery-image d-none d-md-block"></a>
 			</div>
 		</div> <!-- /row -->
 	</div>

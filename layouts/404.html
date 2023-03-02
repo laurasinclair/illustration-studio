@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{- define "main" -}}
 
 <div id="pagenotfound">
 	<header>
@@ -17,10 +17,10 @@
 				</div>
 
 				<div id="totem" class="col-12 col-md-7 text-center py-3 py-md-5 sr-down">
+					{{- $image := resources.Get "img/totem_1.png" -}}
 					<picture>
-						<source srcset="/img/totem_1.webp" type="image/webp">
-						<source srcset="/img/totem_1.png" type="image/png">
-						<img src="/img/totem_1.png" alt="{{ .Params.title }}" width="600">
+						<source srcset="{{ $image.Permalink }}" type="image/png">
+						<img src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="650">
 					</picture>
 				</div> <!-- /col -->
 			</div> <!-- /row -->
@@ -29,4 +29,4 @@
 	<div class="bg_dark" style='-webkit-mask: url({{ "css/assets/bgbottom.png" | absURL  }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;'></div>
 </div>
 
-{{ end }}
+{{- end -}}

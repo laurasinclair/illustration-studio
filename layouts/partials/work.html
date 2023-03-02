@@ -16,12 +16,12 @@
 			{{- range .Pages -}}
 			<div class="gallery-block col-12 col-md-6">
 				<div>
-					<a href="{{.RelPermalink}}">{{ .Title }}</a>
+					<a href="{{ .Permalink | absURL }}">{{ .Title }}</a>
 				</div>
-				<a href="{{.Permalink}}">
+				<a href="{{ .Permalink | absURL }}">
 				{{- $image := .Resources.GetMatch "thumbnail_*" -}}
 				{{- with $image -}}
-				<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Title }} | Dirty Lemon Studio" class="gallery-image">
+				<img src="{{ .Permalink | absURL  }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Title }} | Dirty Lemon Studio" class="gallery-image">
 				{{- end -}}
 				</a>
 			</div>

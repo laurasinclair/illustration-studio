@@ -25,8 +25,8 @@
 
 	<div class="container-fluid" id="related_all">
 		<div class="row my-5">
-			{{- $mainpage := .Site.GetPage "section" "work" -}}
-			{{- range ($mainpage.Pages.GroupByParam "related") -}}
+			{{- $related := .Site.GetPage "section" "work" -}}
+			{{- range ($related.Pages.GroupByParam "related") -}}
 			{{- if eq .Key true -}}
 			{{- range .Pages -}}
 			<div class="col-12 col-sm-6 col-md-4 col-xl-2">

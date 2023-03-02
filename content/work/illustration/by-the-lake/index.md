@@ -3,6 +3,7 @@ title: "By The Lake"
 draft: false
 slug: "by-the-lake"
 weight: "1"
+featured: true
 mainpage: false
 related: true
 

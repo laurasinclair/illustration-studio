@@ -1,0 +1,21 @@
+
+
+		<div id="gallery" class="row mt-0">
+			{{- $featured := .Site.GetPage "section" "work" -}}
+			{{- range ($featured.Pages.GroupByParam "featured") -}}
+			{{- if eq .Key true -}}
+			{{- range .Pages -}}
+			<div class="gallery-block col-12">!!!
+				<div>
+					<a href="{{ .Permalink | absURL }}">{{ .Title }}</a>
+				</div>
+				<a href="{{ .Permalink | absURL }}">
+				{{- $image := .Resources.GetMatch "thumbnail_*" -}}
+				<img src="{{ $image.Permalink | absURL  }}" alt="By The Lake | {{ .Site.Title }}" class="gallery-image d-block d-sm-none">
+				{{- $image := .Resources.GetMatch "thumbnail-desktop_*" -}}
+				<img src="{{ $image.Permalink | absURL  }}" alt="By The Lake | Dirty Lemon Studio" class="gallery-image d-none d-sm-block">
+				</a>
+			</div>
+			{{- end -}}
+			{{- end -}}
+			{{- end -}}

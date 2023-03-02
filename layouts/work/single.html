@@ -1,5 +1,4 @@
 {{-  define "main" -}}
-
 <header class="mt-O bg-dark">
 	<div class="container">
 		<div class="hero_large">
@@ -39,7 +38,7 @@
 						</video> 
 						{{- else if .text -}}
 						<p>
-							{{- .content -}}
+							{{- .text -}}
 						</p>
 						{{- else if .path -}}
 						<img src="{{ .path }}" class="mb-2" alt="{{ $title }}">

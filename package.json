@@ -5,14 +5,14 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurasinclair/2020-studio.git"
+    "url": "git+https://github.com/laurasinclair/dirtylemon-studio.git"
   },
   "author": "laura",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laurasinclair/2020-studio/issues"
+    "url": "https://github.com/laurasinclair/dirtylemon-studio/issues"
   },
-  "homepage": "https://github.com/laurasinclair/2020-studio#readme",
+  "homepage": "https://github.com/laurasinclair/dirtylemon-studio#readme",
   "dependencies": {
     "@adamholtzman/image-compress": "^1.0.1"
   },

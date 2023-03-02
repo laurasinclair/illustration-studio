@@ -3,9 +3,9 @@ title: "By The Lake"
 draft: false
 slug: "by-the-lake"
 weight: "1"
+thumbnail: "thumbnail-desktop_by-the-lake.jpg"
 mainpage: false
 related: true
-thumbnail: "thumbnail_by-the-lake.jpg"
 
 block_project: {
 	description: "(description coming soon)",

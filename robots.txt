@@ -2,7 +2,5 @@ User-agent: *
 
 Disallow: /content/
 Disallow: /layouts/
-
-Disallow: /static/img/work/illustrations/rnw_*.jpg
-Disallow: /public/img/work/illustrations/rnw_*.jpg
-Disallow: /img/work/illustrations/rnw_*.jpg
+Disallow: /work/illustration/raisenow/*
+Disallow: /about/*

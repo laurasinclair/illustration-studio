@@ -7,10 +7,6 @@ thumbnail: "thumbnail_time-out.jpg"
 mainpage: true
 related: true
 
-header: {
-	titleimage: "project-title_time-out.png"
-}
-
 block_project: {
 	description: "(description coming soon)",
 	bgcolor: "#5028C7",

@@ -7,10 +7,6 @@ thumbnail: "thumbnail_fruit-feast.jpg"
 mainpage: true
 related: true
 
-header: {
-	titleimage: "project-title_fruit-feast.png"
-}
-
 block_project: {
 	description: "(description coming soon)",
 	bgcolor: "#fff",

@@ -2,13 +2,9 @@
 title: "All The Lives We Ever Lived"
 draft: false
 slug: "all-the-lives-we-ever-lived"
-thumbnail: "thumbnail_all-the-lives_desktop.jpg"
+thumbnail: "thumbnail-desktop_all-the-lives.jpg"
 mainpage: false
 related: true
-
-header: {
-	titleimage: "project-title_all-the-lives.png"
-}
 
 block_project: {
 	bgcolor: "#151515",

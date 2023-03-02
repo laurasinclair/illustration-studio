@@ -7,10 +7,6 @@ thumbnail: "illustrations/thumbnail_goals.jpg"
 mainpage: true
 related: true
 
-header: {
-	titleimage: "illustrations/project-title_goals.png"
-}
-
 block_project: {
 	bgcolor: "#e9e9f2",
 	description: "(description coming soon)",

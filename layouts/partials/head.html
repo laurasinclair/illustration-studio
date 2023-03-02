@@ -9,31 +9,38 @@
 
 	<meta name="title" content="{{ $title }}">
 	<meta name="description" content="{{ .Site.Params.metadescription }}">
-	<meta name="robots" content="noindex">
+	<!-- <meta name="robots" content="noindex"> -->
 
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="{{"" | absURL }}">
-	<meta property="og:title" content="{{ $title }}">
-	<meta property="og:description" content="{{ .Site.Params.metadescription }}">
-	<meta property="og:image" content="{{"img/lemonstudio_1200x627.jpg" | absURL }}">
-
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="{{"" | absURL }}">
+	<meta property="og:url" content="{{"" | absURL }}">
 	<meta property="twitter:title" content="{{ $title }}">
+	<meta property="og:title" content="{{ $title }}">
 	<meta property="twitter:description" content="{{ .Site.Params.metadescription }}">
-	<meta property="twitter:image" content="{{"img/lemonstudio_1200x627.jpg" | absURL }}">
+	<meta property="og:description" content="{{ .Site.Params.metadescription }}">
+	{{- $image := .Resources.GetMatch "featured_*" -}}
+	{{- if $image -}}
+	<meta property="twitter:image" content="{{ .Permalink }}">
+	<meta property="og:image" content="{{ .Permalink }}">
+	{{- else -}}
+	{{- $image := resources.Get "img/lemonstudio_1200x627.jpg" -}}
+	<meta property="twitter:image" content="{{ $image.Permalink }}">
+	<meta property="og:image" content="{{ $image.Permalink }}">
+	{{- end -}}
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y5D3KK1T6"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-9Y5D3KK1T6');
 	</script>
 
-	<link rel="stylesheet" href="{{"css/main.min.css" | absURL }}">
-	<link rel="icon" href="{{"favicon.png" | absURL }}" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="{{ "css/main.min.css" | absURL }}">
+
+	{{- $image := resources.Get "img/favicon.png" -}}
+	<link rel="icon" href="{{ $image.Permalink }}" sizes="16x16 32x32" type="image/png">
 	<!-- <script src="/js/scrollreveal.js"></script> -->
 	<!-- <script>
 		ScrollReveal({ reset: true });

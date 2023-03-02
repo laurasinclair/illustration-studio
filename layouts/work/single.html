@@ -40,8 +40,9 @@
 						<p>
 							{{- .text -}}
 						</p>
-						{{- else if .path -}}
-						<img src="{{ .path }}" class="mb-2" alt="{{ $title }}">
+						{{- else -}}
+						{{- $image := .Resources.GetMatch "block_project" "work" -}}
+						<img src="{{ $.Permalink | absURL  }}{{.src}}" class="mb-2" alt="{{ $title }}">
 						{{- end -}}
 					</div>
 					{{- end -}}

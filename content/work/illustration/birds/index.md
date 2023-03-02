@@ -11,10 +11,10 @@ block_project: {
 	# bgcolor: "#0D0D0D",
 	# fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-6", path: "illustration_birds-01.jpg"},
-		{class: "gallery-col-6", path: "illustration_birds-02.jpg"},
-		{class: "gallery-col-12", path: "illustration_birds-04.jpg"},
-		{video: true, class: "gallery-col-12", path: "illustration_birds-03"}
+		{class: "gallery-col-6", src: "illustration_birds-01.jpg"},
+		{class: "gallery-col-6", src: "illustration_birds-02.jpg"},
+		{class: "gallery-col-12", src: "illustration_birds-04.jpg"},
+		{video: true, class: "gallery-col-12", src: "illustration_birds-03"}
 	]
 }
 

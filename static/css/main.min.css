@@ -7712,7 +7712,6 @@ html {
 
 .bg_dark, .get-in-touch header, #pagenotfound header,
 #thank-you header, .home header, nav {
-  background-image: url(assets/bg_asfalt-light.png);
   background-color: #000;
 }
 
@@ -8055,7 +8054,7 @@ nav a:visited {
   color: #fff;
   padding: 6px 15px;
 }
-nav .btn-contact {
+nav .nav-element {
   position: fixed;
   z-index: 9;
   bottom: 1em;
@@ -8067,30 +8066,36 @@ nav .btn-contact {
   width: max-content;
 }
 @media (min-width: 768px) {
-  nav .btn-contact {
+  nav .nav-element {
     right: 3em;
     bottom: unset;
     -webkit-transform: initial;
             transform: initial;
   }
 }
-nav #menu-desktop .btn-contact a,
-nav #menu-desktop .btn-contact a:visited {
-  margin: 0 12px;
+nav #menu-desktop .nav-element a,
+nav #menu-desktop .nav-element a:visited {
+  margin: 0 5px;
   background-color: #000;
   border-radius: 20px;
   margin-right: 0 !important;
 }
+@media (min-width: 576px) {
+  nav #menu-desktop .nav-element a,
+  nav #menu-desktop .nav-element a:visited {
+    margin: 0 12px;
+  }
+}
 @media (min-width: 768px) {
-  nav #menu-desktop .btn-contact a,
-  nav #menu-desktop .btn-contact a:visited {
+  nav #menu-desktop .nav-element a,
+  nav #menu-desktop .nav-element a:visited {
     border: 1px solid #fff;
   }
 }
-nav #menu-desktop .btn-contact a:hover, nav #menu-desktop .btn-contact a:focus, nav #menu-desktop .btn-contact a:active,
-nav #menu-desktop .btn-contact a:visited:hover,
-nav #menu-desktop .btn-contact a:visited:focus,
-nav #menu-desktop .btn-contact a:visited:active {
+nav #menu-desktop .nav-element a:hover, nav #menu-desktop .nav-element a:focus, nav #menu-desktop .nav-element a:active,
+nav #menu-desktop .nav-element a:visited:hover,
+nav #menu-desktop .nav-element a:visited:focus,
+nav #menu-desktop .nav-element a:visited:active {
   background-color: #FFC107 !important;
   border-color: #FFC107;
   color: #000;

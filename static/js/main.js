@@ -30,9 +30,9 @@ $(document).ready(function() {
 // $(document).ready(function() {
 //   $(window).scroll(function() {
 // 	if ($(document).scrollTop() > 1) {
-// 	  $(".btn-contact").addClass("hide");
+// 	  $(".nav-element").addClass("hide");
 // 	} else {
-// 	  $(".btn-contact").removeClass("hide");
+// 	  $(".nav-element").removeClass("hide");
 // 	}
 //   });
 // });
@@ -40,9 +40,9 @@ $(document).ready(function() {
 $(document).ready(function() {
  $(window).scroll(function(){
         if($(window).scrollTop() + $(window).height() > $(document).height() - ($("footer").height()) + 550) {
-            $('.btn-contact').addClass("hide");
+            $('.nav-element').addClass("hide");
         } else {
-            $('.btn-contact').removeClass("hide");
+            $('.nav-element').removeClass("hide");
 		}
     });
 });

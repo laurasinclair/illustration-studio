@@ -38,7 +38,7 @@
 						</video> 
 						{{- else if .text -}}
 						<p>
-							{{- .text -}}
+							{{- .content -}}
 						</p>
 						{{- else -}}
 						{{- $image := .Resources.GetMatch "block_project" "work" -}}

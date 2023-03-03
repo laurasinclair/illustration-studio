@@ -21,7 +21,7 @@ $scale: 0.7
 		outline-offset: 2px
 
 .bg_dark
-	background-image: url(assets/bg_asfalt-light.png)
+	// background-image: url(assets/bg_asfalt-light.png)
 	background-color: $dark
 
 .bg_white
@@ -258,7 +258,7 @@ nav
 		color: $white
 		padding: 6px 15px
 
-	.btn-contact
+	.nav-element
 		position: fixed
 		z-index: 9
 		bottom: 1em
@@ -271,13 +271,15 @@ nav
 			transform: initial
 
 	#menu-desktop
-		.btn-contact
+		.nav-element
 			a,
 			a:visited
-				margin: 0 12px
+				margin: 0 5px
 				background-color: $dark
 				border-radius: 20px
 				margin-right: 0 !important
+				@include media-breakpoint-up(sm)
+					margin: 0 12px
 				@include media-breakpoint-up(md)
 					border: 1px solid $white
 				&:hover,

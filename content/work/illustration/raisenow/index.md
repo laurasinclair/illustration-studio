@@ -7,7 +7,8 @@ mainpage: true
 related: true
 
 block_project: {
-	description: "(description coming soon)",
+	description: "...and this is my day job.\n
+	As the creative mind behind Raisenow's branding and colour scheme, I aimed to create a warm and approachable image for this fundraising platform for non-profits and charities. With Raisenow, we strive to provide a helpful and supportive platform for organizations that are doing good in the world.",
 	bgcolor: "#f8f8ff",
 	# fontcolor: "#fff",
 	work: [ 

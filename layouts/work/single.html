@@ -17,12 +17,16 @@
 </header>
 
 {{- if isset .Params "block_project" -}}
-<section class="selected-work"{{ if isset .Params.block_project "bgcolor" }} style="background-color: {{ .Params.block_project.bgcolor }}"{{ else }} style="background-color: #f1f1f7;"{{ end }}>
+<section id="work"{{ if isset .Params.block_project "bgcolor" }} style="background-color: {{ .Params.block_project.bgcolor }}"{{ else }} style="background-color: #f1f1f7;"{{ end }}>
 	<div class="container-fluid">
 		{{- if isset .Params.block_project "description" -}}
-		<p class="title-3 text-center"{{ if isset .Params.block_project "fontcolor" }} style="color: {{ .Params.block_project.fontcolor }}"{{ end }}>
-			{{- (replace .Params.block_project.description "\n" "<br>") | safeHTML -}}
-		</p>
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-6 mx-auto">
+				<p class="description text-center"{{ if isset .Params.block_project "fontcolor" }} style="color: {{ .Params.block_project.fontcolor }}"{{ end }}>
+				{{- (replace .Params.block_project.description "\n" "<br>") | safeHTML -}}
+				</p>
+			</div>
+		</div>
 		{{- end -}}
 
 		<div class="row mt-5">

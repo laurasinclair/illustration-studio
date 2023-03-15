@@ -8526,6 +8526,9 @@ nav #menu-desktop .menu-desktop_logo a {
   fill: #6562FF;
 }
 
+#work .row {
+  max-width: 100vw;
+}
 #work #gallery {
   margin-top: 22px;
 }
@@ -9060,10 +9063,6 @@ footer #get-in-touch {
 }
 .related .card .card-body {
   padding: 0.9rem 1.1rem;
-}
-
-.selected-work .row {
-  max-width: 100vw;
 }
 
 .selected {

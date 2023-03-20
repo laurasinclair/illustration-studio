@@ -8509,6 +8509,36 @@ nav #menu-desktop .menu-desktop_logo a {
   border-radius: 200px;
 }
 
+.links {
+  background-color: #000;
+}
+.links header {
+  min-height: 90vh;
+  margin: 0;
+}
+.links .nav-element a:not(:last-of-type) {
+  display: none !important;
+}
+
+.links-list {
+  width: 100%;
+  max-width: 400px;
+}
+.links-list a {
+  display: inline-block;
+  border: 2px solid;
+  text-align: center;
+  border-radius: 3px;
+  padding: 15px 30px;
+  width: 100%;
+  margin: 10px auto;
+  color: #fff;
+}
+.links-list a:hover, .links-list a:active, .links-list a:focus {
+  background-color: #fff;
+  color: #000 !important;
+}
+
 .social a svg path,
 .social a:visited svg path {
   fill: #212529;

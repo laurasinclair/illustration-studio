@@ -48,14 +48,17 @@
 				</div> <!-- /row -->
 			</div> <!-- /col -->
 		</div> <!-- /row -->
-
+		
+		{{- $image := resources.Get "img/happylemon.png" -}}
+		{{- if $image -}}
 		<div class="row">
 			<div class="col-12 col-lg-7 mx-auto text-center">
 				<figure class="mt-5 mb-0">
-					<img src="{{ "work/illustration/fruit-feast/illustration_fruit-feast-02.png" | absURL }}" alt="{{ .Site.Title }}" width="800">
+					<img src="{{ $image.Permalink }}" alt="{{ .Site.Title }}" width="300">
 				</figure>
 			</div> <!-- /col -->
 		</div> <!-- /row -->
+		{{- end -}}
 	</div> <!-- /container -->
 </section>
 {{ end }}

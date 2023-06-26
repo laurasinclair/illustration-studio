@@ -11,9 +11,9 @@ block_project: {
 	bgcolor: "#03012b",
 	fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12 w-md-50", src: "illustration_bodies-01.png"},
-		{class: "gallery-col-12 w-md-50", src: "illustration_bodies-02.png"},
-		{class: "gallery-col-12 w-md-50", src: "illustration_bodies-03.png"}
+		{class: "gallery-col-12 w-md-50", src: "img/illustration_bodies-01.png"},
+		{class: "gallery-col-12 w-md-50", src: "img/illustration_bodies-02.png"},
+		{class: "gallery-col-12 w-md-50", src: "img/illustration_bodies-03.png"}
 	]
 }
 

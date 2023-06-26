@@ -10,9 +10,9 @@ block_project: {
 	description: "(description coming soon)",
 	bgcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12", src: "illustration_fruit-feast-01.jpg"},
-		{class: "gallery-col-12", src: "illustration_fruit-feast-02.png"},
-		{class: "gallery-col-12", src: "illustration_fruit-feast-03.png"},
+		{class: "gallery-col-12", src: "img/illustration_fruit-feast-01.jpg"},
+		{class: "gallery-col-12", src: "img/illustration_fruit-feast-02.png"},
+		{class: "gallery-col-12", src: "img/illustration_fruit-feast-03.png"},
 	]
 }
 

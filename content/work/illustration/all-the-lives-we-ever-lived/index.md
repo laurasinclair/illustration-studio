@@ -12,7 +12,7 @@ block_project: {
 	fontcolor: "#fff",
 	description: "(description coming soon)",
 	work: [ 
-		{class: "gallery-col-12", src: "illustration_all-the-lives-01.jpg"},
+		{class: "gallery-col-12", src: "img/illustration_all-the-lives-01.jpg"},
 	]
 }
 

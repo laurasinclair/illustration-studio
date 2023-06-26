@@ -18,10 +18,11 @@ block_project: {
 		{class: "gallery-col-4 px-md-3", src: "img/rnw_13-3.jpg"},
 		{class: "gallery-col-4 px-md-3", src: "img/rnw_icons.jpg"},
 		{class: "gallery-col-4 px-md-3", src: "img/rnw_13-2.jpg"},
-		{class: "gallery-col-12", src: "img/rnw_8.png"},
+		{class: "gallery-col-12", src: "img/illustration_rnw-04.jpg"},
 		{class: "gallery-col-12", src: "img/illustration_rnw-05.jpg"},
 		{class: "gallery-col-12", src: "img/linkedin-banners_gif-02.gif"},
-		{class: "gallery-col-12", src: "img/illustration_rnw-06.jpg"},
+		{class: "gallery-col-6 pr-lg-2", src: "img/rnw_7-2.jpg"},
+		{class: "gallery-col-6 pl-lg-2", src: "img/spenderinnen-studie-2023_mockup.jpg"},
 		{class: "gallery-col-12", src: "img/rnw_11.gif"},
 		{class: "gallery-col-12 w-md-50 text-center", src: "img/success-stories.png"}
 	]

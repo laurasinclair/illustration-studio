@@ -10,12 +10,12 @@ block_project: {
 	description: "(description coming soon)",
 	# fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12", src: "illustration_sleeping-buddies-01.jpg"},
+		{class: "gallery-col-12", src: "img/illustration_sleeping-buddies-01.jpg"},
 		{text: true, class: "gallery-col-12", content: "Behind the scenes:"},
-		{class: "gallery-col-3 px-md-2", src: "illustration_sleeping-buddies-03.png"},
-		{class: "gallery-col-3 px-md-2", src: "illustration_sleeping-buddies-04.png"},
-		{class: "gallery-col-3 px-md-2", src: "illustration_sleeping-buddies-05.png"},
-		{class: "gallery-col-3 px-md-2", src: "illustration_sleeping-buddies-06.png"},
+		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-03.png"},
+		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-04.png"},
+		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-05.png"},
+		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-06.png"},
 	]
 }
 

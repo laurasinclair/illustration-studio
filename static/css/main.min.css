@@ -14396,6 +14396,10 @@ body {
   font-size: 1rem;
 }
 
+.text-tertiary {
+  color: #FF5C00;
+}
+
 .bg_dark, .get-in-touch header, .home header, nav, #pagenotfound header,
 #thank-you header {
   background-color: #000;

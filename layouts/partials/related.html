@@ -4,7 +4,7 @@
 			<div class="col order-1 order-md-1 text-center text-md-left">
 				<div class="next-post">
 					{{- if .NextInSection -}}
-					<a class="link-reverse no-outline" href="{{ .NextPage.Permalink }}?ref=footer"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Previous project</span>«&nbsp;{{ .NextPage.Title | truncate 50 "..." }}</a>
+					<a class="link-reverse no-outline" href="{{ .NextPage.Permalink }}"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Previous project</span>«&nbsp;{{ .NextPage.Title | truncate 50 "..." }}</a>
 					{{- end -}}
 				</div>
 			</div>
@@ -16,7 +16,7 @@
 			<div class="col order-2 order-md-3 text-center text-md-right">
 				<div class="previous-post">
 					{{- if .PrevInSection -}}
-					<a class="link-reverse no-outline" href="{{ .PrevPage.Permalink }}?ref=footer"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Next project</span>{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+					<a class="link-reverse no-outline" href="{{ .PrevPage.Permalink }}"><span style="color: #000; border: none;" class="d-inline-block d-md-block mr-3">Next project</span>{{ .PrevPage.Title | truncate 50 "..."}} »</a>
 					{{- end -}}
 				</div>
 			</div>

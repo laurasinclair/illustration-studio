@@ -1,35 +1,26 @@
-// @import "scss/bootstrap-reboot";
-// @import "scss/bootstrap-grid";
-// @import "scss/bootstrap";
+// color system
+$primary:   #6562FF;
+$secondary: #FFC107;
+$tertiary:  #FF5C00;
+$green:     #96FFE7;
+$light:     #f1f6f9;
+$dark:      #000;
 
-@import "scss/functions";
-@import "scss/variables";
-@import "scss/mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "_fonts.sass";
 
-@import "scss/_reboot"; // changed
-@import "scss/_mixins";
-@import "scss/_variables"; // changed
-@import "scss/_grid";
-// @import "scss/_nav";
-// @import "scss/_navbar";
-@import "scss/_utilities";
-@import "scss/utilities/sizing";
-// @import "scss/_alert";
-// @import "scss/_close";
-@import "scss/_transitions";
-@import "scss/_type";
-@import "scss/utilities/align";
-@import "scss/utilities/borders";
-@import "scss/utilities/display";
-@import "scss/utilities/flex";
-@import "scss/utilities/overflow";
-// @import "scss/utilities/shadows";
-@import "scss/utilities/text";
-@import "scss/utilities/visibility";
-@import "scss/_images";
-@import "scss/_card";
-// @import "scss/_code";
+// fonts
+$font-family-sans-serif:     'Roboto Mono', Courier, monospace !important;
 
-@import "custom/_fonts";
-@import "custom/_custom";
-// @import "custom/_newnav";
+// layout
+@import "_utilities.sass";
+@import "_basics.sass";
+@import "_nav.sass";
+@import "_related.sass";
+@import "_contact-form.sass";
+ 
+// pages
+@import "_home.sass";
+@import "_work.sass";
+@import "_about.sass";
+@import "_get-in-touch.sass";

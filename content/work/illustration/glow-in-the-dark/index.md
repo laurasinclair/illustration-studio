@@ -11,9 +11,9 @@ block_project: {
 	bgcolor: "#161421",
 	fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12", src: "img/illustration_glow-in-the-dark-01.jpg"},
-		{class: "gallery-col-12", src: "img/illustration_glow-in-the-dark-02.jpg"},
-		{class: "gallery-col-12", src: "img/illustration_glow-in-the-dark-03.jpg"}
+		{class: "col-12 col-md-10", src: "img/illustration_glow-in-the-dark-01.jpg"},
+		{class: "col-12 col-md-10", src: "img/illustration_glow-in-the-dark-02.jpg"},
+		{class: "col-12 col-md-10", src: "img/illustration_glow-in-the-dark-03.jpg"}
 	]
 }
 

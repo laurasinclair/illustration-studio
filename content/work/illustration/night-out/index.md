@@ -11,9 +11,9 @@ block_project: {
 	bgcolor: "#0D0D0D",
 	fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12 w-md-75", src: "img/illustration_night-out-01.jpg"},
-		{class: "gallery-col-5 offset-md-2 pr-md-3", src: "img/illustration_night-out-02.jpg"},
-		{class: "gallery-col-5 offset-md-2 pl-md-3", src: "img/illustration_night-out-03.jpg"}
+		{class: "col-12 col-md-10", src: "img/illustration_night-out-01.jpg"},
+		{class: "col-12 col-md-6", src: "img/illustration_night-out-02.jpg"},
+		{class: "col-12 col-md-6", src: "img/illustration_night-out-03.jpg"}
 	]
 }
 

@@ -1,0 +1,39 @@
+.get-in-touch
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		h1
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em
+			@include media-breakpoint-up(xl)
+				margin-top: 3em
+				margin-bottom: 3em
+			&+a,
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+	input,
+	textarea
+		background-color: $white
+	button
+		background-color: $primary !important
+	#get-in-touch
+		display: none
+	header
+		@extend .bg_dark
+		color: $white
+		.hero
+			display: flex
+			min-height: 40vh
+			padding: 3em 0 0
+			@include media-breakpoint-up(md)
+				height: 60vh
+				padding: 2.5rem 0
+			align-items: center
+			padding-bottom: 50px
+	footer
+		.social-links
+			background-color: $secondary !important

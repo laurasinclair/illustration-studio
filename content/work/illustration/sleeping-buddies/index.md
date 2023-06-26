@@ -8,14 +8,15 @@ related: true
 
 block_project: {
 	description: "(description coming soon)",
-	# fontcolor: "#fff",
+	bgcolor: "#000",
+	fontcolor: "#fff",
 	work: [ 
-		{class: "gallery-col-12", src: "img/illustration_sleeping-buddies-01.jpg"},
-		{text: true, class: "gallery-col-12", content: "Behind the scenes:"},
-		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-03.png"},
-		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-04.png"},
-		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-05.png"},
-		{class: "gallery-col-3 px-md-2", src: "img/illustration_sleeping-buddies-06.png"},
+		{class: "col-12", src: "img/illustration_sleeping-buddies-01.jpg"},
+		{text: true, class: "col-12 text-center my-5", content: "Behind the scenes:"},
+		{class: "col-6 col-md-3", src: "img/illustration_sleeping-buddies-03.png"},
+		{class: "col-6 col-md-3", src: "img/illustration_sleeping-buddies-04.png"},
+		{class: "col-6 col-md-3", src: "img/illustration_sleeping-buddies-05.png"},
+		{class: "col-6 col-md-3", src: "img/illustration_sleeping-buddies-06.png"},
 	]
 }
 

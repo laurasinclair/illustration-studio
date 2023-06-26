@@ -14922,8 +14922,8 @@ nav #menu-desktop .menu-desktop_logo a {
     opacity: 1;
   }
 }
-#work .description br {
-  margin-bottom: 100px !important;
+#work br {
+  margin-bottom: 1em;
 }
 #work .row {
   max-width: 100vw;

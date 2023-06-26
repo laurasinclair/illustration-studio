@@ -32,7 +32,7 @@
 		<div class="row">
 			{{- $title := print .Page.Title " | " .Site.Title -}}
 			{{- range .Params.block_project.work -}}
-			
+
 			{{- if .text -}}
 			<div {{ if .class }}class="{{ .class }}"{{ else }}class="col-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4 offset-lg-1 offset-xl-2 offset-xxl-3 pt-5 mt-5 mb-5 pb-5"{{ end }}{{ if .id }} id="{{ .id }}"{{ end }}>
 				{{- if .title -}}
@@ -92,7 +92,7 @@
 	
 			{{- else -}}
 			{{- $image := .Resources.GetMatch "block_project" "work" -}}
-			<div class="{{ .class }} mx-auto">
+			<div class="{{ .class }} mx-auto mb-4 mb-md-5">
 				<img src="{{ $.Permalink | absURL  }}{{.src}}" class="mb-5" alt="{{ $title }}"{{ if .id }} id="{{ .id }}"{{ end }}>
 			</div>
 			{{- end -}}

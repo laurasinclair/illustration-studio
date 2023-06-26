@@ -7,7 +7,8 @@ mainpage: true
 related: true
 
 block_project: {
-	description: "(description coming soon)",
+	description: "If you go to the forest at night, watch out! \n
+	You never know what you might find...",
 	bgcolor: "#161421",
 	fontcolor: "#fff",
 	work: [ 

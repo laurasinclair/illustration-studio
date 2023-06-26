@@ -7,7 +7,8 @@ mainpage: true
 related: true 
 
 block_project: {
-	description: "(description coming soon)",
+	description: "I've loved drawing monsters for as long as I can remember. \n
+	For this series, I've played with shapes and color palettes I don't often use. It was fun!",
 	fontcolor: "#fff",
 	bgcolor: "#000000",
 	work: [

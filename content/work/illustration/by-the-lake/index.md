@@ -8,7 +8,6 @@ mainpage: false
 related: true
 
 block_project: {
-	description: "(description coming soon)",
 	fontcolor: "#fff",
 	bgcolor: "#040404",
 	work: [ 

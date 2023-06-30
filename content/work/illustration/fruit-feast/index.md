@@ -2,7 +2,7 @@
 title: "Fruit Feast"
 draft: false
 slug: "fruit-feast"
-weight: "3"
+weight: "5"
 mainpage: true
 related: true
 

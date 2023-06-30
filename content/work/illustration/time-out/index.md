@@ -2,7 +2,7 @@
 title: "Time Out"
 draft: false
 slug: "time-out"
-weight: "7"
+weight: "3"
 mainpage: true
 related: true
 

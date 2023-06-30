@@ -20,15 +20,15 @@
 	<meta property="twitter:description" content="{{ .Site.Params.metadescription }}">
 	<meta property="og:description" content="{{ .Site.Params.metadescription }}">
 	
-	{{ $image := .Resources.GetMatch "featured_*" }}
-	{{ if $image }}
+	{{- $image := .Resources.GetMatch "featured_*" -}}
+	{{- if $image -}}
 	<meta property="twitter:image" content="{{ $image.Permalink }}">
 	<meta property="og:image" content="{{ $image.Permalink }}">
-	{{ else }}
-	{{ $image := resources.Get "img/dirtylemonstudio_1200x627.jpg" }}
+	{{- else -}}
+	{{- $image := resources.Get "img/dirtylemonstudio_1200x627.jpg" -}}
 	<meta property="twitter:image" content="{{ $image.Permalink }}">
 	<meta property="og:image" content="{{ $image.Permalink }}">
-	{{ end }}
+	{{- end -}}
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y5D3KK1T6"></script>
 	<script>

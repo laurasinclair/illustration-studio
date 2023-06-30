@@ -2,7 +2,7 @@
 title: "RaiseNow"
 draft: false
 slug: "raisenow"
-weight: "5"
+weight: "3"
 mainpage: true
 related: true
 
@@ -20,24 +20,24 @@ block_project: {
 			text: true,
 			class: "col-12 col-md-10 col-lg-8 col-xl-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3 pt-5 my-4 text-white",
 			content: "My goal is to craft a distinct illustration style that captures the essence of the brand and differentiates it from competitors. \n
-			Through careful consideration of the brand's values, personality, and target audience, I create illustrations that not only convey the brand's message but also resonate with its audience on an emotional level. My goal is to create visuals that are memorable, visually appealing, and help the brand stand out."
+			Through careful consideration of the brand's values, personality, and target audience, I strive to create illustrations that not only convey the brand's message but also resonate with its audience on an emotional level. The aim is to create visuals that are memorable, visually appealing, and help the brand stand out."
 		},
 		{class: "col-12", src: "img/rnw_10.jpg"},
 		{class: "col-12 col-md-4", src: "img/rnw_13-3.jpg"},
 		{class: "col-12 col-md-4", src: "img/rnw_icons.jpg"},
 		{class: "col-12 col-md-4", src: "img/rnw_13-2.jpg"},
+		{
+			text: true,
+			class: "col-12 col-md-10 col-lg-8 col-xl-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3 text-white",
+			content: "Let me introduce to you to you: the Ugly First Draft™️ process. \n
+				It allows me to quickly generate initial drafts and iterate based on feedback from team members. This approach helps me avoid getting lost in details early on and ensures that the big picture is well-defined before delving into finer details."
+		},
+		{class: "col-12", src: "img/rnw_11.gif"},
 		{class: "col-12", src: "img/rnw_8.png"},
 		{class: "col-12", src: "img/illustration_rnw-05.jpg"},
 		{class: "col-12 col-md-10", src: "img/linkedin-banners_gif-02.gif"},
 		{class: "col-12 col-md-6", src: "img/rnw_7-2.jpg"},
 		{class: "col-12 col-md-6", src: "img/spenderinnen-studie-2023_mockup.jpg"},
-		{
-			text: true,
-			class: "col-12 col-md-10 col-lg-8 col-xl-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3 pt-5 mt-5 text-white",
-			content: "Let me introduce to you to you: the Ugly First Draft™️ process. \n
-				It allows me to quickly generate initial drafts and iterate based on feedback from team members. This approach helps me avoid getting lost in details early on and ensures that the big picture is well-defined before delving into finer details."
-		},
-		{class: "col-12", src: "img/rnw_11.gif"},
 		{class: "col-12 col-md-6", src: "img/success-stories.png"},
 		{
 			link: true,

@@ -13695,7 +13695,11 @@ html {
   outline: 1px solid red;
 }
 
-.no-outline, #work .gallery-block:hover div, #work .gallery-block:focus div, #work .gallery-block:hover, #work .gallery-block:focus, #work .gallery-block .gallery-image:hover, #work .gallery-block .gallery-image:focus, .related .card a:hover, .related .card a:visited:hover, .related #toggle, #sidebar #logo:hover, #sidebar #logo:active, #sidebar #logo:focus,
+.no-outline, #work .gallery-block:hover div, #work .gallery-block:focus div, #work .gallery-block:hover, #work .gallery-block:focus, #work .gallery-block .gallery-image:hover, #work .gallery-block .gallery-image:focus, .related .card a:hover, .related .card a:visited:hover, .related #toggle, a,
+a:hover,
+a:focus,
+a:active,
+span, #sidebar #logo:hover, #sidebar #logo:active, #sidebar #logo:focus,
 #sidebar .icon-lemon:hover,
 #sidebar .icon-lemon:active,
 #sidebar .icon-lemon:focus, #top-btn:hover, #top-btn:focus,

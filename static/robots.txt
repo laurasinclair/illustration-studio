@@ -1,6 +1,0 @@
-User-agent: *
-
-Disallow: /content/
-Disallow: /layouts/
-Disallow: /work/illustration/raisenow/*
-Disallow: /about/*

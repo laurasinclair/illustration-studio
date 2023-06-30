@@ -40,15 +40,18 @@
 		</div> <!-- /row -->
 	</div>
 
+	{{- $image := resources.Get "img/happylemon.png" -}}
+    {{- if $image -}}
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-12 col-lg-6 mb-2 mb-md-5 mx-auto">
-				<div class="gallery-block sr-down">
-					<img src="{{"/work/illustration/fruit-feast/illustration_fruit-feast-02.png" | absURL }}" alt="Dirty Lemon Studio" class="gallery-image">
+			<div class="col-12 text-center mb-2 mb-md-5">
+				<div>
+					<img src="{{ $image.Permalink }}" alt="{{ .Site.Title }}" class="pe-md-5" width="300">
 				</div>
 			</div>
 		</div>
 	</div>
+    {{- end -}}
 </section> <!-- #work -->
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->

@@ -10,3 +10,8 @@
 
 [[plugins]]
   package = "netlify-plugin-image-optim"
+
+[[redirects]]
+  from = "/instagram"
+  to = "https://instagram.com/laura.snclr/"
+  status = 301

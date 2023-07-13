@@ -15,3 +15,18 @@
   from = "/instagram"
   to = "https://instagram.com/laura.snclr/"
   status = 301
+
+[[redirects]]
+  from = "/linkedin"
+  to = "https://www.linkedin.com/in/laurasnclr/"
+  status = 301
+
+[[redirects]]
+  from = "/behance"
+  to = "https://www.behance.net/laurasnclr/"
+  status = 301
+
+[[redirects]]
+  from = "/work"
+  to = "/#work"
+  status = 301

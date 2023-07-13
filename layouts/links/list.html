@@ -2,7 +2,7 @@
 <div class="container-fluid">
 	<header class="row flex-column align-items-center justify-content-center pt-5">
 		<h3 class="text-center text-white mb-4">Hello!</h3>
-		<div class="col-12 col-md-4 text-center">{{ partial "links.html" . }}</div>
+		<div class="col-12 col-md-4">{{ partial "links.html" . }}</div>
 		<!-- /col -->
 
 		{{- $image := resources.Get "img/happylemon.png" -}} {{- if $image -}}

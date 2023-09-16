@@ -9,9 +9,9 @@
 
 	<meta name="title" content="{{ $title }}">
 	<meta name="description" content="{{ .Site.Params.metadescription }}">
-	{{- if .Params.noindex -}}
+	{{ if .Params.noindex }}
 	<meta name="robots" content="noindex" /> 
-	{{- end -}}
+	{{ end }}
 
 	<meta property="og:type" content="website">
 	<meta property="twitter:card" content="summary_large_image">

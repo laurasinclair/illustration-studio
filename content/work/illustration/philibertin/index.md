@@ -6,6 +6,7 @@ featured: false
 weight: "100"
 mainpage: false
 related: false
+noindex: true
 
 block_project: {
 	bgcolor: "#fff",

@@ -1,14 +1,15 @@
 body
-	font-family: $font-family-sans-serif
+	font-family: $font-primary !important
 	color: $gray-900
 	position: relative
 	font-size: $font-size-base * 1
 
+	
 .text-tertiary
 	color: $tertiary
 
 .bg_dark
-	// background-image: url(assets/bg_asfalt-light.png)
+	background-image: url(assets/bg_asfalt-light.png)
 	background-color: $dark
 
 .bg_white
@@ -24,7 +25,7 @@ body
 #sidebar
 	@extend .d-none
 	@extend .d-md-block
-	@extend .bg-dark
+	@extend .bg_dark
 	@extend .text-white
 	border-right: 1px solid #666
 	p
@@ -58,7 +59,7 @@ body
 	#logo
 		font-size: $font-size-base * 1.2
 		// font-size: 1em
-		@extend .fw-light
+		font-weight: 200
 		&:hover,
 		&:active,
 		&:focus

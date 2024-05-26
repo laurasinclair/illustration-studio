@@ -1,16 +1,26 @@
-// color system
-$primary:   #6562FF;
-$secondary: #FFC107;
-$tertiary:  #FF5C00;
-$green:     #96FFE7;
+@import 'bootstrap/scss/bootstrap-reboot.scss';
+@import 'bootstrap/scss/bootstrap-grid.scss';
+@import "_fonts";
+
+$font-primary: 'Roboto mono', 'Open sans', Arial, Helvetica, sans-serif;
+
+// Colors
+$indigo:    #6562FF;
+$yellow:    #FFC107;
+$red:       #FF5C00;
+
+$primary:   $indigo;
+$secondary: $yellow;
+$tertiary:  $red;
+
 $light:     #f1f6f9;
 $dark:      #000;
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "_fonts.sass";
+// layout
+$grid-gutter-width:     55px !default;
 
-// fonts
-$font-family-sans-serif:     'Roboto Mono', Courier, monospace !important;
+@import "_custom";
+
 
 // layout
 @import "_utilities.sass";

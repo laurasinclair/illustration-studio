@@ -1,0 +1,1598 @@
+html
+	scroll-behavior: smooth !important
+
+// .js 
+// 	.sr-down,
+// 	#work img
+// 		visibility: hidden
+
+::-moz-selection,
+::selection
+	color: $dark
+	background: $secondary
+
+$scale: 0.7
+@include media-breakpoint-up(lg)
+	$scale: 1
+
+*
+	&:focus
+		outline: 1px dotted $dark
+		outline-offset: 2px
+
+.bg_dark
+	background-image: url(/img/bg_asfalt-light.png)
+	background-color: $dark
+
+.bg_white
+	background-image: url(/img/bg_stardust.png)
+	background-color: $white
+
+.bg_light
+	background-image: url(/img/bg_stardust.png)
+	background-color: $white
+
+.bd-left
+	border-left: 5px solid $dark
+	@extend .ps-4
+
+.text-white
+	color: #fff !important
+
+.text-primary
+	color: $primary
+
+.text-secondary
+	color: $secondary
+
+.text-tertiary
+	color: $tertiary
+
+.rounded
+	border-radius: 6px
+
+body
+	@extend .bg_white
+	// background-color: blue !important
+	@extend .font-weight-light !optional
+	font-family: $font-primary
+	color: $gray-900
+	position: relative
+	font-size: $font-size-base * 1
+	// font-size: 16px
+
+.no-outline
+	outline: none
+
+.transition-2s
+	transition: all 0.2s ease-in-out
+
+#all
+	display: grid
+	grid-template-columns: [main] auto
+	@include media-breakpoint-up(md)
+		grid-template-columns: [sidebar] 7% [main] auto
+
+#sidebar
+	@extend .d-none
+	@extend .d-md-block
+	@extend .bg_dark
+	@extend .text-white
+	border-right: 1px solid #666
+	p
+		width: fit-content
+		white-space: nowrap
+		text-align: right
+		padding: 0
+		margin: 0
+		transform-origin: center
+		&:first-of-type
+			transform: rotate(-90deg) translateX(-50%)
+		&:last-of-type
+			transform: rotate(-90deg) translateX(50%)
+	&>div
+		padding-top: 1em
+		padding-bottom: 1em
+		height: 100vh
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		top: 0
+		position: sticky
+	#logo,
+	.icon-lemon
+		opacity: 0
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+	#logo
+		font-size: $font-size-base * 1.2
+		// font-size: 1em
+		@extend .font-weight-light !optional
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+
+section
+	padding-top: 2em
+	padding-bottom: 2em
+	@include media-breakpoint-up(sm)
+		padding-top: 2.5em
+		padding-bottom: 2.5em
+	@include media-breakpoint-up(md)
+		padding-top: 3em
+		padding-bottom: 3em
+	@include media-breakpoint-up(lg)
+		padding-top: 4em
+		padding-bottom: 4em
+	@include media-breakpoint-up(xl)
+		padding-top: 5em
+		padding-bottom: 5em
+
+a,
+a:visited
+	font-weight: 800
+	color: $primary
+	text-decoration: none
+	span
+		border-bottom: 1px solid
+	svg
+		@extend .transition-2s
+	&:hover,
+	&:active,
+	&:focus
+		color: $primary
+		text-decoration: none
+		@extend .transition-2s
+		span,
+		&.link
+			border-bottom: 2px solid
+.move
+	&:hover,
+	&:active,
+	&:focus
+		svg
+			transform: translate(5px, 0)
+
+img
+	max-width: 100%
+	max-height: 100%
+	display: inline-block
+	height: auto
+
+hr
+	border-top: none
+	border-bottom: 3px solid $dark
+
+h1
+	font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 2
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 2.2
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2.5
+	@include media-breakpoint-up(xl)
+		font-size: $font-size-base * 2.7
+
+h2
+	font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 2.2
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2.4
+	@include media-breakpoint-up(xl)
+		font-size: $font-size-base * 2.6
+
+h3
+	font-size: $font-size-base * 1.4
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.6
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.8
+	@include media-breakpoint-up(lg)
+		font-size: $font-size-base * 2
+
+h4
+	font-size: $font-size-base * 1.2
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.4
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.6
+
+h5
+	font-size: $font-size-base * 1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+	@include media-breakpoint-up(md)
+		font-size: $font-size-base * 1.4
+
+p,
+li
+	font-size: $font-size-base * 1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+
+.lead
+	font-size: $font-size-base * 1.1
+	@include media-breakpoint-up(sm)
+		font-size: $font-size-base * 1.2
+
+.label
+	font-size: $font-size-base * 1
+	font-weight: 800er
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style: none
+		position: relative
+		padding: 0
+		margin-left: 0
+
+ul.arrow
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 6px
+			height: 5px
+			width: 5px
+			border: 1px solid $dark
+			border-width: 2px 2px 0 0
+			transform: rotate(45deg)
+	
+ul.line
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 12px
+			width: 8px
+			display: block
+			border-top: 2px solid $dark
+
+nav
+	@extend .bg_dark
+	width: 100%
+	margin-bottom: -1px // chrome fix: lines between divs
+	a,
+	a:visited
+		font-weight: 800
+		@extend .mt-4
+		@extend .d-inline-block
+		color: $white
+		padding: 6px 15px
+		
+	.btn-contact
+		position: fixed
+		z-index: 9
+		bottom: 1em
+		right: 50%
+		transform: translateX(50%)
+		width: max-content
+		@include media-breakpoint-up(md)
+			right: 3em
+			bottom: unset
+			transform: initial
+
+	#menu-desktop
+		.btn-contact
+			a,
+			a:visited
+				background-color: $dark
+				border-radius: 20px
+				margin-right: 0 !important
+				@include media-breakpoint-up(md)
+					border: 1px solid $white
+				&:hover,
+				&:focus,
+				&:active
+					background-color: $secondary !important
+					border-color: $secondary
+					color: $dark
+		a, 
+		a:visited
+			&:hover,
+			&:focus,
+			&:active
+				outline: none
+				color: $secondary
+		.menu-desktop_logo
+			a
+				padding-left: 0 !important
+				margin-left: 0 !important
+
+	#menu-mobile
+		z-index: 9999
+		.menu-mobile_logo
+			@extend .nav-link 
+			text-transform: uppercase 
+			@extend .lead
+			@extend .pt-4
+			display: inline-block
+			transition: all .2s ease-in-out
+		.checkbox-toggle
+			position: fixed
+			top: 12px
+			right: 12px
+			z-index: 2
+			cursor: pointer
+			width: 40px
+			z-index: 99999
+			height: 40px
+			opacity: 0
+			&:checked 
+				&+ .hamburger > div
+					-webkit-transform: rotate(135deg)
+					transform: rotate(135deg)
+					&:before,
+					&:after
+						top: 0
+						-webkit-transform: rotate(90deg)
+						transform: rotate(90deg)
+						&:after
+							opacity: 0
+				& ~ .menu-mobile_all
+					pointer-events: auto
+					visibility: visible
+					& > div
+						-webkit-transform: translate(0, 0)
+						transform: translate(0, 0)
+						-webkit-transition-duration: 0.75s
+						transition-duration: 0.75s
+						& > div
+							opacity: 1
+							-webkit-transition: opacity 0.4s ease 0.4s
+							transition: opacity 0.4s ease 0.4s
+
+				&:hover + .hamburger > div
+					-webkit-transform: rotate(225deg)
+							transform: rotate(225deg)
+
+		.hamburger
+			position: fixed
+			top: 12px
+			right: 12px
+			z-index: 9999
+			width: 40px
+			height: 40px
+			padding: 10px
+			background: $dark
+			cursor: pointer
+			-webkit-transition: box-shadow 0.4s ease
+			transition: box-shadow 0.4s ease
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			display: -webkit-box
+			display: flex
+			-webkit-box-align: center
+			align-items: center
+			-webkit-box-pack: center
+			justify-content: center
+			& > div
+				position: relative
+				-webkit-box-flex: 0
+				flex: none
+				width: 100%
+				height: 3px
+				border-radius: 5px
+				background: $white
+				-webkit-transition: all 0.4s ease
+				transition: all 0.4s ease
+				display: -webkit-box
+				display: flex
+				-webkit-box-align: center
+				align-items: center
+				-webkit-box-pack: center
+				justify-content: center
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+					z-index: 1
+					top: -8px
+					left: 0
+					width: 100%
+					height: 3px
+					border-radius: 5px
+					background: inherit
+					-webkit-transition: all 0.4s ease
+					transition: all 0.4s ease
+				&:after
+					top: 8px
+
+		.menu-mobile_all
+			z-index: 999
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			pointer-events: none
+			visibility: hidden
+			overflow: hidden
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			display: -webkit-box
+			display: flex
+			& > div
+				width: 100vw
+				height: 100vh
+				color: $white
+				z-index: 999
+				background: $dark
+				-webkit-transition: all 0.4s ease
+				transition: all 0.4s ease
+				-webkit-transform: translate(0, -100%)
+				transform: translate(0, -100%)
+				-webkit-backface-visibility: hidden
+				backface-visibility: hidden
+				overflow: hidden
+		.menu-mobile_cat
+			display: flex
+			flex-direction: column
+			justify-content: center
+			-webkit-font-smoothing: antialiased
+			.nav-link
+				margin: 0 !important
+				text-decoration: none
+				padding-left: 2em
+				padding-right: 2em
+				padding-top: 0.9em
+				padding-bottom: 0.9em
+				@include media-breakpoint-up(md)
+					padding-top: 1.1em
+					padding-bottom: 1.1em
+				&:first-of-type
+					color: $secondary
+				span
+					border-bottom: none
+				&:hover,
+				&:focus,
+				&:active
+					outline: none
+					color: $secondary
+					background-color: lighten($dark, 20%)
+		.menu-mobile_contact
+			margin-left: 1em
+			a, a:visited
+				color: $secondary
+
+.btn
+	font-weight: 800
+	border-radius: 4px
+	padding: 13px 24px 14px
+	display: inline-block
+	margin-top: 10px
+	margin-bottom: 10px
+	text-align: center
+
+.btn-primary-dark
+	@extend .btn
+	@extend .text-white
+	svg
+		fill: $white
+		path
+			fill: $white
+	background-color: $primary
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		color: $white !important
+		background-color: $dark
+
+.btn-primary-light
+	@extend .btn
+	@extend .bg_white
+	color: $dark
+	svg
+		fill: $dark
+		path
+			fill: $dark
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: transparent !important
+		box-shadow: inset 0px 0px 0px 2px $light
+		color: $light
+		svg
+			fill: $light
+			path
+				fill: $light
+
+.btn-secondary-light
+	@extend .btn
+	background: transparent
+	@extend .text-white
+	border: 2px solid $white
+	svg path
+			fill: $white
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: $gray-900 !important
+
+.btn-disabled
+	@extend .btn
+	background-color: $gray-200
+	color: $gray-600
+	svg
+		fill: $gray-600
+		path
+			fill: $gray-600
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		background-color: transparent !important
+		box-shadow: inset 0px 0px 0px 2px $light
+		color: $light
+		svg
+			fill: $light
+			path
+				fill: $light
+
+.btn-transparent
+	@extend .btn
+	@extend .text-white
+	background: none
+	fill: $white
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration: none !important
+		background: none !important
+		box-shadow: none !important
+
+.u-light
+	border-bottom: 1px solid $light
+.u-dark
+	border-bottom: 1px solid $dark
+
+.tag,
+.tag:visited
+	@extend .d-inline-block
+	color: $dark
+	border: 2px solid $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	&:hover,
+	&:active,
+	&:focus
+		@extend .no-outline
+		color: $light
+		background-color: $primary
+		border: 2px solid $primary
+	&.instagram
+		svg
+			width: 23px
+			height: 21px
+			margin-bottom: 4px
+			transform: none
+			path
+				fill: $dark
+		&:hover,
+		&:active,
+		&:focus
+			svg
+				transform: none
+				path
+					fill: $light
+					@extend .transition-2s
+
+.tag_primary
+	@extend .m-0
+	@extend .me-2
+	font-weight: 800
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $primary
+
+.tag_dark
+	@extend .m-0
+	@extend .me-2
+	font-weight: 800
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: #262560
+
+.tag_secondary
+	@extend .m-0
+	@extend .me-2
+	font-weight: 800
+	display: inline-block
+	color: $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $secondary
+
+#related
+	margin-top: 6em
+	margin-bottom: 2em
+
+.reveal
+	opacity: 1 !important
+	@extend .transition-2s
+
+.hide
+	opacity: 0 !important
+	@extend .transition-2s
+
+.home
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
+		h1
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em 
+			@include media-breakpoint-up(xl)
+				margin-top: 3em 
+				margin-bottom: 3em
+			&+a, 
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+		#grapes
+			overflow: hidden
+			z-index: 8
+			margin-bottom: -135px
+			@include media-breakpoint-up(lg)
+				margin-bottom: -95px
+			img
+				max-width: 120%
+				transform: translateX(-10%)
+				@include media-breakpoint-up(md)
+					max-width: 100%
+					transform: initial
+
+@keyframes translate
+	0%
+		transform: translateX(-10px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+.sticky
+	position: sticky
+	z-index: 6
+
+#services
+	li
+		margin-bottom: 4px
+		@include media-breakpoint-up(lg)
+			margin-bottom: 10px
+
+#top-btn,
+#top-btn:active
+	transition: all .25s ease-in-out
+	display: none
+	position: fixed
+	bottom: 0
+	right: 0
+	cursor: pointer
+	align-items: center
+	justify-content: center
+	margin: 0 1em 1em 0
+	width: 40px
+	height: 40px
+	background-color: $light
+	border: 2px solid $primary
+	border-radius: 50%
+	padding: .25em
+	z-index: 9
+	@extend .no-outline
+	@include media-breakpoint-up(sm)
+		margin: 0 3em 3em 0
+		width: 50px
+		height: 50px
+		background-color: transparent
+		border: 3px solid $primary
+	&:hover,
+	&:focus,
+	&:active
+		@extend .no-outline
+		background-color: $primary
+		svg
+			path
+				fill: $light !important
+	svg
+		width: 30px
+		height: 19px
+		@include media-breakpoint-up(sm)
+			width: 40px
+			height: 22px
+	
+.screen-reader-text
+	position: absolute
+	clip-path: inset(50%)
+	margin: -1px
+	border: 0
+	padding: 0
+	width: 1px
+	height: 1px
+	overflow: hidden
+	word-wrap: normal !important
+	clip: rect(1px, 1px, 1px, 1px)
+	&:focus
+		display: block
+		top: 5px
+		left: 5px
+		z-index: 10
+		clip-path: none
+		background-color: #eee
+		padding: 15px 23px 14px
+		width: auto
+		height: auto
+		text-decoration: none
+		line-height: normal
+		color: #444
+		font-size: 1em
+		clip: auto !important
+
+@keyframes rotation
+	from
+		transform: rotate(0deg) 
+	to
+		transform: rotate(359deg)
+
+#about
+	.cat
+		.mg
+			margin-top: 6px
+		@include media-breakpoint-up(xl)
+			display: flex
+			justify-content: flex-end
+	.social
+		a,
+		a:visited
+			svg path
+				fill: $gray-900
+			&:hover,
+			&:focus
+				transition: all 0.2s ease-in-out
+				outline: none
+				svg path
+					fill: $primary
+#work
+	#submenu
+		position: sticky
+		top: 0
+		left: 0
+		width: 100vw
+		background-color: $white
+		z-index: 8
+		white-space: nowrap !important
+		overflow: auto !important
+		-webkit-overflow-scrolling: touch
+		-ms-overflow-style: -ms-autohiding-scrollbar
+		@media screen and (min-width: 396px)
+			justify-content: space-between
+		&::-webkit-scrollbar 
+			display: none
+		a, 
+		a:visited
+			@extend .font-weight-light !optional
+			color: $gray-500
+			padding: 15px 7px 11px
+			margin-left: 20px
+			@media screen and (min-width: 396px)
+				margin-left: initial
+			border-bottom: 4px solid $white
+			&:hover, 
+			&:active,
+			&:focus,
+			&.active
+				@extend .no-outline
+				font-weight: 800er
+				&:nth-of-type(1)
+					color: $primary
+					border-bottom: 4px solid $primary
+				&:nth-of-type(2)
+					color: $secondary
+					border-bottom: 4px solid $secondary
+				&:nth-of-type(3)
+					color: $tertiary
+					border-bottom: 4px solid $tertiary
+				&:nth-of-type(4)
+					background: $primary
+					background: linear-gradient(90deg, rgba(255,0,188,1) 0%, rgba(255,215,0,1) 25%, rgba(0,212,255,1) 50%, rgba(34,9,121,1) 75%)
+					-webkit-background-clip: text
+					color: transparent
+					border-bottom: 4px solid $gray-500
+	#submenu-md
+		white-space: nowrap
+		z-index: 9
+		top: 0
+		width: 100%
+		position: sticky 
+		top: 3em
+		margin-bottom: 4em
+		a, 
+		a:visited
+			@extend .transition-2s
+			color: $gray-600
+			@extend .font-weight-light !optional
+			@include media-breakpoint-up(md)
+				font-size: $font-size-base * 1.3
+			@include media-breakpoint-up(lg)
+				font-size: $font-size-base * 1.5
+			@include media-breakpoint-up(xl)
+				font-size: $font-size-base * 1.8
+			&:hover, 
+			&:active,
+			&:focus,
+			&.active
+				@extend .no-outline
+				font-weight: 800er
+				&:nth-of-type(1)
+					color: $primary
+				&:nth-of-type(2)
+					color: $secondary
+				&:nth-of-type(3)
+					color: $tertiary
+				&:nth-of-type(4)
+					background: rgb(255,0,188)
+					background: linear-gradient(105deg, #f87ad7 6%, gold 14%, #51d6ff 25%, #6e44ff 35%)
+					-webkit-background-clip: text
+					color: transparent
+			&.active
+				&::after
+					content: ''
+					background-image: url(/img/icon_arrow-right.svg)
+					background-size: cover
+					display: inline-block
+					height: 12px
+					width: 17px
+					margin-left: 11px
+					margin-bottom: 3px
+					animation-name: translate
+					animation-duration: 0.4s
+					animation-timing-function: ease-in-out
+					animation-fill-mode: forwards
+	hr
+		margin-top: 50px
+		margin-bottom: 100px
+		@include media-breakpoint-up(md)
+			margin-top: 100px
+			margin-bottom: 150px
+		@include media-breakpoint-up(lg)
+			margin-top: 200px
+			margin-bottom: 250px
+	.work-section
+		@extend .my-4
+		&:last-of-type
+			@extend .mb-0
+	
+	.w-projects-list
+		&:hover,
+		&:focus,
+		&:active
+			.w-project:hover,
+			.w-project:focus,
+			.w-project:active
+				@extend .transition-2s
+				opacity: 1
+			.w-project:not(:hover)
+				@extend .transition-2s
+				opacity: 0.3
+				@include media-breakpoint-up(lg)
+					opacity: 0.5
+
+#lemon
+	display: flex
+	justify-content: center
+	figure
+		position: relative
+		overflow: visible
+		width: 100%
+		max-width: 470px
+		img
+			height: auto
+	.txt-circle
+		position: absolute
+		animation: rotation 15s infinite linear 
+		fill: #000
+		width: 70px
+		left: 30px
+		bottom: 10px
+		@media screen and (min-width: 368px)
+			width: 80px
+			left: 35px
+			bottom: 30px
+		@media screen and (min-width: 420px)
+			width: 95px
+			left: 45px
+		@media screen and (min-width: 490px)
+			width: 95px
+			left: 55px
+			bottom: 45px
+		@media screen and (min-width: 540px)
+			width: 95px
+		@include media-breakpoint-up(sm)
+			width: 105px
+			left: 45px
+			bottom: 70px
+		@include media-breakpoint-up(md)
+			width: 105px
+			left: 55px
+			bottom: 70px
+
+footer
+	#get-in-touch
+		padding-top: 5em
+		padding-bottom: 5em
+
+.img-round
+	@extend .me-3
+	@extend .d-block
+	overflow: hidden
+	border-radius: 50%
+	border: 2px solid $white
+	// box-shadow: 0 5px 10px 0 transparentize($primary, 0.4)
+	box-shadow: 0 6px 10px transparentize($dark, 0.5)
+	height: auto
+	img
+		width: 100%
+		height: auto
+
+.vl
+	display: block
+	width: 50%
+	height: 60px
+	@include media-breakpoint-up(xl)
+		height: 100px
+	border-right: 2px solid $dark
+	margin: 1.5em 0
+
+// .cd-title
+// 	position: relative
+// 	i
+// 		font-style: normal !important
+
+// @media only screen and (min-width: 768px)
+// 	.cd-title
+// 		line-height: 250px
+
+// @media only screen and (min-width: 1170px)
+// 	.cd-title
+// 		height: 200px
+// 		line-height: 300px
+		
+// @media only screen and (min-width: 768px)
+// 	.cd-intro
+// 		margin: 5em auto
+	
+// @media only screen and (min-width: 1170px)
+// 	.cd-intro
+// 		margin: 6em auto
+
+.cd-words-wrapper
+	display: inline-block
+	position: relative
+	text-align: left
+	// i
+	// 	font-style: normal !important
+
+.cd-words-wrapper b
+	display: inline-block
+	position: absolute
+	white-space: nowrap
+	left: 0
+	top: 0
+
+.cd-words-wrapper b.is-visible
+	position: relative
+
+.no-js .cd-words-wrapper b
+	opacity: 0
+
+.no-js .cd-words-wrapper b.is-visible
+	opacity: 1
+
+// xscale 
+.cd-headline.scale b
+	opacity: 0
+
+.cd-headline.scale i
+	font-style: normal !important
+	display: inline-block
+	opacity: 0
+	-webkit-transform: scale(0)
+	-moz-transform: scale(0)
+	-ms-transform: scale(0)
+	-o-transform: scale(0)
+	transform: scale(0)
+
+.is-visible .cd-headline.scale i
+	opacity: 1
+
+.cd-headline.scale i.in
+	-webkit-animation: scale-up 0.6s forwards
+	-moz-animation: scale-up 0.6s forwards
+	animation: scale-up 0.6s forwards
+
+.cd-headline.scale i.out
+	-webkit-animation: scale-down 0.6s forwards
+	-moz-animation: scale-down 0.6s forwards
+	animation: scale-down 0.6s forwards
+
+.no-csstransitions .cd-headline.scale i
+	-webkit-transform: scale(1)
+	-moz-transform: scale(1)
+	-ms-transform: scale(1)
+	-o-transform: scale(1)
+	transform: scale(1)
+	opacity: 0
+
+.no-csstransitions .cd-headline.scale .is-visible i
+	opacity: 1
+
+@-webkit-keyframes scale-up
+	0%
+		-webkit-transform: scale(0)
+		opacity: 0
+	
+	60%
+		-webkit-transform: scale(1.2)
+		opacity: 1
+	
+	100%
+		-webkit-transform: scale(1)
+		opacity: 1
+	
+
+@-moz-keyframes scale-up
+	0%
+		-moz-transform: scale(0)
+		opacity: 0
+	
+	60%
+		-moz-transform: scale(1.2)
+		opacity: 1
+	
+	100%
+		-moz-transform: scale(1)
+		opacity: 1
+
+// .cd-headline.loading-bar
+// 	span
+// 		display: inline-block
+// 		padding: .2em 0
+// 	.cd-words-wrapper
+// 		overflow: hidden
+// 		vertical-align: top
+// 		&::after
+// 			/* loading bar */
+// 			content: ''
+// 			position: absolute
+// 			left: 0
+// 			bottom: 0
+// 			height: 3px
+// 			width: 0
+// 			background: $primary
+// 			z-index: 2
+// 			@include transition(width .3s -0.1s)
+// 		&.is-loading::after
+// 			width: 100%
+// 			@include transition(width 3s)
+// 	b
+// 		top: .2em
+// 		opacity: 0
+// 		@include transition(opacity .3s)
+// 		&.is-visible
+// 			opacity: 1
+// 			top: 0
+
+.overlay
+	border-radius: 4px
+	overflow: hidden
+	position: relative
+	div:first-of-type
+		font-weight: 800
+		opacity: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: transparentize($primary, 0.2)
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $white
+	&:hover,
+	&:focus,
+	&:active
+		div:first-of-type
+			@extend .transition-2s
+			opacity: 1 !important
+
+#pagenotfound,
+#thank-you
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
+		h1
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em 
+			@include media-breakpoint-up(xl)
+				margin-top: 3em 
+				margin-bottom: 3em
+			&+a, 
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+		#grapes
+			overflow: hidden
+			z-index: 9
+			margin-bottom: -135px
+			@include media-breakpoint-up(lg)
+				margin-bottom: -95px
+			img
+				max-width: 120%
+				transform: translateX(-10%)
+				@include media-breakpoint-up(md)
+					max-width: 100%
+					transform: initial
+
+#contact-form
+	.row
+		@extend .mb-4
+	.form-label
+		font-weight: 800er
+		@extend .pb-2
+		display: block
+		// font-size: $font-size-base * 1.4
+	label
+		width: 100%
+	input
+		height: 3.4rem
+		@include media-breakpoint-up(md)
+			height: 3.8rem
+	textarea
+		min-height: 8rem
+		resize: vertical
+	input,
+	textarea
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		box-shadow: none
+		width: 100%
+		background: transparent
+		border: 3px solid $dark
+		border-radius: 6px
+		color: $dark
+		padding: 1em
+		&::selection
+			color: $white
+			background: $primary
+		&:focus
+			outline: none
+			background-color: $dark
+			border-color: $dark
+			color: $secondary
+			&::placeholder
+				color: $dark
+		&:invalid
+			outline: none
+			box-shadow: none
+			border-color: red
+		&::placeholder
+			color: #625341
+			font-style: italic
+	button
+		border: none
+		background-color: $dark
+		color: $white
+		svg
+			width: 16px
+			height: 11px
+			margin-left: 3px
+			@extend .transition-2s
+		&:focus,
+		&:hover,
+		&:active
+			background-color: $dark
+			svg
+				transform: translate(5px, 0)
+	ul
+		&.ks-cboxtags
+			list-style: none
+			li
+				display: inline-block
+				input[type="checkbox"]:checked
+					& + label
+						border: 3px solid $dark
+						background-color: $dark
+						color: #fff
+						transition: all .2s
+						&::before
+							// content: "\f00c"
+							content: ''
+							background-image: url('/img/icon_check-1.svg')
+							transform: rotate(-360deg)
+							transition: transform .3s ease-in-out
+				input[type="checkbox"]:focus
+					& + label
+						border: 2px solid #e9a1ff
+				label
+					display: inline-block
+					background-color: none
+					border: 3px solid $dark !important
+					color: $dark
+					border-radius: 25px
+					white-space: nowrap
+					margin: 5px 0px
+					-webkit-touch-callout: none
+					-webkit-user-select: none
+					-moz-user-select: none
+					-ms-user-select: none
+					user-select: none
+					-webkit-tap-highlight-color: transparent
+					transition: all .2s
+					padding: 8px 14px
+					cursor: pointer
+					&::before
+						display: inline-block
+						// font-style: normal
+						// font-variant: normal
+						// text-rendering: auto
+						// -webkit-font-smoothing: antialiased
+						// font-family: "Font Awesome 5 Free"
+						// font-weight: 900
+						// font-size: 12px
+						// content: "\f067"
+						background-image: url('/img/icon_plus.svg')
+						padding: 2px 6px 2px 2px
+						content: ''
+						margin-right: 10px
+						background-repeat: no-repeat
+						background-size: cover
+						width: 14px
+						height: 14px
+						transition: transform .3s ease-in-out
+				input[type="checkbox"]
+					display: absolute
+					position: absolute
+					opacity: 0
+
+.get-in-touch
+	.btn-contact
+		display: none
+	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		h1
+			font-size: 1.8rem
+			@extend .mb-3
+			@include media-breakpoint-up(lg)
+				margin-top: 1.5em 
+			@include media-breakpoint-up(xl)
+				margin-top: 3em 
+				margin-bottom: 3em
+			&+a, 
+			&+a:visited
+				@extend .text-white
+				@extend .mb-5
+	input,
+	textarea
+		background-color: $white
+	button
+		background-color: $primary !important
+	#get-in-touch
+		display: none
+
+.work
+	header
+		@extend .bg_dark
+		color: $white
+		.hero
+			display: flex
+			min-height: 40vh
+			padding: 3em 0 0
+			@include media-breakpoint-up(md)
+				height: 60vh
+				padding: 2.5rem 0
+			align-items: center
+			padding-bottom: 50px
+
+.illustration,
+.paper-artwork,
+.wall-murals,
+.everything-else
+	footer
+		@extend .bg_dark
+
+.thank-you
+	background-color: $secondary
+
+.w-project
+	// margin-top: 5rem
+	@extend .mb-5
+	@include media-breakpoint-up(md)
+		&:nth-of-type(even)
+			margin-top: -6rem
+		&:first-of-type
+			margin-top: 0
+	.w-project-name
+		padding: 20px 35px 0 0
+		@include media-breakpoint-up(xl)
+			padding: 35px 35px 0 0
+		position: absolute
+		left: 0
+		bottom: 0
+		color: $white
+		background-color: $dark 
+		&:hover,
+		&:focus,
+		&:active
+			a
+				color: $secondary !important
+	@extend .move
+
+#breadcrumbs
+	a
+		font-weight: 900 !important
+		&:first-of-type
+			font-weight: lighter !important
+			color: #ffffff8c
+
+.grid-1,
+.grid-2
+	display: grid
+	place-items: center
+
+.full-area-1,
+.full-area-2
+	grid-area: 1/1
+
+.speech
+	height: max-content
+	p
+		font-size: 16px
+		display: block
+
+.speech-1
+	@extend .speech
+	@include media-breakpoint-up(sm)
+		// margin-right: 150px
+	p
+		transform: rotate(3deg)
+		color: $white
+		padding-top: 20px
+	@include media-breakpoint-up(lg)
+		transform: scale(130%)
+
+.speech-2
+	@extend .speech
+	max-width: 510px
+	@include media-breakpoint-up(sm)
+		// margin-left: 60px
+	p
+		max-width: 230px
+		transform: rotate(-3deg) translateY(5px)
+		span
+			font-weight: 800
+			font-size: 1.3em
+			display: block
+			margin-left: 10px
+	@include media-breakpoint-up(sm)
+		transform: scale(110%)
+	@include media-breakpoint-up(lg)
+		transform: scale(130%)
+
+.related
+	&:hover,
+	&:focus,
+	&:active
+		.w-project:hover,
+		.w-project:focus,
+		.w-project:active
+			@extend .transition-2s
+			opacity: 1
+		.w-project:not(:hover)
+			@extend .transition-2s
+			opacity: 0.3
+			@include media-breakpoint-up(lg)
+				opacity: 0.5
+	.w-project
+		@extend .mb-5
+		&:nth-of-type(even)
+			margin-top: 0
+		&:first-of-type
+			margin-top: 0
+
+.selected-work
+	margin-bottom: initial
+	h2
+		@include media-breakpoint-up(md)
+			margin-bottom: 2.5em
+			display: block
+
+.gallery-grid-container
+	display: flex
+	padding-left: 1.5em
+	padding-right: 1.5em
+	@include media-breakpoint-up(sm)
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		// grid-template-rows: 100fr
+		padding-left: initial
+		padding-right: initial
+	grid-gap: 2em
+	@include media-breakpoint-up(md)
+		grid-gap: 3em
+	
+	.gallery-grid-item
+		width: 100%
+		height: 100%
+		object-fit: cover
+		@extend .mb-5
+		text-align: center
+		&.w-md-50,
+		&.w-md-75
+			@extend .mx-auto
+		&.pt-md-lots
+			@include media-breakpoint-up(md)
+				padding-top: 10em !important
+		&.vertical-align
+			display: flex
+			align-items: center
+			justify-content: center
+
+	.gallery-col-1
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 1
+
+	.gallery-col-2
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 2
+
+	.gallery-col-3
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 3
+
+	.gallery-col-4
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 4
+
+	.gallery-col-5
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 5
+
+	.gallery-col-6
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 6
+
+	.gallery-col-7
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 7
+
+	.gallery-col-8
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 8
+
+	.gallery-col-9
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 9
+
+	.gallery-col-10
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 10
+
+	.gallery-col-11
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 11
+
+	.gallery-col-12
+		grid-column: span 12
+		@include media-breakpoint-up(md)
+			grid-column: span 12
+
+	.gallery-row-1
+		grid-row: span 1
+
+	.gallery-row-2
+		grid-row: span 2
+
+	.gallery-row-3
+		grid-row: span 3
+
+	.gallery-row-3
+		grid-row: span 4
+
+.tabs
+	width: 100vw
+	white-space: nowrap
+	overflow: auto !important
+	-webkit-overflow-scrolling: touch
+	-ms-overflow-style: -ms-autohiding-scrollbar
+	padding: 0 !important
+	margin: 0
+	z-index: 0
+	display: flex
+	&::-webkit-scrollbar 
+		display: none
+
+	@include media-breakpoint-up(md)
+		width: auto
+		display: flex
+		justify-content: space-around
+		max-width: 1400px
+		margin: 0 auto
+
+	> div
+		a,
+		a:visited
+			@include media-breakpoint-up(md)
+				font-size: 1.2em
+			padding: 1.2em
+			display: inline-block
+			@include media-breakpoint-up(md)
+				padding: 1.2em 1.5em
+				display: block
+			@include media-breakpoint-up(lg)
+				padding: 1.5em 2.5em
+			font-weight: 300 !important
+			color: darken($white, 40%)
+		&:hover,
+		&:active,
+		&:focus
+			@extend .no-outline
+			a,
+			a:visited
+				@extend .no-outline
+				color: $white
+				font-weight: 1000 !important
+		&.active
+			box-shadow: 0px -5px 0 0 $primary inset
+			a,
+			a:visited
+				font-weight: 1000 !important
+				color: $primary
+				&:hover,
+				&:active,
+				&:focus
+					color: $primary !important

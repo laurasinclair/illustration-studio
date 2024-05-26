@@ -1,10 +1,8 @@
 html
 	scroll-behavior: smooth !important
 
-// .js
-// 	.sr-down,
-// 	# img
-// 		visibility: hidden
+.text-center
+	text-align: center
 
 ::-moz-selection,
 ::selection
@@ -104,7 +102,7 @@ ul.line
 			border-top: 2px solid $dark
 
 .btn
-	@extend .fw-bold
+	font-weight: bold
 	border-radius: 4px
 	padding: 13px 24px 14px
 	display: inline-block
@@ -129,7 +127,7 @@ ul.line
 
 .btn-primary-light
 	@extend .btn
-	@extend .bg-light
+	@extend .bg_light
 	color: $dark
 	svg
 		fill: $dark
@@ -149,7 +147,7 @@ ul.line
 
 .btn-secondary-light
 	@extend .btn
-	@extend .bg-transparent
+	background: transparent
 	@extend .text-white
 	border: 2px solid $white
 	svg path
@@ -232,7 +230,7 @@ ul.line
 .tag_primary
 	@extend .m-0
 	@extend .me-2
-	@extend .fw-bold
+	font-weight: bold
 	display: inline-block
 	color: $light
 	border-radius: 9px
@@ -243,7 +241,7 @@ ul.line
 .tag_dark
 	@extend .m-0
 	@extend .me-2
-	@extend .fw-bold
+	font-weight: bold
 	display: inline-block
 	color: $light
 	border-radius: 9px
@@ -254,7 +252,7 @@ ul.line
 .tag_secondary
 	@extend .m-0
 	@extend .me-2
-	@extend .fw-bold
+	font-weight: bold
 	display: inline-block
 	color: $dark
 	border-radius: 9px
@@ -478,7 +476,7 @@ ul.line
 		object-fit: cover
 		@extend .mb-3
 		@extend .mb-md-5
-		@extend .text-center
+		text-align: center
 		&.w-md-50,
 		&.w-md-75
 			@extend .mx-auto

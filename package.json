@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run dev:*\"",
-    "dev:sass": "sass -w --load-path=node_modules --style=compressed assets/css/main.scss static/css/main.min.css",
+    "dev:sass": "sass -w --load-path=node_modules --style=compressed themes/lemon-theme/assets/css/main.scss themes/lemon-theme/static/css/main.min.css",
     "dev:hugo": "hugo server"
   },
   "author": "Laura Sinclair",

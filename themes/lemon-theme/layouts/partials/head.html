@@ -32,14 +32,6 @@
 	<meta property="og:image" content="{{ $image.Permalink }}">
 	{{- end -}}
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y5D3KK1T6"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-9Y5D3KK1T6');
-	</script>
-
 	<link rel="stylesheet" href="{{ "css/main.min.css" | absURL }}">
 
 	{{- $image := resources.Get "img/favicon.png" -}}

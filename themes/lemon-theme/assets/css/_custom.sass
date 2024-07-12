@@ -636,38 +636,6 @@ nav
 	opacity: 0 !important
 	@extend .transition-2s
 
-.home
-	header
-		@extend .bg_dark
-		@extend .text-white
-		margin-bottom: -1px // chrome fix: lines between divs
-		padding-top: 60px
-		// @include media-breakpoint-up(lg)
-		// 	min-height: 90vh
-		h1
-			@extend .mb-3
-			@include media-breakpoint-up(lg)
-				margin-top: 1.5em 
-			@include media-breakpoint-up(xl)
-				margin-top: 3em 
-				margin-bottom: 3em
-			&+a, 
-			&+a:visited
-				@extend .text-white
-				@extend .mb-5
-		#grapes
-			overflow: hidden
-			z-index: 8
-			margin-bottom: -135px
-			@include media-breakpoint-up(lg)
-				margin-bottom: -95px
-			img
-				max-width: 120%
-				transform: translateX(-10%)
-				@include media-breakpoint-up(md)
-					max-width: 100%
-					transform: initial
-
 @keyframes translate
 	0%
 		transform: translateX(-10px)
@@ -758,24 +726,6 @@ nav
 	to
 		transform: rotate(359deg)
 
-#about
-	.cat
-		.mg
-			margin-top: 6px
-		@include media-breakpoint-up(xl)
-			display: flex
-			justify-content: flex-end
-	.social
-		a,
-		a:visited
-			svg path
-				fill: $gray-900
-			&:hover,
-			&:focus
-				transition: all 0.2s ease-in-out
-				outline: none
-				svg path
-					fill: $primary
 #work
 	#submenu
 		position: sticky

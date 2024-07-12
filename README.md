@@ -6,7 +6,7 @@ A little portfolio website using Hugo CMS for content management, resulting in a
 
 [🍋 Dirty Lemon Studio | Fun & happy creative artwork!](https://dirtylemon.studio/)
 
-![Dirty Lemon Studio | Homepage screenshot](https://github.com/laurasinclair/dirtylemon-studio/blob/3e52ac2bf37b9830fff06fff7ba41554b3f66cda/static/img/dirtylemon_screenshot.jpg)
+![Dirty Lemon Studio | Homepage screenshot](resources/dirtylemon_screenshot.jpg)
 
 ## Technologies used
 **Frontend**
@@ -23,4 +23,4 @@ A little portfolio website using Hugo CMS for content management, resulting in a
 
 ---
 
-![Dirty Lemon Studio | Process picture](https://github.com/laurasinclair/dirtylemon-studio/blob/3e52ac2bf37b9830fff06fff7ba41554b3f66cda/static/img/dirtylemon_process-05.jpg)
+![Dirty Lemon Studio | Process picture](resources/dirtylemon_process-05.jpg)

@@ -1,10 +1,4 @@
 #about
-	.cat
-		.mg
-			margin-top: 6px
-		@include media-breakpoint-up(xl)
-			display: flex
-			justify-content: flex-end
 	.pic
 		@extend .pic-bg
 		box-shadow: 0 12px 37px rgba(26, 27, 32, 0.24)
@@ -13,22 +7,3 @@
 		height: 220px
 		max-width: 100%
 		border-radius: 200px
-
-a,
-a:visited
-	font-weight: bold
-	color: $primary
-	text-decoration: none
-	span
-		border-bottom: 1px solid
-	svg
-		@extend .transition-2s
-	&:hover,
-	&:active,
-	&:focus
-		color: $primary
-		text-decoration: none
-		@extend .transition-2s
-		span,
-		&.link
-			border-bottom: 2px solid

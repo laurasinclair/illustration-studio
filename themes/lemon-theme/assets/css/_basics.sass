@@ -1,20 +1,21 @@
 body
-	font-family: $font-primary !important
+	@extend .bg_white
+	@extend .font-weight-light !optional
+	font-family: $font-primary
 	color: $gray-900
 	position: relative
 	font-size: $font-size-base * 1
-
-	
 .text-tertiary
 	color: $tertiary
 
-.bg_dark
-	background-image: url(assets/bg_asfalt-light.png)
-	background-color: $dark
-
-.bg_white
-	background-image: url(assets/bg_stardust.png)
-	background-color: $white
+.bg
+	&_dark
+		background-color: $dark
+	&_white
+		background-color: $white
+		background-image: url(assets/bg_stardust.png)
+	&_secondary
+		background-color: $secondary
 
 #all
 	display: grid
@@ -26,8 +27,9 @@ body
 	@extend .d-none
 	@extend .d-md-block
 	@extend .bg_dark
-	@extend .text-white
 	border-right: 1px solid #666
+	a
+		@extend .text-white
 	p
 		width: fit-content
 		white-space: nowrap

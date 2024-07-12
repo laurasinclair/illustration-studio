@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-
+public
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 .env
-node_modules/
 .DS_Store
-design-assets/
-public/
+design-assets
+public

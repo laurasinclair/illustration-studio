@@ -7,13 +7,15 @@ body
 .text-tertiary
 	color: $tertiary
 
-.bg_dark
-	background-image: url(assets/bg_asfalt-light.png)
-	background-color: $dark
+.bg
+	&_dark
+		background-color: $dark
+	&_white
+		background-color: $white
+		background-image: url(assets/bg_stardust.png)
+	&_secondary
+		background-color: $secondary
 
-.bg_white
-	background-image: url(assets/bg_stardust.png)
-	background-color: $white
 
 #all
 	display: grid

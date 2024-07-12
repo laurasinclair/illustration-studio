@@ -1,17 +1,18 @@
 .home
 	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		overflow: hidden
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
 		.container-fluid
 			margin-left: -30px
 			margin-right: -30px
 			@include media-breakpoint-up(sm)
 				margin-left: initial
 				margin-right: initial
-		@extend .bg_dark
-		@extend .text-white
-		margin-bottom: -1px // chrome fix: lines between divs
-		padding-top: 60px
-		// @include media-breakpoint-up(lg)
-		// 	min-height: 90vh
 		h2
 			@extend .mb-3
 			@include media-breakpoint-up(lg)

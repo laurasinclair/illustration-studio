@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Laura Sinclair</title>
+    <link>/work/</link>
+    <description>Recent content in Work on Laura Sinclair</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Illustrations</title>
+      <link>/work/illustration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/illustration/</guid>
+      <description>                                         This is something I wonder about very often.
+    </description>
+    </item>
+    
+    <item>
+      <title>CareerFoundry</title>
+      <link>/work/careerfoundry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/careerfoundry/</guid>
+      <description>My missions include:   Execute on all phases of the design process, from wireframing concepts and mockups through to handovers to developers.
+ Improving branding image and consistency through digital materials for social media, presentations, website assets, sales collaterals, etc.
+ Identifying and understanding customer needs, and work with team members to improve their online experience.
+  Translating ideas and concepts into compelling, visual solutions.
+ Working in close collaboration with lots of different teams, including designers, developers, marketing strategists, copywriters.</description>
+    </item>
+    
+    <item>
+      <title>Murals</title>
+      <link>/work/murals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/murals/</guid>
+      <description>         </description>
+    </item>
+    
+    <item>
+      <title>Paper</title>
+      <link>/work/paper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/paper/</guid>
+      <description>            Behind the scenes&amp;hellip;      </description>
+    </item>
+    
+    <item>
+      <title>Painting</title>
+      <link>/work/painting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/painting/</guid>
+      <description>             </description>
+    </item>
+    
+    <item>
+      <title>Yoda app</title>
+      <link>/work/yoda-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/yoda-app/</guid>
+      <description>    And as a bonus, I designed a few placeholder avatar pictures 🙂
+    </description>
+    </item>
+    
+    <item>
+      <title>Sharefood</title>
+      <link>/work/sharefood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/sharefood/</guid>
+      <description>        </description>
+    </item>
+    
+    <item>
+      <title>Pancake ad</title>
+      <link>/work/pancake-ad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/pancake-ad/</guid>
+      <description>      </description>
+    </item>
+    
+    <item>
+      <title>Sketches</title>
+      <link>/work/sketches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/sketches/</guid>
+      <description>             </description>
+    </item>
+    
+    <item>
+      <title>Brittany Ferries</title>
+      <link>/work/brittanyferries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/work/brittanyferries/</guid>
+      <description>They were coded from scratch and tested with with Litmus, to make sure they&#39;d work well no matter the email client. Then we moved on to using MJML &amp;#10084;&amp;#65039;
+     </description>
+    </item>
+    
+  </channel>
+</rss>

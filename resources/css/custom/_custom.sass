@@ -1,0 +1,655 @@
+html
+	scroll-behavior: smooth !important
+	.sr
+		.load-hidden
+			visibility: hidden
+
+*
+	&:focus
+		outline: 1px dotted $dark
+		outline-offset: 2px
+
+::-moz-selection
+	color: $dark
+	background: $secondary
+
+::selection
+	color: $dark
+	background: $secondary
+
+body
+	font-family: $font-primary
+	color: $dark
+	font-weight: 400
+	position: relative
+	font-size: 16px
+	@include media-breakpoint-up(lg)
+		font-size: 18px
+
+.no-outline
+	outline: none
+
+.transition-2s
+	transition: all 0.2s ease-in-out
+
+#all
+	display: grid
+	grid-template-columns: [sidebar] 7% [main] auto
+
+section
+	padding-top: 5em
+	padding-bottom: 5em
+
+a
+	font-weight: 600
+	color: $primary
+	text-decoration: none
+	span
+		border-bottom: 1px solid
+	&.arrow-right
+		svg
+			width: 16px
+			height: 11px
+			margin-left: 3px
+			@extend .transition-2s
+		&:hover,
+		&:focus
+			svg
+				transform: translate(5px, 0)
+	&:hover,
+	&:focus
+		color: $primary
+		text-decoration: none
+		@extend .transition-2s
+		span,
+		&.link
+			border-bottom: 2px solid
+	&.arrow-fade
+		svg
+			opacity: 0
+		&:hover,
+		&:focus
+			svg
+				opacity: 1
+	&.alert-link
+		border-bottom: 2px solid
+
+img
+	max-width: 100%
+	max-height: 100%
+	display: inline-block
+
+hr
+	border-top: none
+	border-bottom: 2px solid $dark
+
+h1
+
+h2
+	font-size: 2em
+	@include media-breakpoint-up(sm)
+		font-size: 2.5em
+
+h3
+	@extend .font-weight-bold
+	font-size: 1.75em
+	@include media-breakpoint-up(sm)
+		font-size: 2em
+
+h4
+	@extend .font-weight-bold
+	font-size: 1.5rem
+	@include media-breakpoint-up(sm)
+		font-size: 2rem
+	margin-bottom: 4px
+
+.lead
+	font-weight: inherit
+	font-size: 1.10rem
+	@include media-breakpoint-up(sm)
+		font-size: 1.25rem
+
+.bg_dark
+	background-image: url(/img/bg_asfalt-light.png)
+	background-color: $dark
+
+.bg_white
+	background-image: url(/img/bg_stardust.png)
+	background-color: $white
+
+ul
+	margin: 5px 0 15px
+	padding: 0
+	li
+		list-style: none
+		position: relative
+		padding: 0 0 0 20px
+		margin-left: 12px
+		margin-bottom: 8px
+
+ul.arrow
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 6px
+			height: 5px
+			width: 5px
+			border: 1px solid $dark
+			border-width: 2px 2px 0 0
+			transform: rotate(45deg)
+	
+ul.line
+	li
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 12px
+			width: 8px
+			display: block
+			border-top: 2px solid $dark
+
+nav
+	@extend .bg_dark
+	width: 100%
+	a
+		color: $white
+		font-weight: 400
+	#menu-md
+		a
+			@extend .py-4
+			&:hover,
+			&:focus
+				@extend .no-outline
+				font-weight: 700
+	#menu-sm
+		z-index: 9
+		.logo
+			@extend .transition-2s
+			@extend .d-flex
+			@extend .pt-4
+		.checkbox-toggle
+			position: fixed
+			top: 12px
+			right: 12px
+			z-index: 2
+			cursor: pointer
+			width: 40px
+			z-index: 99999
+			height: 40px
+			opacity: 0
+			&:checked 
+				&+ .hamburger > div
+					-webkit-transform: rotate(135deg)
+					transform: rotate(135deg)
+					&:before,
+					&:after
+						top: 0
+						-webkit-transform: rotate(90deg)
+						transform: rotate(90deg)
+						&:after
+							opacity: 0
+				& ~ .menu
+					pointer-events: auto
+					visibility: visible
+					& > div
+						-webkit-transform: translate(0, 0)
+						transform: translate(0, 0)
+						-webkit-transition-duration: 0.75s
+						transition-duration: 0.75s
+						& > div
+							opacity: 1
+							-webkit-transition: opacity 0.4s ease 0.4s
+							transition: opacity 0.4s ease 0.4s
+
+				&:hover + .hamburger > div
+					-webkit-transform: rotate(225deg)
+							transform: rotate(225deg)
+		#block_contact-menu
+			a, svg path
+				color: $primary !important
+				fill: $primary 
+		.hamburger
+			position: fixed
+			top: 12px
+			right: 12px
+			z-index: 1
+			width: 40px
+			height: 40px
+			padding: 10px
+			background: $light
+			cursor: pointer
+			-webkit-transition: box-shadow 0.4s ease
+			transition: box-shadow 0.4s ease
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			display: -webkit-box
+			display: flex
+			-webkit-box-align: center
+			align-items: center
+			-webkit-box-pack: center
+			justify-content: center
+			& > div
+				position: relative
+				-webkit-box-flex: 0
+				flex: none
+				width: 100%
+				height: 3px
+				border-radius: 5px
+				background: $dark
+				-webkit-transition: all 0.4s ease
+				transition: all 0.4s ease
+				display: -webkit-box
+				display: flex
+				-webkit-box-align: center
+				align-items: center
+				-webkit-box-pack: center
+				justify-content: center
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+					z-index: 1
+					top: -8px
+					left: 0
+					width: 100%
+					height: 3px
+					border-radius: 5px
+					background: inherit
+					-webkit-transition: all 0.4s ease
+					transition: all 0.4s ease
+				&:after
+					top: 8px
+		.menu
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			pointer-events: none
+			visibility: hidden
+			overflow: hidden
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			display: -webkit-box
+			display: flex
+			& > div
+				width: 100vw
+				height: 100vh
+				color: $dark
+				background: $light
+				-webkit-transition: all 0.4s ease
+				transition: all 0.4s ease
+				-webkit-transform: translate(0, -100%)
+				transform: translate(0, -100%)
+				-webkit-backface-visibility: hidden
+				backface-visibility: hidden
+				overflow: hidden
+			#menu-sm-cat
+				display: flex
+				flex-direction: column
+				margin: 0
+				padding: 0
+				padding-top: 50px
+				-webkit-font-smoothing: antialiased
+				p, a
+					font-weight: 600
+					padding-top: 10px
+					padding-bottom: 10px
+				.nav-link
+					padding-top: 10px
+					padding-bottom: 10px
+					span
+						@extend .px-4
+					&:hover,
+					&:focus
+						@extend .no-outline
+						background-color: $secondary
+				.lead
+					margin: 0 !important
+
+.btn
+	border-radius: 4px
+	padding: 13px 24px 14px
+	font-weight: 600
+	display: inline-block
+	margin-top: 10px
+	margin-bottom: 10px
+	&:hover
+		color: $secondary
+		fill: $secondary
+		background: $gray-900
+		box-shadow: inset 0px 0px 0px 2px $gray-900
+
+.btn-primary-dark
+	@extend .btn
+	@extend .bg-primary
+	@extend .text-white
+
+.btn-primary-light
+	@extend .btn
+	@extend .bg-light
+	@extend .text-primary
+
+.btn-transparent
+	@extend .btn
+	@extend .text-white
+	background: none
+	fill: $white
+	&:hover
+		text-decoration: none !important
+		background: none !important
+		box-shadow: none !important
+
+.border-b
+	border-bottom: 6px solid
+
+.border-b-dark
+	@extend .border-b
+	border-bottom-color: $dark
+
+.border-r
+	border-right: 6px solid
+
+.border-r-dark
+	@extend .border-r
+	border-right-color: $dark
+
+.border-t
+	border-top: 6px solid
+
+.border-t-dark
+	@extend .border-t
+	border-top-color: $dark
+
+.border-l
+	border-left: 6px solid
+
+.border-l-dark
+	@extend .border-l
+	border-left-color: $dark
+
+.u-light
+	border-bottom: 1px solid $light
+.u-dark
+	border-bottom: 1px solid $dark
+
+img[src*="#thumbnail"]
+	width: 50%
+	float: left
+
+.tag,
+.tag:visited
+	@extend .d-inline-block
+	color: $dark
+	border: 2px solid $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	&:hover,
+	&:focus
+		@extend .no-outline
+		color: $light
+		background-color: $primary
+		border: 2px solid $primary
+	&.instagram
+		svg
+			width: 23px
+			height: 21px
+			margin-bottom: 4px
+			transform: none
+			path
+				fill: $dark
+		&:hover,
+		&:focus
+			svg
+				transform: none
+				path
+					fill: $light
+					@extend .transition-2s
+
+.tag_primary
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $primary
+
+.tag_dark
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $light
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: #262560
+
+.tag_secondary
+	@extend .m-0
+	@extend .mr-2
+	@extend .font-weight-bold
+	display: inline-block
+	color: $dark
+	border-radius: 9px
+	padding-left: 10px
+	padding-right: 10px
+	background-color: $secondary
+
+.slider
+	max-height: 300px !important
+	max-width: 100% !important
+	padding-bottom: 40px
+	overflow: hidden
+	@extend .mx-auto
+	.slick-slide:focus
+		@extend .no-outline
+	.card
+		&:hover,
+		&:focus
+			@extend .shadow
+			@extend .transition-2s
+			border-color: $primary !important
+
+#related
+	margin-top: 6em
+	margin-bottom: 2em
+
+.bg-blob
+	overflow: hidden
+	@include media-breakpoint-up(md)
+		background-image: url(/img/bg-blob.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+$background-color: #000
+
+#sidebar
+	@extend .bg-dark
+	@extend .text-white
+	border-right: 1px solid #666
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	p
+		position: fixed
+		transform: rotate(270deg) translateX(-50%)
+		top: 20px
+		width: fit-content
+		text-align: left
+
+.home
+	header
+		@extend .bg_dark
+		@extend .text-white
+		padding-top: 60px
+		min-height: 100vh
+
+@keyframes translate
+	0%
+		transform: translateX(-10px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+.sticky
+	position: sticky
+	top: 0
+	width: 100%
+	@extend .bg-light
+	@extend .px-3
+	z-index: 666
+
+#submenu-md
+	white-space: nowrap
+	z-index: 999
+	top: 0
+	width: 100%
+	position: sticky 
+	top: 3em
+	a, a:visited
+		@extend .transition-2s
+		color: $gray-600
+		@include media-breakpoint-up(lg)
+			font-size: 1.7em
+		font-weight: 300
+		&:hover, &:focus
+			@extend .no-outline
+			color: $dark
+		&.active
+			color: $dark
+			@include media-breakpoint-up(lg)
+				font-size: 1.8em
+			font-weight: 600
+			&::after
+				content: ''
+				background-image: url(/img/icon_arrow-right.svg)
+				background-size: cover
+				display: inline-block
+				height: 12px
+				width: 17px
+				margin-left: 11px
+				margin-bottom: 3px
+				animation-name: translate
+				animation-duration: 0.4s
+				animation-timing-function: ease-in-out
+				animation-fill-mode: forwards
+
+span
+	&.boom
+		position: relative
+		z-index: 4
+		&::after
+			content: ""
+			background-color: $secondary
+			display: block
+			height: 20px
+			position: absolute
+			bottom: -1px
+			width: 99%
+			z-index: -1
+			left: 5px
+
+@keyframes moveLeft
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(-2000vw)
+
+#top-btn,
+#top-btn:active
+	transition: all .25s ease-in-out
+	display: none
+	position: fixed
+	bottom: 0
+	right: 0
+	cursor: pointer
+	align-items: center
+	justify-content: center
+	margin: 0 1em 1em 0
+	width: 40px
+	height: 40px
+	background-color: $light
+	border: 2px solid $primary
+	border-radius: 50%
+	padding: .25em
+	z-index: 99999
+	@extend .no-outline
+	@include media-breakpoint-up(sm)
+		margin: 0 3em 3em 0
+		width: 50px
+		height: 50px
+		background-color: transparent
+		border: 3px solid $primary
+	&:hover,
+	&:active
+		@extend .no-outline
+		background-color: $primary
+		svg
+			path
+				fill: $light !important
+	svg
+		width: 30px
+		height: 19px
+		@include media-breakpoint-up(sm)
+			width: 40px
+			height: 22px
+	
+.screen-reader-text
+	position: absolute
+	clip-path: inset(50%)
+	margin: -1px
+	border: 0
+	padding: 0
+	width: 1px
+	height: 1px
+	overflow: hidden
+	word-wrap: normal !important
+	clip: rect(1px, 1px, 1px, 1px)
+	&:focus
+		display: block
+		top: 5px
+		left: 5px
+		z-index: 100000 // Above WP toolbar
+		clip-path: none
+		background-color: #eee
+		padding: 15px 23px 14px
+		width: auto
+		height: auto
+		text-decoration: none
+		line-height: normal
+		color: #444
+		font-size: 1em
+		clip: auto !important
+
+@keyframes rotation
+	from
+		transform: rotate(0deg) 
+	to
+		transform: rotate(359deg)  
+#lemon
+	display: flex
+	justify-content: center
+	figure
+		position: relative
+		overflow: visible
+		width: 100%
+		max-width: 470px
+	svg
+		position: absolute
+		bottom: 70px
+		left: 55px
+		width: 105px
+		fill: #000
+		animation: rotation 15s infinite linear 
+
+footer
+	@extend .bg-secondary

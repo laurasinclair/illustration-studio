@@ -1,0 +1,49 @@
+<nav>
+	<div class="container-fluid navigation">
+		{{ if .Site.Menus.main }}
+		<div id="menu-md" class="d-none d-md-flex justify-content-between align-items-center">
+			<a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+			
+			<div class="ml-auto d-flex">
+				{{ $current := . }}
+				{{ range .Site.Menus.main }}
+					{{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+					{{ $active = or $active (eq .Name $current.Title) }}
+					{{ $active = or $active (and (eq .Name "Work") (eq $current.Section "work")) }}
+					<a href="{{ .URL }}" class="{{ if $active }}active{{ end }} ml-5">{{ .Name }}</a>
+				{{ end }}
+			</div>
+		</div> <!-- /#menu-md -->
+
+		<div id="menu-sm" class="d-md-none">
+			<a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+
+			<input class="checkbox-toggle" type="checkbox" />
+			<div class="hamburger">
+				<div></div>
+			</div>
+			<div class="menu">
+				<div id="menu-sm-cat">
+					<a href="{{ .Site.BaseURL }}" class="nav-link lead"><span>{{ .Site.Title }}</span></a>
+
+					<hr class="w-100 px-4">
+
+					{{ $currentPage := . }}
+					{{ range first 3 .Site.Menus.main }}
+					<a href="{{ .URL }}" class="nav-link"><span>{{ .Name }}</span></a>
+					{{ end }}
+
+					<hr class="w-100 px-4">
+
+					<div id="block_contact-menu" class="px-4">	
+						<p class="lead">Let’s get in touch!</p>
+						<p class="pt-0">I would love to hear from you. <br>
+						<a href="mailto:{{ .Site.Params.email }}"><span>{{ .Site.Params.email }}</span> <svg width="16" height="11" class="ml2 icon" viewBox="0 0 282 201" xmlns="http://www.w3.org/2000/svg"><path d="M171.07 24.652C165.368 18.9501 165.368 9.9735 171.07 4.2716C176.772 -1.23767 185.748 -1.23767 191.45 4.2716L276.863 89.6717C279.509 92.3172 281.14 95.99 281.14 100.061C281.14 104.132 279.509 107.805 276.863 110.463L191.45 195.863C185.748 201.565 176.772 201.565 171.07 195.863C165.368 190.161 165.368 181.185 171.07 175.483L232.224 114.534L15.1279 114.534C7.17867 114.547 0.860348 108.023 0.860347 100.074C0.860347 92.1246 7.17867 85.8062 15.1279 85.8062L232.211 85.8062L171.07 24.652Z" fill="#000"/></svg></a>
+						</p>	
+					</div>
+				</div>
+			</div>
+		</div> <!-- /#menu-sm -->
+		{{ end }}
+	</div>
+</nav>

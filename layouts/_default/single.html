@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="project">
+	<div class="container">
+		<div class="row">
+			<header class="col-12 col-lg-7 mx-auto">
+				<div class="mt-5 mb- mb-md-5 mt-md-3 srSlideUp">
+					<h2 class="text-center mb-1">{{ .Title }}</h2>
+					{{ if isset .Params "tag_new" }}<p class="text-center"><span class="tag_dark">{{ index .Params "tag_new" }}</span></p>{{ end }}
+					{{ if isset .Params "tag_job" }}<p class="text-center"><span class="tag_secondary">{{ index .Params "tag_job" }}</span></p>{{ end }}
+					<p class="lead srSlideUp mt-0">{{ if .Params.project_description_2 }}<strong class="d-block">{{ .Params.project_description_2 }}</strong>{{ end }}{{ (replace .Params.project_description "\n" "<br>") | safeHTML }}</p>
+				</div>
+			</header> <!-- /col -->
+		</div> <!-- /row -->
+		{{ .Content }}
+	</div>
+</div>
+
+{{- partial "related.html" . -}}
+
+{{ end }}

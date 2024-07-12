@@ -1,0 +1,23 @@
+---
+label: TEST-1
+hide_body: false
+display_field: city_picker
+fields:
+- type: text
+  name: title
+  label: title
+- name: city_picker
+  type: select
+  default: Brussels
+  config:
+    required: false
+    options:
+    - Brussels
+    - London
+    - Paris
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: City picker

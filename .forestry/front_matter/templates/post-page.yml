@@ -1,0 +1,31 @@
+---
+label: Post page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: slug
+  label: slug
+- type: file
+  name: thumbnail_picture
+  label: thumbnail_picture
+- type: text
+  name: thumbnail_bg_color
+  label: thumbnail_bg_color
+- type: text
+  name: thumbnail_description
+  label: thumbnail_description
+- type: text
+  name: project_description
+  label: project_description
+- type: text
+  name: weight
+  label: weight
+- name: images_upload
+  type: image_gallery
+  config: {}
+  label: Images upload
+pages:
+- content/work/illustration.md

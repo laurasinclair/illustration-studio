@@ -103,6 +103,6 @@
 <div class="bg_dark" style='-webkit-mask: url({{ "css/assets/bgbottom.png" | absURL  }}); -webkit-mask-repeat: repeat-x; -webkit-mask-size: cover;-webkit-mask-position: bottom center; height: 100px;{{ if isset .Params.block_project "bgcolor" }} background-color: {{ .Params.block_project.bgcolor }}{{ else }} background-color: #f1f1f7;{{ end }}'></div>
 {{- end -}}
 
-{{- partial "related.html" . -}}
+{{- partial "work/related-projects.html" . -}}
 
 {{- end -}}

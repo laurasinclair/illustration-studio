@@ -1,17 +1,18 @@
 .home
 	header
+		@extend .bg_dark
+		@extend .text-white
+		margin-bottom: -1px // chrome fix: lines between divs
+		padding-top: 60px
+		overflow: hidden
+		// @include media-breakpoint-up(lg)
+		// 	min-height: 90vh
 		.container-fluid
 			margin-left: -30px
 			margin-right: -30px
 			@include media-breakpoint-up(sm)
 				margin-left: initial
 				margin-right: initial
-		@extend .bg_dark
-		@extend .text-white
-		margin-bottom: -1px // chrome fix: lines between divs
-		padding-top: 60px
-		// @include media-breakpoint-up(lg)
-		// 	min-height: 90vh
 		h2
 			@extend .mb-3
 			@include media-breakpoint-up(lg)
@@ -80,29 +81,22 @@
 				i
 					opacity: 1
 
-@-webkit-keyframes scale-up
+@keyframes scale-up 
 	0%
-		-webkit-transform: scale(0)
+		transform: scale(0)
 		opacity: 0
 
 	60%
-		-webkit-transform: scale(1.2)
+		transform: scale(1.2)
 		opacity: 1
 
 	100%
-		-webkit-transform: scale(1)
+		transform: scale(1)
 		opacity: 1
 
-@-moz-keyframes scale-up
-	0%
-		-moz-transform: scale(0)
-		opacity: 0
-
-	60%
-		-moz-transform: scale(1.2)
-		opacity: 1
-
-	100%
-		-moz-transform: scale(1)
-		opacity: 1
-		opacity: 1 !important
+// .selected
+// 	margin-bottom: initial
+// 	h2
+// 		@include media-breakpoint-up(md)
+// 			margin-bottom: 2.5em
+// 			display: block

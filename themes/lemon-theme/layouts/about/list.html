@@ -1,7 +1,7 @@
 {{ define "main" }}
-<header class="mt-O bg-dark">
-	<div class="container-fluid">
-		<div class="hero_large">
+<header class="mt-O bg_dark">
+	<div class="hero_large">
+		<div class="container-fluid">
 			<h2 class="text-center mx-auto">{{ .Params.title }}</h2>
 		</div>
 	</div> <!-- /container -->
@@ -10,11 +10,7 @@
 <section id="about" class="bg_white">
 	<div class="container-fluid">
 		<div class="row mb-4 mb-md-5">
-			<div class="col-12 col-md-3 sr-down cat">
-				<p class="label mg">About</p>
-			</div> <!-- /col -->
-
-			<div class="col-12 col-md-7">
+			<div class="col-12 col-md-8 offset-md-2">
 				<h2 class="sr-down mb-4">Hey there 👋</h2>
 				<div class="row flex-column flex-sm-row no-gutters">
 					{{ if $image := resources.GetMatch "img/laurasinclair.jpg" }}
@@ -61,4 +57,7 @@
 		{{- end -}}
 	</div> <!-- /container -->
 </section>
+
+{{- partial "footer.html" . -}}
+
 {{ end }}

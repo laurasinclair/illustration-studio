@@ -10,13 +10,22 @@
 		color: $tertiary
 	&-white
 		color: $white
-
-	.rounded
-	border-radius: 6px
+.bg
+	&_dark
+		background-color: $dark
+	&_light
+		background-color: lighten($dark, 90%)
+	&_white
+		background-color: $white
+		background-image: url(assets/bg_stardust.png)
+	&_primary
+		background-color: $indigo
+	&_secondary
+		background-color: $secondary
 
 .bd-left
-	border-left: 5px solid $dark
 	@extend .ps-4
+	border-left: 5px solid $dark
 
 .pic-bg
 	background-size: cover !important

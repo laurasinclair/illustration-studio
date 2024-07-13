@@ -61,8 +61,8 @@
 					</div>
 
 					<div class="card-img">
-						{{- $image := .Resources.GetMatch "thumbnail_*" -}} {{- with
-						$image -}}
+						{{- $image := .Resources.GetMatch "thumbnail_*" -}}
+						{{- with $image -}}
 						<div
 							class="card-img mb-3"
 							style="background-image: url('{{ .Permalink | absURL }}');">

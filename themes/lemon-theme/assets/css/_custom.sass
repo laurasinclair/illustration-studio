@@ -51,56 +51,15 @@ img
 	&-primary-dark
 		@extend .btn
 		@extend .text-white
-		svg
-			fill: $white
-			path
-				fill: $white
 		background-color: $primary
+		svg, path
+			fill: $white
 		&:hover,
 		&:active,
 		&:focus
 			@extend .no-outline
 			color: $white !important
 			background-color: $dark
-
-#lemon
-	display: flex
-	justify-content: center
-	figure
-		position: relative
-		overflow: visible
-		width: 100%
-		max-width: 470px
-		img
-			height: auto
-	.txt-circle
-		position: absolute
-		animation: rotation 15s infinite linear 
-		fill: #000
-		width: 70px
-		left: 30px
-		bottom: 10px
-		@media screen and (min-width: 368px)
-			width: 80px
-			left: 35px
-			bottom: 30px
-		@media screen and (min-width: 420px)
-			width: 95px
-			left: 45px
-		@media screen and (min-width: 490px)
-			width: 95px
-			left: 55px
-			bottom: 45px
-		@media screen and (min-width: 540px)
-			width: 95px
-		@include media-breakpoint-up(sm)
-			width: 105px
-			left: 45px
-			bottom: 70px
-		@include media-breakpoint-up(md)
-			width: 105px
-			left: 55px
-			bottom: 70px
 
 #pagenotfound,
 #thank-you

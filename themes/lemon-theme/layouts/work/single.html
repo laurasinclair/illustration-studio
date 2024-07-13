@@ -61,7 +61,7 @@
 				<div class="work_single_link">
 					<p class="mb-1">Come have a look!</p>
 					{{- $image := resources.Get "css/assets/icon_open-new-window.svg" -}}
-					<a href="{{.src}}" target="_blank" class="link_new-window stretched-link"><span class="me-2">{{ .text }}</span></a>
+					<a href="{{.src}}" target="_blank" class="link_new-window stretched-link">{{ .text }}</a>
 				</div>
 				{{- end -}}
 			</div> <!-- /col -->
@@ -105,5 +105,9 @@
 {{- end -}}
 
 {{- partial "work/related-projects.html" . -}}
+
+<div class="text-center p-4 social-links bg_light">
+	{{ partial "social-links.html" . }}
+</div>
 
 {{- end -}}

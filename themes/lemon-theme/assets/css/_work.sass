@@ -1,65 +1,42 @@
 #work
-	br
-		margin-bottom: 1em
-	.row
-		max-width: 100vw
-	.-section
-		@extend .my-4
-		&:last-of-type
-			@extend .mb-0
-	#gallery
-		margin-top: 22px
-		&::before
-			content: ""
-			display: table
-			clear: both
-		&::after
-			content: ""
-			display: table
-			clear: both
-	.gallery-block
-		@extend .mb-3
-		@extend .mb-md-5
-		overflow: hidden
-		position: relative
-		.gallery-image
-			width: 100%
-			display: block
-			height: auto
+	.work-gallery
+		&_project
+			@extend .mb-3
+			@extend .mb-md-5
+			overflow: hidden
+			position: relative
 			border-radius: 4px
 			&:hover,
-			&:focus
+			&:focus,
+			&:active
+				@extend .transition-2s
 				@extend .no-outline
-		div
-			background-color: $dark
-			color: $white
-			padding: 4px 13px
-			transition: transform 1000ms cubic-bezier(.32,0,.07,1)
-			opacity: 0
-			position: absolute
-			left: 35px
-			bottom: 10px
-			a
-				font-weight: 4500
-				color: $white
-				opacity: 0
-				font-size: 0.9em
-			@include media-breakpoint-up(md)
-				left: 40px
-				bottom: 25px
-				padding: 4px 8px
-				a
-					font-size: 1.3em
-		&:hover,
-		&:focus
-			@extend .no-outline
-			div
-				/*transform: scaleX(1)*/
-				opacity: 1
-				transition: all 0.5s ease-in-out
-				@extend .no-outline
-				a
+				box-shadow: 0 20px 60px transparentize($dark, 0.8)
+				> div
+					@extend .transition-2s
 					opacity: 1
+			&_title
+				background-color: $dark
+				color: $white
+				transition: transform 1000ms cubic-bezier(.32,0,.07,1)
+				opacity: 0
+				position: absolute
+				left: 24px
+				bottom: 10px
+				padding: 4px 22px
+				@include media-breakpoint-up(md)
+					left: 34px
+					bottom: 25px
+					padding: 10px 20px
+				a
+					font-weight: 500
+					color: $white
+					@include media-breakpoint-up(md)
+						font-size: 1.3em
+
+	br
+		margin-bottom: 1em
+
 	hr
 		margin-top: 50px
 		margin-bottom: 100px
@@ -71,7 +48,6 @@
 			margin-bottom: 250px
 
 .work_single
-	background-color: $dark
 	&_text
 		a
 			font-weight: 600
@@ -81,17 +57,12 @@
 	&_link
 		@extend .p-4
 		@extend .p-md-5
-		@extend .mb-5
 		@extend .transition-2s
-		background-color: lighten(#18181b, 10%)
-		border-top: 4px solid lighten(#18181b, 10%)
-		border-bottom: 4px solid lighten(#18181b, 10%)
+		background-color: $indigo
 		display: inline-block
 		position: relative
-		&:hover
-			border-bottom: 4px solid $secondary
+		border-radius: 4px
 		a
-			font-weight: 600
-			span
-				border: 2px solid transparent !important
-				color: $primary
+			@extend .lead
+			border-bottom: 2px solid !important
+			color: $white

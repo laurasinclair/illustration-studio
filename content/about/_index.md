@@ -8,5 +8,3 @@ photo: {
     mask: "img/mask01.png"
 }
 ---
-
-

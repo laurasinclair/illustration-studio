@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  build = "hugo"
+  command = "hugo"
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"

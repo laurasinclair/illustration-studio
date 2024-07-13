@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	// Hides the sidebar logo at first, shows it on scroll
+	// (otherwise, it's displayed twice: once in the top nav, once in the sidebar)
 	$(window).scroll(function () {
 		if ($(document).scrollTop() > 250) {
 			$('#logo').addClass('reveal');
@@ -9,6 +11,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+	// Hides nav buttonw when we reach the footer
 	$(window).scroll(function () {
 		if (
 			$(window).scrollTop() + $(window).height() >
@@ -20,21 +23,3 @@ $(document).ready(function () {
 		}
 	});
 });
-
-var srDown = {
-	distance: '10%',
-	origin: 'top',
-	easing: 'ease-in-out',
-	duration: 500,
-	interval: 150,
-};
-
-var srFade = {
-	distance: '0',
-	// opacity: null,
-	duration: 500,
-	interval: 150,
-};
-
-var nodeList = document.querySelectorAll('.sr-down');
-var otherNodeList = document.querySelectorAll('.work-section img');

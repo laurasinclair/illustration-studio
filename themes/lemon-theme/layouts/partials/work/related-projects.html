@@ -39,18 +39,17 @@
 					{{- end -}}
 				</div>
 			</div>
-		</div>
-		<!-- /row -->
-	</div>
-	<!-- /container -->
+		</div> <!-- /row -->
+	</div> <!-- /container -->
 
 	<div
 		class="container-fluid"
 		id="related_all">
 		<div class="row my-5">
-			{{- $related := .Site.GetPage "section" "work" -}} {{- range
-			($related.Pages.GroupByParam "related") -}} {{- if eq .Key true -}} {{-
-			range .Pages -}}
+			{{- $related := .Site.GetPage "section" "work" -}}
+			{{- range ($related.Pages.GroupByParam "related") -}}
+			{{- if eq .Key true -}} 
+			{{- range .Pages -}}
 			<div class="col-12 col-sm-6 col-md-4 col-xl-2">
 				<div class="card mb-4">
 					<div class="card-body">
@@ -61,24 +60,23 @@
 						>
 					</div>
 
-						<div class="card-img">
-							{{- $image := .Resources.GetMatch "thumbnail_*" -}} {{-
-							with $image -}}
-							<div
-								class="card-img mb-3"
-								style="background-image: url('{{ .Permalink | absURL }}');">
-								&nbsp;
-							</div>
-							{{- end -}}
+					<div class="card-img">
+						{{- $image := .Resources.GetMatch "thumbnail_*" -}} {{- with
+						$image -}}
+						<div
+							class="card-img mb-3"
+							style="background-image: url('{{ .Permalink | absURL }}');">
+							&nbsp;
 						</div>
+						{{- end -}}
+					</div>
 				</div>
-			</div>
-			<!-- /col -->
-			{{- end -}} {{- end -}} {{- end -}}
-		</div>
-		<!-- /row -->
-	</div>
-	<!-- /container -->
+			</div> <!-- /col -->
+			{{- end -}}
+			{{- end -}}
+			{{- end -}}
+		</div> <!-- /row -->
+	</div> <!-- /container -->
 </section>
 
 <script type="text/javascript">

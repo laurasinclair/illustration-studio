@@ -1,7 +1,7 @@
 languageCode = "en-uk"
 title = "Dirty Lemon Studio"
 pluralizeListTitles = "false"
-baseURL = "https://dirtylemon.studio/"
+baseURL = "/"
 theme = "lemon-theme"
 
 [menu]

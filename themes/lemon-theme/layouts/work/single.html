@@ -81,7 +81,7 @@
 				<div class="container-fluid row"{{ if .id }} id="{{ .id }}"{{ end }}>
 					{{- range .images -}}
 					{{- if .src -}}
-					<div class="col-6 col-md-{{if (eq (len $imagescount) 2)}}6{{else if (eq (len $imagescount) 3)}}4{{else if (eq (len $imagescount) 4)}}3{{else}}12{{end}} prout">
+					<div class="col-6 col-md-{{if (eq (len $imagescount) 2)}}6{{else if (eq (len $imagescount) 3)}}4{{else if (eq (len $imagescount) 4)}}3{{else}}12{{end}}">
 						<img src="{{ $.Permalink | absURL  }}{{.src}}" class="mb-5" alt="{{ $title }}">
 					</div> <!-- /col -->
 					{{- end -}}

@@ -1,12 +1,12 @@
-# Dirty Lemon Studio
+# Illustration Studio
 
 A little portfolio website using Hugo CMS for content management, resulting in a fast, lightweight platform that avoids unnecessary dependencies.
 
 ## Have a look!
 
-[🍋 Dirty Lemon Studio | Fun & happy creative artwork!](https://dirtylemon.studio/)
+[🍋 Fun & happy creative artwork!](https://illustration.laurasnclr.com/)
 
-![Dirty Lemon Studio | Homepage screenshot](resources/dirtylemon_screenshot.jpg)
+![Illustration Studio | Homepage screenshot](resources/dirtylemon_screenshot.jpg)
 
 ## Technologies used
 **Frontend**
@@ -23,4 +23,4 @@ A little portfolio website using Hugo CMS for content management, resulting in a
 
 ---
 
-![Dirty Lemon Studio | Process picture](resources/dirtylemon_process-05.jpg)
+![Illustration Studio | Process picture](resources/dirtylemon_process-05.jpg)
